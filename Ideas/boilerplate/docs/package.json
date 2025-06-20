@@ -1,0 +1,27 @@
+{
+  "name": "fused-gaming-docs",
+  "version": "1.0.0",
+  "description": "Documentation for FUSED GAMING React TypeScript Boilerplate",
+  "main": "index.html",
+  "scripts": {
+    "dev": "python -m http.server 3000",
+    "build": "echo 'Static site - no build needed'",
+    "start": "python -m http.server 8080"
+  },
+  "keywords": [
+    "react",
+    "typescript",
+    "vite",
+    "boilerplate",
+    "documentation",
+    "fused-gaming"
+  ],
+  "author": "Its Different Productions",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/4eckd/react-boilerplate.git",
+    "directory": "docs"
+  },
+  "homepage": "https://docs.react-boilerplate-taupe.vercel.app"
+}

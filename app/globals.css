@@ -1,0 +1,136 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Custom color utilities */
+  .text-color-1 { color: var(--color-1); }
+  .text-color-2 { color: var(--color-2); }
+  .text-color-3 { color: var(--color-3); }
+  .text-color-4 { color: var(--color-4); }
+
+  .bg-color-1 { background-color: var(--color-1); }
+  .bg-color-2 { background-color: var(--color-2); }
+  .bg-color-3 { background-color: var(--color-3); }
+  .bg-color-4 { background-color: var(--color-4); }
+
+  .border-color-1 { border-color: var(--color-1); }
+  .border-color-2 { border-color: var(--color-2); }
+  .border-color-3 { border-color: var(--color-3); }
+  .border-color-4 { border-color: var(--color-4); }
+
+  /* Hover variants */
+  .hover\:bg-color-2:hover { background-color: var(--color-2); }
+  .hover\:bg-color-4:hover { background-color: var(--color-4); }
+  .hover\:text-color-1:hover { color: var(--color-1); }
+  .hover\:text-color-3:hover { color: var(--color-3); }
+}
+
+@layer base {
+  :root {
+    /* Custom Color Palette */
+    --color-1: #002447; /* Deep Navy */
+    --color-2: #53d3d1; /* Bright Teal */
+    --color-3: #fbeceb; /* Soft Cream */
+    --color-4: #feb249; /* Vibrant Orange */
+
+    /* Light theme with bright accents */
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+    --primary: 188 82% 57%; /* Bright Teal */
+    --primary-foreground: 0 0% 98%;
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+    --accent: 37 100% 64%; /* Vibrant Orange */
+    --accent-foreground: 0 0% 98%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 188 82% 57%;
+    --chart-1: 188 82% 57%;
+    --chart-2: 37 100% 64%;
+    --chart-3: 210 40% 8%;
+    --chart-4: 0 0% 98%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Logo theming with custom palette */
+    --logo-primary: var(--color-1);
+    --logo-secondary: var(--color-2);
+    --logo-accent: var(--color-4);
+    --logo-highlight: var(--color-3);
+  }
+  .dark {
+    /* Dark theme with bright color accents */
+    --background: 210 40% 4%; /* Deep navy background */
+    --foreground: 0 0% 98%;
+    --card: 210 40% 6%;
+    --card-foreground: 0 0% 98%;
+    --popover: 210 40% 6%;
+    --popover-foreground: 0 0% 98%;
+    --primary: 188 82% 57%; /* Bright Teal */
+    --primary-foreground: 210 40% 4%;
+    --secondary: 210 40% 10%;
+    --secondary-foreground: 0 0% 98%;
+    --muted: 210 40% 10%;
+    --muted-foreground: 0 0% 63.9%;
+    --accent: 37 100% 64%; /* Vibrant Orange */
+    --accent-foreground: 210 40% 4%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 210 40% 15%;
+    --input: 210 40% 15%;
+    --ring: 188 82% 57%;
+    --chart-1: 188 82% 57%;
+    --chart-2: 37 100% 64%;
+    --chart-3: 0 0% 98%;
+    --chart-4: 210 40% 4%;
+    --chart-5: 340 75% 55%;
+    --sidebar-background: 210 40% 4%;
+    --sidebar-foreground: 0 0% 98%;
+    --sidebar-primary: 188 82% 57%;
+    --sidebar-primary-foreground: 210 40% 4%;
+    --sidebar-accent: 210 40% 10%;
+    --sidebar-accent-foreground: 0 0% 98%;
+    --sidebar-border: 210 40% 15%;
+    --sidebar-ring: 188 82% 57%;
+
+    /* Logo theming for dark mode with enhanced contrast */
+    --logo-primary: var(--color-2);
+    --logo-secondary: var(--color-4);
+    --logo-accent: var(--color-3);
+    --logo-highlight: var(--color-1);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}

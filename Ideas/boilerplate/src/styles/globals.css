@@ -1,0 +1,95 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+@import './themes.css';
+
+/* Base styles */
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* Component styles */
+@layer components {
+  .container {
+    @apply w-full mx-auto px-4 sm:px-6 lg:px-8;
+    max-width: 1200px;
+  }
+}
+
+/* Utility styles */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Enhanced glow effects */
+  .glow-primary {
+    box-shadow: 0 0 20px rgb(var(--shadow-primary) / 0.4);
+  }
+
+  .glow-primary-lg {
+    box-shadow: 0 0 30px rgb(var(--shadow-primary) / 0.6);
+  }
+
+  /* Red-specific glow effects for dark theme */
+  .theme-dark .glow-red {
+    box-shadow: 0 0 25px rgb(220 38 38 / 0.5), 0 0 50px rgb(220 38 38 / 0.2);
+  }
+
+  .theme-dark .glow-red-lg {
+    box-shadow: 0 0 35px rgb(220 38 38 / 0.7), 0 0 70px rgb(220 38 38 / 0.3);
+  }
+
+  .glow-accent {
+    box-shadow: 0 0 20px rgb(var(--shadow-accent) / 0.4);
+  }
+
+  .glow-accent-lg {
+    box-shadow: 0 0 30px rgb(var(--shadow-accent) / 0.6);
+  }
+
+  /* Gradient text effects */
+  .gradient-text {
+    background: linear-gradient(135deg, rgb(var(--color-primary)), rgb(var(--color-accent)));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  /* Enhanced backdrop effects */
+  .backdrop-enhanced {
+    backdrop-filter: blur(12px) saturate(180%);
+    background: rgb(var(--color-background) / 0.8);
+  }
+
+  /* Floating animation */
+  .float {
+    animation: float 3s ease-in-out infinite;
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+  }
+
+  /* Pulse glow animation */
+  .pulse-glow {
+    animation: pulseGlow 2s ease-in-out infinite;
+  }
+
+  @keyframes pulseGlow {
+    0%, 100% {
+      box-shadow: 0 0 20px rgb(var(--shadow-primary) / 0.3);
+    }
+    50% {
+      box-shadow: 0 0 30px rgb(var(--shadow-primary) / 0.6);
+    }
+  }
+}

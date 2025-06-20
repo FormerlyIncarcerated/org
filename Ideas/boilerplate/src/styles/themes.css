@@ -1,0 +1,156 @@
+/* FUSED GAMING Theme System - 5 Theme Support */
+
+/* Dark Theme (Default) - Enhanced Red */
+.theme-dark {
+  --color-background: 8 4 4; /* #080404 - Deep red-black */
+  --color-foreground: 255 250 250; /* #fffafa - Slightly warm white */
+  --color-card: 20 12 12; /* #140c0c - Dark red card */
+  --color-card-foreground: 255 250 250; /* #fffafa */
+  --color-popover: 20 12 12; /* #140c0c */
+  --color-popover-foreground: 255 250 250; /* #fffafa */
+  --color-primary: 220 38 38; /* #dc2626 - Vibrant red */
+  --color-primary-foreground: 255 255 255; /* #ffffff */
+  --color-secondary: 60 25 25; /* #3c1919 - Dark red secondary */
+  --color-secondary-foreground: 255 250 250; /* #fffafa */
+  --color-muted: 40 20 20; /* #281414 - Muted red */
+  --color-muted-foreground: 185 160 160; /* #b9a0a0 - Warm gray */
+  --color-accent: 185 28 28; /* #b91c1c - Red accent */
+  --color-accent-foreground: 255 255 255; /* #ffffff */
+  --color-destructive: 239 68 68; /* #ef4444 */
+  --color-destructive-foreground: 255 255 255; /* #ffffff */
+  --color-border: 60 25 25; /* #3c1919 - Red border */
+  --color-input: 30 15 15; /* #1e0f0f - Dark red input */
+  --color-ring: 220 38 38; /* #dc2626 */
+
+  /* Enhanced red shadow colors */
+  --shadow-primary: 220 38 38; /* #dc2626 */
+  --shadow-secondary: 185 28 28; /* #b91c1c */
+  --shadow-accent: 239 68 68; /* #ef4444 */
+}
+
+/* Violet Theme */
+.theme-violet {
+  --color-background: 8 8 16; /* #080810 */
+  --color-foreground: 255 255 255; /* #ffffff */
+  --color-card: 18 18 32; /* #121220 */
+  --color-card-foreground: 255 255 255; /* #ffffff */
+  --color-popover: 18 18 32; /* #121220 */
+  --color-popover-foreground: 255 255 255; /* #ffffff */
+  --color-primary: 147 51 234; /* #9333ea */
+  --color-primary-foreground: 255 255 255; /* #ffffff */
+  --color-secondary: 55 48 89; /* #373059 */
+  --color-secondary-foreground: 255 255 255; /* #ffffff */
+  --color-muted: 40 35 70; /* #282346 */
+  --color-muted-foreground: 163 163 163; /* #a3a3a3 */
+  --color-accent: 67 56 202; /* #4338ca */
+  --color-accent-foreground: 255 255 255; /* #ffffff */
+  --color-destructive: 239 68 68; /* #ef4444 */
+  --color-destructive-foreground: 255 255 255; /* #ffffff */
+  --color-border: 55 48 89; /* #373059 */
+  --color-input: 25 22 45; /* #19162d */
+  --color-ring: 147 51 234; /* #9333ea */
+
+  /* Enhanced shadow colors */
+  --shadow-primary: 147 51 234; /* #9333ea */
+  --shadow-secondary: 55 48 89; /* #373059 */
+  --shadow-accent: 67 56 202; /* #4338ca */
+}
+
+/* Emerald Theme */
+.theme-emerald {
+  --color-background: 6 12 8; /* #060c08 */
+  --color-foreground: 255 255 255; /* #ffffff */
+  --color-card: 16 28 20; /* #101c14 */
+  --color-card-foreground: 255 255 255; /* #ffffff */
+  --color-popover: 16 28 20; /* #101c14 */
+  --color-popover-foreground: 255 255 255; /* #ffffff */
+  --color-primary: 5 150 105; /* #059669 */
+  --color-primary-foreground: 255 255 255; /* #ffffff */
+  --color-secondary: 45 78 55; /* #2d4e37 */
+  --color-secondary-foreground: 255 255 255; /* #ffffff */
+  --color-muted: 30 60 40; /* #1e3c28 */
+  --color-muted-foreground: 163 163 163; /* #a3a3a3 */
+  --color-accent: 34 197 94; /* #22c55e */
+  --color-accent-foreground: 255 255 255; /* #ffffff */
+  --color-destructive: 239 68 68; /* #ef4444 */
+  --color-destructive-foreground: 255 255 255; /* #ffffff */
+  --color-border: 45 78 55; /* #2d4e37 */
+  --color-input: 20 35 25; /* #142319 */
+  --color-ring: 5 150 105; /* #059669 */
+
+  /* Enhanced shadow colors */
+  --shadow-primary: 5 150 105; /* #059669 */
+  --shadow-secondary: 45 78 55; /* #2d4e37 */
+  --shadow-accent: 34 197 94; /* #22c55e */
+}
+
+/* Amber Theme */
+.theme-amber {
+  --color-background: 12 8 6; /* #0c0806 */
+  --color-foreground: 255 255 255; /* #ffffff */
+  --color-card: 24 18 14; /* #18120e */
+  --color-card-foreground: 255 255 255; /* #ffffff */
+  --color-popover: 24 18 14; /* #18120e */
+  --color-popover-foreground: 255 255 255; /* #ffffff */
+  --color-primary: 251 146 60; /* #fb923c */
+  --color-primary-foreground: 255 255 255; /* #ffffff */
+  --color-secondary: 78 58 42; /* #4e3a2a */
+  --color-secondary-foreground: 255 255 255; /* #ffffff */
+  --color-muted: 60 45 30; /* #3c2d1e */
+  --color-muted-foreground: 163 163 163; /* #a3a3a3 */
+  --color-accent: 217 119 6; /* #d97706 */
+  --color-accent-foreground: 255 255 255; /* #ffffff */
+  --color-destructive: 239 68 68; /* #ef4444 */
+  --color-destructive-foreground: 255 255 255; /* #ffffff */
+  --color-border: 78 58 42; /* #4e3a2a */
+  --color-input: 30 22 16; /* #1e1610 */
+  --color-ring: 251 146 60; /* #fb923c */
+
+  /* Enhanced shadow colors */
+  --shadow-primary: 251 146 60; /* #fb923c */
+  --shadow-secondary: 78 58 42; /* #4e3a2a */
+  --shadow-accent: 217 119 6; /* #d97706 */
+}
+
+/* Aurora Theme */
+.theme-aurora {
+  --color-background: 10 8 14; /* #0a080e */
+  --color-foreground: 255 255 255; /* #ffffff */
+  --color-card: 20 16 26; /* #14101a */
+  --color-card-foreground: 255 255 255; /* #ffffff */
+  --color-popover: 20 16 26; /* #14101a */
+  --color-popover-foreground: 255 255 255; /* #ffffff */
+  --color-primary: 192 132 252; /* #c084fc */
+  --color-primary-foreground: 255 255 255; /* #ffffff */
+  --color-secondary: 65 48 88; /* #413058 */
+  --color-secondary-foreground: 255 255 255; /* #ffffff */
+  --color-muted: 45 35 65; /* #2d2341 */
+  --color-muted-foreground: 163 163 163; /* #a3a3a3 */
+  --color-accent: 168 85 247; /* #a855f7 */
+  --color-accent-foreground: 255 255 255; /* #ffffff */
+  --color-destructive: 239 68 68; /* #ef4444 */
+  --color-destructive-foreground: 255 255 255; /* #ffffff */
+  --color-border: 65 48 88; /* #413058 */
+  --color-input: 25 20 35; /* #191423 */
+  --color-ring: 192 132 252; /* #c084fc */
+
+  /* Enhanced shadow colors */
+  --shadow-primary: 192 132 252; /* #c084fc */
+  --shadow-secondary: 65 48 88; /* #413058 */
+  --shadow-accent: 168 85 247; /* #a855f7 */
+}
+
+/* Global theme application */
+.theme-dark,
+.theme-violet,
+.theme-emerald,
+.theme-amber,
+.theme-aurora {
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
+}
+
+/* Smooth transitions for theme changes */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
+}

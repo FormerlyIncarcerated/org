@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "name": "fused-gaming-docs",
+  "builds": [
+    {
+      "src": "**/*.md",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "**/*.html",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/index.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/$1.html"
+    }
+  ],
+  "cleanUrls": true,
+  "trailingSlash": false
+}
