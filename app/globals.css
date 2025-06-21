@@ -10,62 +10,34 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-
-  /* Custom color utilities */
-  .text-color-1 { color: var(--color-1); }
-  .text-color-2 { color: var(--color-2); }
-  .text-color-3 { color: var(--color-3); }
-  .text-color-4 { color: var(--color-4); }
-
-  .bg-color-1 { background-color: var(--color-1); }
-  .bg-color-2 { background-color: var(--color-2); }
-  .bg-color-3 { background-color: var(--color-3); }
-  .bg-color-4 { background-color: var(--color-4); }
-
-  .border-color-1 { border-color: var(--color-1); }
-  .border-color-2 { border-color: var(--color-2); }
-  .border-color-3 { border-color: var(--color-3); }
-  .border-color-4 { border-color: var(--color-4); }
-
-  /* Hover variants */
-  .hover\:bg-color-2:hover { background-color: var(--color-2); }
-  .hover\:bg-color-4:hover { background-color: var(--color-4); }
-  .hover\:text-color-1:hover { color: var(--color-1); }
-  .hover\:text-color-3:hover { color: var(--color-3); }
 }
 
 @layer base {
   :root {
-    /* Custom Color Palette */
-    --color-1: #002447; /* Deep Navy */
-    --color-2: #53d3d1; /* Bright Teal */
-    --color-3: #fbeceb; /* Soft Cream */
-    --color-4: #feb249; /* Vibrant Orange */
-
-    /* Light theme with bright accents */
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 188 82% 57%; /* Bright Teal */
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 37 100% 64%; /* Vibrant Orange */
-    --accent-foreground: 0 0% 98%;
+    /* Light mode - Your brand colors */
+    --background: 251 236 235; /* #fbeceb - Soft Cream background */
+    --foreground: 0 36 71; /* #002447 - Deep Navy text */
+    --card: 255 255 255; /* Pure white cards */
+    --card-foreground: 0 36 71; /* #002447 - Deep Navy text */
+    --popover: 255 255 255; /* Pure white popover */
+    --popover-foreground: 0 36 71; /* #002447 - Deep Navy text */
+    --primary: 0 36 71; /* #002447 - Deep Navy */
+    --primary-foreground: 251 236 235; /* #fbeceb - Soft Cream */
+    --secondary: 188 82% 57%; /* #53d3d1 - Bright Teal */
+    --secondary-foreground: 0 36 71; /* #002447 - Deep Navy */
+    --muted: 251 236 235; /* #fbeceb - Soft Cream muted */
+    --muted-foreground: 0 36 71; /* #002447 - Deep Navy muted text */
+    --accent: 37 100% 64%; /* #feb249 - Vibrant Orange */
+    --accent-foreground: 0 36 71; /* #002447 - Deep Navy */
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 188 82% 57%;
-    --chart-1: 188 82% 57%;
-    --chart-2: 37 100% 64%;
-    --chart-3: 210 40% 8%;
-    --chart-4: 0 0% 98%;
+    --border: 188 82% 57%; /* #53d3d1 - Bright Teal borders */
+    --input: 251 236 235; /* #fbeceb - Soft Cream input */
+    --ring: 188 82% 57%; /* #53d3d1 - Bright Teal ring */
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
     --chart-5: 27 87% 67%;
     --radius: 0.5rem;
     --sidebar-background: 0 0% 98%;
@@ -76,53 +48,41 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
-
-    /* Logo theming with custom palette */
-    --logo-primary: var(--color-1);
-    --logo-secondary: var(--color-2);
-    --logo-accent: var(--color-4);
-    --logo-highlight: var(--color-3);
   }
   .dark {
-    /* Dark theme with bright color accents */
-    --background: 210 40% 4%; /* Deep navy background */
-    --foreground: 0 0% 98%;
-    --card: 210 40% 6%;
-    --card-foreground: 0 0% 98%;
-    --popover: 210 40% 6%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 188 82% 57%; /* Bright Teal */
-    --primary-foreground: 210 40% 4%;
-    --secondary: 210 40% 10%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 210 40% 10%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 37 100% 64%; /* Vibrant Orange */
-    --accent-foreground: 210 40% 4%;
+    /* Dark mode - Your brand colors with dark background */
+    --background: 0 36 71; /* #002447 - Deep Navy background */
+    --foreground: 251 236 235; /* #fbeceb - Soft Cream text */
+    --card: 0 46 81; /* Slightly lighter navy for cards */
+    --card-foreground: 251 236 235; /* #fbeceb - Soft Cream text */
+    --popover: 0 46 81; /* Slightly lighter navy for popover */
+    --popover-foreground: 251 236 235; /* #fbeceb - Soft Cream text */
+    --primary: 188 82% 57%; /* #53d3d1 - Bright Teal (primary in dark) */
+    --primary-foreground: 0 36 71; /* #002447 - Deep Navy */
+    --secondary: 37 100% 64%; /* #feb249 - Vibrant Orange (secondary in dark) */
+    --secondary-foreground: 0 36 71; /* #002447 - Deep Navy */
+    --muted: 0 46 81; /* Slightly lighter navy for muted */
+    --muted-foreground: 251 236 235; /* #fbeceb - Soft Cream muted text */
+    --accent: 251 236 235; /* #fbeceb - Soft Cream (accent in dark) */
+    --accent-foreground: 0 36 71; /* #002447 - Deep Navy */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 98%;
-    --border: 210 40% 15%;
-    --input: 210 40% 15%;
-    --ring: 188 82% 57%;
-    --chart-1: 188 82% 57%;
-    --chart-2: 37 100% 64%;
-    --chart-3: 0 0% 98%;
-    --chart-4: 210 40% 4%;
+    --border: 188 82% 57%; /* #53d3d1 - Bright Teal borders */
+    --input: 0 46 81; /* Slightly lighter navy for input */
+    --ring: 188 82% 57%; /* #53d3d1 - Bright Teal ring */
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
     --chart-5: 340 75% 55%;
-    --sidebar-background: 210 40% 4%;
-    --sidebar-foreground: 0 0% 98%;
-    --sidebar-primary: 188 82% 57%;
-    --sidebar-primary-foreground: 210 40% 4%;
-    --sidebar-accent: 210 40% 10%;
-    --sidebar-accent-foreground: 0 0% 98%;
-    --sidebar-border: 210 40% 15%;
-    --sidebar-ring: 188 82% 57%;
-
-    /* Logo theming for dark mode with enhanced contrast */
-    --logo-primary: var(--color-2);
-    --logo-secondary: var(--color-4);
-    --logo-accent: var(--color-3);
-    --logo-highlight: var(--color-1);
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -132,5 +92,47 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer utilities {
+  /* Custom gradient utilities for theme-aware backgrounds */
+  .bg-gradient-conic {
+    background: conic-gradient(var(--tw-gradient-stops));
+  }
+
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, var(--tw-gradient-stops));
+  }
+
+  /* Theme-aware gradient variants */
+  .gradient-hero {
+    @apply bg-gradient-to-br from-primary/20 via-secondary/15 to-accent/10;
+  }
+
+  .dark .gradient-hero {
+    @apply from-primary/30 via-secondary/25 to-accent/15;
+  }
+
+  .gradient-vibrant {
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--primary) / 0.4),
+      hsl(var(--secondary) / 0.4),
+      hsl(var(--background) / 0.2),
+      hsl(var(--accent) / 0.4),
+      hsl(var(--primary) / 0.4)
+    );
+  }
+
+  .dark .gradient-vibrant {
+    background: conic-gradient(
+      from 0deg,
+      hsl(var(--primary) / 0.5),
+      hsl(var(--secondary) / 0.5),
+      hsl(var(--background) / 0.3),
+      hsl(var(--accent) / 0.5),
+      hsl(var(--primary) / 0.5)
+    );
   }
 }

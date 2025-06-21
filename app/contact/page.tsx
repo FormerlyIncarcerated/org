@@ -8,8 +8,6 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { Textarea } from "@/components/ui/textarea"
 import { siteConfig } from "@/lib/config"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -83,10 +81,7 @@ export default function ContactPage() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <div className="container py-12 md:py-24">
+    <div className="container py-12 md:py-24">
       {/* Hero Section */}
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
@@ -270,9 +265,6 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
-        </div>
-      </main>
-      <Footer />
     </div>
   )
 }

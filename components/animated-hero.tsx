@@ -30,7 +30,7 @@ export default function AnimatedHero() {
           </div>
           <div className="flex gap-4 flex-col">
             <h1 className="text-5xl md:text-7xl max-w-2xl tracking-tighter text-center font-regular">
-              <span className="text-color-2">70 Million Americans Feel</span>
+              <span className="bg-gradient-to-r from-primary via-secondary to-primary dark:from-secondary dark:via-primary dark:to-secondary bg-clip-text text-transparent drop-shadow-lg font-bold">70 Million Americans Feel</span>
               <span className="relative flex w-full justify-center overflow-hidden text-center md:pb-4 md:pt-1">
                 &nbsp;
                 {titles.map((title, index) => (
@@ -62,12 +62,12 @@ export default function AnimatedHero() {
             </p>
           </div>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center w-full max-w-lg mx-auto">
-            <Button size="lg" className="gap-4 w-full sm:w-auto bg-color-2 hover:bg-color-2/90 text-color-1" asChild>
+            <Button size="lg" className="gap-4 w-full sm:w-auto bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary text-primary-foreground dark:text-secondary-foreground border-2 border-primary/20 dark:border-secondary/20 shadow-2xl hover:shadow-primary/25 dark:hover:shadow-secondary/25 transition-all duration-300 font-bold" asChild>
               <Link href="/about">
                 Learn More <Heart className="w-4 h-4" />
               </Link>
             </Button>
-            <Button size="lg" className="gap-4 w-full sm:w-auto border-color-4 text-color-4 hover:bg-color-4 hover:text-color-1" variant="outline" asChild>
+            <Button size="lg" className="gap-4 w-full sm:w-auto border-2 border-primary/50 dark:border-secondary/50 text-primary dark:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/10 hover:border-primary dark:hover:border-secondary backdrop-blur-sm bg-background/50 dark:bg-background/50 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold" variant="outline" asChild>
               <Link href="/contact">
                 Join Our Community <Users className="w-4 h-4" />
               </Link>

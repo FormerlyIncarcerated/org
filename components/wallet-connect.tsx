@@ -3,12 +3,25 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wallet, ExternalLink, AlertCircle } from "lucide-react"
+import { Wallet, ExternalLink, AlertCircle, ChevronDown, Copy, LogOut } from "lucide-react"
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
+import { Badge } from "@/components/ui/badge"
+import { motion } from "framer-motion"
 
 // Placeholder component for Web3 wallet connection
 // This will be implemented in Phase 3 with proper Web3 libraries
 
-export function WalletConnect() {
+interface WalletConnectProps {
+  compact?: boolean
+}
+
+export function WalletConnect({ compact = false }: WalletConnectProps) {
   const [isConnecting, setIsConnecting] = useState(false)
   const [isConnected, setIsConnected] = useState(false)
   const [walletAddress, setWalletAddress] = useState("")
@@ -30,6 +43,120 @@ export function WalletConnect() {
     setWalletAddress("")
   }
 
+  const copyAddress = () => {
+    if (walletAddress) {
+      navigator.clipboard.writeText(walletAddress)
+    }
+  }
+
+  const formatAddress = (address: string) => {
+    return `${address.slice(0, 6)}...${address.slice(-4)}`
+  }
+
+  // Compact version for header
+  if (compact) {
+    if (!isConnected) {
+      return (
+        <motion.div
+          whileHover={{ scale: 1.02 }}
+          whileTap={{ scale: 0.98 }}
+        >
+          <Button
+            onClick={handleConnect}
+            disabled={isConnecting}
+            className="bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary text-primary-foreground dark:text-secondary-foreground border-2 border-primary/20 dark:border-secondary/20 shadow-lg hover:shadow-xl hover:shadow-primary/25 dark:hover:shadow-secondary/25 transition-all duration-300 font-semibold"
+            size="sm"
+          >
+            {isConnecting ? (
+              <>
+                <div className="mr-2 h-4 w-4 animate-spin rounded-full border-2 border-background border-t-transparent" />
+                Connecting...
+              </>
+            ) : (
+              <>
+                <Wallet className="w-4 h-4 mr-2" />
+                Connect Wallet
+              </>
+            )}
+          </Button>
+        </motion.div>
+      )
+    }
+
+    return (
+      <DropdownMenu>
+        <DropdownMenuTrigger asChild>
+          <motion.div
+            whileHover={{ scale: 1.02 }}
+            whileTap={{ scale: 0.98 }}
+          >
+            <Button
+              variant="outline"
+              className="border-2 border-primary/50 dark:border-secondary/50 text-primary dark:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/10 hover:border-primary dark:hover:border-secondary backdrop-blur-sm bg-background/50 dark:bg-background/50 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold"
+              size="sm"
+            >
+              <div className="flex items-center gap-2">
+                <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+                <span className="hidden sm:inline">
+                  {formatAddress(walletAddress)}
+                </span>
+                <ChevronDown className="w-4 h-4" />
+              </div>
+            </Button>
+          </motion.div>
+        </DropdownMenuTrigger>
+
+        <DropdownMenuContent
+          align="end"
+          className="w-64 border-2 border-border/50 backdrop-blur-xl bg-background/95 shadow-2xl"
+        >
+          <div className="p-3 space-y-2">
+            <div className="flex items-center justify-between">
+              <span className="text-sm font-medium text-muted-foreground">Connected</span>
+              <Badge variant="outline" className="text-xs">
+                Ethereum
+              </Badge>
+            </div>
+
+            <div className="flex items-center gap-2">
+              <div className="w-3 h-3 bg-green-500 rounded-full" />
+              <span className="text-sm font-mono">
+                {formatAddress(walletAddress)}
+              </span>
+            </div>
+
+            <div className="text-lg font-bold text-foreground">
+              1.234 ETH
+            </div>
+          </div>
+
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem onClick={copyAddress} className="cursor-pointer">
+            <Copy className="w-4 h-4 mr-2" />
+            Copy Address
+          </DropdownMenuItem>
+
+          <DropdownMenuItem className="cursor-pointer">
+            <ExternalLink className="w-4 h-4 mr-2" />
+            View on Explorer
+          </DropdownMenuItem>
+
+          <DropdownMenuSeparator />
+
+          <DropdownMenuItem
+            onClick={handleDisconnect}
+            className="cursor-pointer text-destructive focus:text-destructive"
+          >
+            <LogOut className="w-4 h-4 mr-2" />
+            Disconnect
+          </DropdownMenuItem>
+        </DropdownMenuContent>
+      </DropdownMenu>
+    )
+  }
+
+  // Full card version for pages
   if (isConnected) {
     return (
       <Card className="w-full max-w-md">

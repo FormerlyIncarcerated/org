@@ -11,8 +11,7 @@ import { Checkbox } from "@/components/ui/checkbox"
 import { Slider } from "@/components/ui/slider"
 import { Textarea } from "@/components/ui/textarea"
 import { ChevronLeft, ChevronRight, Send } from "lucide-react"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
+
 
 interface SurveyData {
   relationship: string
@@ -81,9 +80,7 @@ export default function SurveyPage() {
   }
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1 bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
+    <div className="bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800">
         <div className="container mx-auto px-4 py-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -515,8 +512,6 @@ export default function SurveyPage() {
           </div>
         </motion.div>
         </div>
-      </main>
-      <Footer />
     </div>
   )
 }

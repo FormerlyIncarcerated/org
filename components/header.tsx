@@ -7,6 +7,7 @@ import { Menu, X, Users, Heart, FileText, MessageCircle } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/config"
 import ThemeSelector from "@/components/theme-selector"
+import { WalletConnect } from "@/components/wallet-connect"
 
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -14,7 +15,7 @@ export function Header() {
   const navigation = [
     { name: "Home", href: "/", icon: Heart },
     { name: "About", href: "/about", icon: Users },
-    { name: "Programs", href: "/programs", icon: FileText },
+    { name: "Proposals", href: "/proposals", icon: FileText },
     { name: "Survey", href: "/survey", icon: MessageCircle },
     { name: "Contact", href: "/contact", icon: MessageCircle },
   ]
@@ -51,12 +52,10 @@ export function Header() {
         {/* Right side */}
         <div className="flex flex-1 items-center justify-end space-x-4">
           <ThemeSelector />
-          <Button variant="outline" size="sm" className="hidden md:inline-flex">
+          <Button variant="outline" size="sm" className="hidden md:inline-flex border-2 border-primary/50 dark:border-secondary/50 text-primary dark:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/10 hover:border-primary dark:hover:border-secondary backdrop-blur-sm bg-background/50 dark:bg-background/50 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold">
             Join Community
           </Button>
-          <Button size="sm">
-            Get Started
-          </Button>
+          <WalletConnect compact />
 
           {/* Mobile menu button */}
           <Button
@@ -86,12 +85,12 @@ export function Header() {
               </Link>
             ))}
             <div className="flex flex-col space-y-2 pt-4">
-              <Button variant="outline" size="sm">
+              <Button variant="outline" size="sm" className="border-2 border-primary/50 dark:border-secondary/50 text-primary dark:text-secondary hover:bg-primary/10 dark:hover:bg-secondary/10 hover:border-primary dark:hover:border-secondary backdrop-blur-sm bg-background/50 dark:bg-background/50 shadow-lg hover:shadow-xl transition-all duration-300 font-semibold">
                 Join Community
               </Button>
-              <Button size="sm">
-                Get Started
-              </Button>
+              <div className="w-full">
+                <WalletConnect compact />
+              </div>
             </div>
           </div>
         </div>

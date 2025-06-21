@@ -1,7 +1,5 @@
 import { Users, Target, Heart, Zap, Shield, Globe } from "lucide-react"
 import { siteConfig } from "@/lib/config"
-import { Header } from "@/components/header"
-import { Footer } from "@/components/footer"
 
 export default function AboutPage() {
   const stats = [
@@ -35,10 +33,7 @@ export default function AboutPage() {
   ]
 
   return (
-    <div className="min-h-screen flex flex-col">
-      <Header />
-      <main className="flex-1">
-        <div className="container py-12 md:py-24">
+    <div className="container py-12 md:py-24">
       {/* Hero Section */}
       <div className="mx-auto max-w-4xl text-center">
         <h1 className="text-4xl font-bold tracking-tight sm:text-6xl">
@@ -155,9 +150,6 @@ export default function AboutPage() {
           </a>
         </div>
       </div>
-        </div>
-      </main>
-      <Footer />
     </div>
   )
 }

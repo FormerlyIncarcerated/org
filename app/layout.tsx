@@ -1,33 +1,13 @@
 import type { Metadata } from 'next'
 import './globals.css'
-import { ThemeProvider } from '@/components/theme-provider'
-import { siteConfig } from '@/lib/config'
+import { ThemeProvider } from "@/components/theme-provider"
+import { Header } from "@/components/header"
+import { Footer } from "@/components/footer"
 
 export const metadata: Metadata = {
-  title: siteConfig.name,
-  description: siteConfig.description,
-  keywords: ['formerly incarcerated', 'empowerment', 'web3', 'blockchain', 'second chances'],
-  authors: [{ name: 'F.Inc. Team' }],
-  creator: 'F.Inc.',
-  openGraph: {
-    type: 'website',
-    locale: 'en_US',
-    url: siteConfig.url,
-    title: siteConfig.name,
-    description: siteConfig.description,
-    siteName: siteConfig.name,
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: siteConfig.name,
-    description: siteConfig.description,
-    creator: '@FormerlyIncEmp',
-  },
-  icons: {
-    icon: '/favicon.svg',
-    shortcut: '/favicon.svg',
-    apple: '/favicon.svg',
-  },
+  title: 'Formerly Incarcerated - Empowering Second Chances',
+  description: 'Web3-powered platform breaking barriers and creating opportunities for formerly incarcerated individuals',
+  generator: 'v0.dev',
 }
 
 export default function RootLayout({
@@ -37,14 +17,20 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className="min-h-screen bg-background font-sans antialiased">
+      <body className="min-h-screen flex flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="dark"
+          defaultTheme="system"
           enableSystem
           disableTransitionOnChange={false}
         >
-          {children}
+          <div className="relative z-10 min-h-screen flex flex-col">
+            <Header />
+            <main className="flex-1">
+              {children}
+            </main>
+            <Footer />
+          </div>
         </ThemeProvider>
       </body>
     </html>
