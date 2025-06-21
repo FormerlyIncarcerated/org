@@ -8,103 +8,52 @@ import { Briefcase, GraduationCap, Heart, Shield, Coins, Building, ArrowRight } 
 const proposals = [
   {
     id: 1,
-    title: "Decentralized Job Matching Platform",
-    description: "A blockchain-based platform that connects formerly incarcerated individuals with employers who value second chances, using smart contracts for fair hiring practices.",
-    category: "Employment",
-    status: "Active",
-    votes: 127,
-    comments: 23,
-    author: "Community Member",
-    date: "2024-01-15",
+    title: "Job Matching Platform",
+    description: "Connect formerly incarcerated individuals with employers through blockchain-verified hiring.",
     icon: Briefcase,
-    tags: ["Blockchain", "Employment", "Smart Contracts"],
-    details: "This proposal aims to create a transparent hiring system where employers can post jobs specifically for individuals with criminal records, while maintaining privacy through zero-knowledge proofs."
+    status: "Active"
   },
   {
     id: 2,
-    title: "Educational NFT Certification System",
-    description: "Issue verifiable educational certificates as NFTs for skills training programs, creating a permanent, tamper-proof record of achievements.",
-    category: "Education",
-    status: "Under Review",
-    votes: 89,
-    comments: 15,
-    author: "Education Committee",
-    date: "2024-01-10",
+    title: "Skills Certification System",
+    description: "Issue blockchain certificates for completed training programs and skills development.",
     icon: GraduationCap,
-    tags: ["NFTs", "Education", "Certification"],
-    details: "A system that allows educational institutions to issue blockchain-verified certificates, helping individuals build credible skill portfolios."
+    status: "In Review"
   },
   {
     id: 3,
-    title: "Community Support Token Economy",
-    description: "Create a token-based reward system for community members who provide mentorship, support, and resources to those reentering society.",
-    category: "Community",
-    status: "Draft",
-    votes: 156,
-    comments: 31,
-    author: "Token Economics Team",
-    date: "2024-01-08",
+    title: "Community Support Network",
+    description: "Token-based rewards for mentorship and community support activities.",
     icon: Heart,
-    tags: ["Tokens", "Community", "Incentives"],
-    details: "A comprehensive token economy that rewards positive community actions and creates sustainable support networks."
+    status: "Draft"
   },
   {
     id: 4,
-    title: "Secure Identity Verification System",
-    description: "Develop a privacy-preserving identity system that allows individuals to prove their rehabilitation without exposing sensitive criminal history.",
-    category: "Identity",
-    status: "Active",
-    votes: 203,
-    comments: 42,
-    author: "Privacy Advocates",
-    date: "2024-01-05",
+    title: "Privacy Identity System",
+    description: "Secure identity verification without exposing criminal history details.",
     icon: Shield,
-    tags: ["Privacy", "Identity", "Zero-Knowledge"],
-    details: "Using advanced cryptography to create identity solutions that protect privacy while enabling trust and verification."
+    status: "Active"
   },
   {
     id: 5,
-    title: "Micro-Investment Crowdfunding Platform",
-    description: "Enable community members to crowdfund small business ventures and entrepreneurial projects for formerly incarcerated individuals.",
-    category: "Finance",
-    status: "Active",
-    votes: 94,
-    comments: 18,
-    author: "Finance Working Group",
-    date: "2024-01-03",
+    title: "Micro-Investment Platform",
+    description: "Crowdfunding for small business ventures and entrepreneurial projects.",
     icon: Coins,
-    tags: ["DeFi", "Crowdfunding", "Entrepreneurship"],
-    details: "A decentralized platform for raising capital for small businesses and entrepreneurial ventures, with built-in accountability mechanisms."
+    status: "Active"
   },
   {
     id: 6,
     title: "Housing Assistance DAO",
-    description: "Create a decentralized autonomous organization focused on providing housing assistance and advocacy for individuals facing housing discrimination.",
-    category: "Housing",
-    status: "Under Review",
-    votes: 178,
-    comments: 27,
-    author: "Housing Rights Coalition",
-    date: "2023-12-28",
+    description: "Decentralized organization for housing support and advocacy.",
     icon: Building,
-    tags: ["DAO", "Housing", "Advocacy"],
-    details: "A community-governed organization that pools resources and advocates for fair housing practices and assistance programs."
+    status: "In Review"
   }
 ]
 
 const statusColors = {
-  "Active": "bg-green-500/10 text-green-700 dark:text-green-400 border-green-500/20",
-  "Under Review": "bg-yellow-500/10 text-yellow-700 dark:text-yellow-400 border-yellow-500/20",
-  "Draft": "bg-blue-500/10 text-blue-700 dark:text-blue-400 border-blue-500/20"
-}
-
-const categoryIcons = {
-  "Employment": Briefcase,
-  "Education": GraduationCap,
-  "Community": Heart,
-  "Identity": Shield,
-  "Finance": Coins,
-  "Housing": Building
+  "Active": "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
+  "In Review": "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
+  "Draft": "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200"
 }
 
 export default function ProposalsPage() {
