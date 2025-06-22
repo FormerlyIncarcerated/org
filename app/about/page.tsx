@@ -1,5 +1,31 @@
+import { Metadata } from "next"
 import { Users, Target, Heart, Zap, Shield, Globe, TrendingUp, Award } from "lucide-react"
 import { siteConfig } from "@/lib/config"
+
+export const metadata: Metadata = {
+  title: "About Us - Breaking Barriers, Building Futures",
+  description: "Learn about our mission to empower formerly incarcerated individuals through Web3 technology. Discover our values, approach, and the systemic challenges we're addressing through blockchain innovation and community support.",
+  keywords: [
+    "about formerly incarcerated",
+    "reentry mission",
+    "Web3 social impact",
+    "criminal justice reform",
+    "second chances organization",
+    "blockchain empowerment",
+    "community values",
+    "social justice mission"
+  ],
+  openGraph: {
+    title: "About FormerlyIncarcerated.org - Our Mission & Values",
+    description: "Learn about our mission to empower formerly incarcerated individuals through Web3 technology and community-driven support systems.",
+    url: "https://formerlyincarcerated.org/about",
+    type: "website",
+  },
+  twitter: {
+    title: "About FormerlyIncarcerated.org - Our Mission & Values",
+    description: "Learn about our mission to empower formerly incarcerated individuals through Web3 technology and community-driven support systems.",
+  },
+}
 
 export default function AboutPage() {
   const stats = [
