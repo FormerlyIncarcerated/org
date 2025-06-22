@@ -1,0 +1,177 @@
+name: Documentation Deployment
+
+on:
+  push:
+    branches: [ master, main ]
+    paths:
+      - 'docs/**'
+      - 'docs-site/**'
+      - '.github/workflows/docs-deploy.yml'
+  pull_request:
+    branches: [ master, main ]
+    paths:
+      - 'docs/**'
+      - 'docs-site/**'
+  workflow_dispatch:
+
+env:
+  NODE_VERSION: '20'
+  BUN_VERSION: 'latest'
+
+jobs:
+  build-docs:
+    name: Build Documentation
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: Install documentation dependencies
+        run: |
+          cd docs-site
+          bun install
+
+      - name: Build documentation site
+        run: |
+          cd docs-site
+          bun run build
+
+      - name: Upload documentation build
+        uses: actions/upload-artifact@v4
+        with:
+          name: docs-build
+          path: docs-site/build/
+          retention-days: 1
+
+  deploy-docs:
+    name: Deploy Documentation
+    runs-on: ubuntu-latest
+    needs: build-docs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download documentation build
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-build
+          path: docs-site/build/
+
+      - name: Deploy to Vercel (Documentation)
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_DOCS_PROJECT_ID }}
+          vercel-args: '--prod'
+          working-directory: docs-site
+
+  sync-docs-to-org:
+    name: Sync Documentation to Organization
+    runs-on: ubuntu-latest
+    needs: build-docs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    
+    steps:
+      - name: Checkout main repository
+        uses: actions/checkout@v4
+        with:
+          path: main-repo
+
+      - name: Checkout organization repository
+        uses: actions/checkout@v4
+        with:
+          repository: FormerlyIncarcerated/org
+          token: ${{ secrets.ORG_REPO_TOKEN }}
+          path: org-repo
+
+      - name: Sync documentation
+        run: |
+          # Remove existing docs in org repo
+          rm -rf org-repo/docs/
+          rm -rf org-repo/docs-site/
+          
+          # Copy updated documentation
+          cp -r main-repo/docs/ org-repo/docs/
+          cp -r main-repo/docs-site/ org-repo/docs-site/
+
+      - name: Commit and push documentation updates
+        run: |
+          cd org-repo
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          git add docs/ docs-site/
+          
+          if git diff --staged --quiet; then
+            echo "No documentation changes to commit"
+          else
+            git commit -m "docs: Sync documentation from main repository"
+            git push
+
+  validate-links:
+    name: Validate Documentation Links
+    runs-on: ubuntu-latest
+    needs: build-docs
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Download documentation build
+        uses: actions/download-artifact@v4
+        with:
+          name: docs-build
+          path: docs-site/build/
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+
+      - name: Install link checker
+        run: npm install -g broken-link-checker
+
+      - name: Start local server
+        run: |
+          cd docs-site/build
+          npx http-server -p 3000 &
+          sleep 5
+
+      - name: Check for broken links
+        run: |
+          blc http://localhost:3000 -r --filter-level 3
+
+  update-search-index:
+    name: Update Search Index
+    runs-on: ubuntu-latest
+    needs: deploy-docs
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Update Algolia search index
+        uses: algolia/algoliasearch-netlify@master
+        with:
+          algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
+          algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
+          algolia_index_name: formerlyincarcerated_docs
+          site_url: https://docs.formerlyincarcerated.org

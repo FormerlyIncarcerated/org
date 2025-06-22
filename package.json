@@ -39,7 +39,14 @@
     "pm2:monit": "pm2 monit",
     "deploy:production": "pm2 deploy ecosystem.config.js production",
     "deploy:staging": "pm2 deploy ecosystem.config.js staging",
-    "prepare": "husky install || true"
+    "prepare": "husky install || true",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "test:a11y": "jest --testPathPattern=accessibility",
+    "workflow:publish": "gh workflow run dual-repository-publish.yml",
+    "workflow:publish-org": "gh workflow run dual-repository-publish.yml -f publish_to_org=true",
+    "workflow:release": "gh workflow run dual-repository-publish.yml -f create_release=true",
+    "sync:org": "node scripts/sync-to-org.js"
   },
   "dependencies": {
     "@emotion/is-prop-valid": "latest",
@@ -72,6 +79,7 @@
     "@radix-ui/react-toggle-group": "^1.1.1",
     "@radix-ui/react-tooltip": "^1.1.6",
     "@rainbow-me/rainbowkit": "^2.2.8",
+    "@supabase/supabase-js": "^2.50.0",
     "@tanstack/react-query": "^5.80.10",
     "autoprefixer": "^10.4.20",
     "class-variance-authority": "^0.7.1",

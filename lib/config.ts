@@ -13,8 +13,8 @@ export const siteConfig = {
     github: "https://github.com/FormerlyIncarcerated",
     linkedin: "https://linkedin.com/company/",
     discord: "https://discord.gg/fJPfsnZe9x",
-    telegram: "https://t.me/formerly_incarcerated_empowerment",
-    email: "contact@formerlyincarcerated.org",
+    telegram: "https://t.me/formerlyincarcerated",
+    email: "hello@formerlyincarcerated.org",
     docs: "https://docs.formerlyincarcerated.org",
   },
   
