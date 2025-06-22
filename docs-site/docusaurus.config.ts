@@ -22,8 +22,8 @@ const config: Config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'formerly-incarcerated-empowerment', // Usually your GitHub org/user name.
-  projectName: 'platform', // Usually your repo name.
+  organizationName: 'FormerlyIncarcerated', // Usually your GitHub org/user name.
+  projectName: 'formerlyincarcerated', // Usually your repo name.
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/formerly-incarcerated-empowerment/platform/tree/main/docs-site/',
+            'https://github.com/4eckd/formerlyincarcerated/tree/master/docs-site/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/formerly-incarcerated-empowerment/platform/tree/main/docs-site/',
+            'https://github.com/4eckd/formerlyincarcerated/tree/master/docs-site/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -71,7 +71,7 @@ const config: Config = {
 
   themeConfig: {
     // Replace with your project's social card
-    image: 'img/formerlyincarcerated-social-card.jpg',
+    image: 'img/docusaurus-social-card.jpg',
     navbar: {
       title: 'F.Inc. Docs',
       logo: {
@@ -92,7 +92,7 @@ const config: Config = {
           position: 'right',
         },
         {
-          href: 'https://github.com/formerly-incarcerated-empowerment/platform',
+          href: 'https://github.com/4eckd/formerlyincarcerated',
           label: 'GitHub',
           position: 'right',
         },
@@ -109,18 +109,18 @@ const config: Config = {
               to: '/docs/intro',
             },
             {
-              label: 'Technical Docs',
-              to: '/docs/technical/architecture',
-            },
-            {
-              label: 'User Guide',
-              to: '/docs/user/getting-started',
+              label: 'Technical Guides',
+              to: '/docs/technical',
             },
           ],
         },
         {
           title: 'Community',
           items: [
+            {
+              label: 'Main Website',
+              href: 'https://formerlyincarcerated.org',
+            },
             {
               label: 'Discord',
               href: 'https://discord.gg/formerly-incarcerated-empowerment',
@@ -129,31 +129,27 @@ const config: Config = {
               label: 'Twitter',
               href: 'https://twitter.com/FormerlyIncEmp',
             },
-            {
-              label: 'Contact',
-              href: 'https://formerlyincarcerated.org/contact',
-            },
           ],
         },
         {
-          title: 'More',
+          title: 'Development',
           items: [
-            {
-              label: 'Main Website',
-              href: 'https://formerlyincarcerated.org',
-            },
-            {
-              label: 'GitHub',
-              href: 'https://github.com/formerly-incarcerated-empowerment/platform',
-            },
             {
               label: 'Updates',
               to: '/blog',
             },
+            {
+              label: 'GitHub',
+              href: 'https://github.com/4eckd/formerlyincarcerated',
+            },
+            {
+              label: 'Organization',
+              href: 'https://github.com/FormerlyIncarcerated',
+            },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} FormerlyIncarcerated.org - Building Second Chances Through Web3 Technology.`,
+      copyright: `Copyright © ${new Date().getFullYear()} FormerlyIncarcerated.org. Building second chances through Web3 technology.`,
     },
     prism: {
       theme: prismThemes.github,
