@@ -2,7 +2,7 @@ import { siteConfig } from '@/lib/config'
 
 describe('Site Configuration', () => {
   it('has correct site name and description', () => {
-    expect(siteConfig.name).toBe('Formerly Incarcerated Empowerment Platform')
+    expect(siteConfig.name).toBe('F.Inc. - Formerly Incarcerated.org')
     expect(siteConfig.description).toContain('Empowering formerly incarcerated individuals')
     expect(siteConfig.description).toContain('Web3 technology')
   })

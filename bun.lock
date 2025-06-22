@@ -2,7 +2,7 @@
   "lockfileVersion": 1,
   "workspaces": {
     "": {
-      "name": "formerly-incarcerated-empowerment",
+      "name": "formerly-incarcerated",
       "dependencies": {
         "@emotion/is-prop-valid": "latest",
         "@hookform/resolvers": "^3.9.1",

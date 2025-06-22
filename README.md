@@ -26,7 +26,7 @@ To empower formerly incarcerated individuals through innovative Web3 technology,
 
 ### **Custom Color Palette**
 ```css
---color-1: #002447; /* Deep Navy - Primary elements */
+--color-1: #002447; /* Deep Navy Gradient - Primary Background */
 --color-2: #53d3d1; /* Bright Teal - Interactive elements */
 --color-3: #fbeceb; /* Soft Cream - Accent details */
 --color-4: #feb249; /* Vibrant Orange - Call-to-action highlights */
@@ -40,13 +40,19 @@ To empower formerly incarcerated individuals through innovative Web3 technology,
 
 ## 🛠️ Tech Stack
 
-- **Framework**: Next.js 15 with TypeScript
-- **Styling**: Tailwind CSS with custom design system
-- **UI Components**: Radix UI primitives with custom styling
-- **Icons**: Lucide React + Web3 Icons
-- **Animation**: Framer Motion
-- **Testing**: Jest with React Testing Library
-- **Analytics**: Google Analytics integration ready
+- **Framework**: Next.js 15 with React 19 and TypeScript 5
+- **Package Manager**: npm (transitioning to bun for production)
+- **Styling**: Tailwind CSS 3.4 with custom design system
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Icons**: Lucide React + Web3 Icons, no emojis in UI
+- **Animation**: Framer Motion 11, Magic UI components
+- **Theme Management**: next-themes with 6-theme support
+- **Testing**: Jest 29 with React Testing Library
+- **Web3**: Wagmi 2.x, Viem 2.x, RainbowKit 2.x (ready for integration)
+- **Documentation**: Docusaurus for docs.formerlyincarcerated.org
+- **Process Management**: PM2 with clustering for production
+- **Hosting**: infuze.cloud Ubuntu server with git CI/CD deployment
+
 
 ## 📦 Installation
 
@@ -58,7 +64,7 @@ cd platform
 
 2. Install dependencies:
 ```bash
-npm install
+npm install --legacy-peer-deps
 ```
 
 3. Set up environment variables:
@@ -67,12 +73,18 @@ cp .env.example .env.local
 # Edit .env.local with your configuration
 ```
 
-4. Run the development server:
+4. Run the development servers:
 ```bash
+# Main site (port 3000)
 npm run dev
+
+# Documentation site (port 3002)
+npm run docs:dev
 ```
 
-5. Open [http://localhost:3001](http://localhost:3001) in your browser.
+5. Open the applications:
+   - **Main site**: [http://localhost:3000](http://localhost:3000)
+   - **Documentation**: [http://localhost:3002](http://localhost:3002)
 
 ## 🧪 Testing
 
@@ -91,55 +103,85 @@ npm run test:coverage
 ## 📁 Project Structure
 
 ```
-├── app/                    # Next.js app directory
+├── app/                    # Next.js 15 App Router
 │   ├── about/             # About page
 │   ├── contact/           # Contact page
 │   ├── programs/          # Programs showcase
+│   ├── proposals/         # Proposals page
 │   ├── survey/            # Community survey
-│   ├── layout.tsx         # Root layout
-│   └── page.tsx           # Homepage
-├── components/            # Reusable components
-│   ├── ui/               # Base UI components
-│   ├── animated-hero.tsx # Hero section
-│   ├── header.tsx        # Navigation header
+│   ├── layout.tsx         # Root layout with theme provider
+│   ├── page.tsx           # Homepage with animated hero
+│   └── globals.css        # Global styles and CSS variables
+├── components/            # React components
+│   ├── ui/               # shadcn/ui base components
+│   ├── magicui/          # Magic UI animated components
+│   ├── animated-*.tsx    # Feature animations
+│   ├── header.tsx        # Navigation header with theme selector
 │   ├── footer.tsx        # Site footer
-│   └── wallet-connect.tsx # Web3 wallet (placeholder)
+│   ├── theme-provider.tsx # Theme context provider
+│   └── wallet-connect.tsx # Web3 wallet integration (ready)
 ├── lib/                  # Utility libraries
 │   ├── config.ts         # Site configuration
 │   ├── analytics.ts      # Analytics utilities
 │   ├── web3-config.ts    # Web3 configuration
-│   └── structured-data.ts # SEO structured data
-├── docs/                 # Documentation
-│   └── WEB3_ARCHITECTURE.md # Web3 technical design
-├── __tests__/            # Test files
-└── public/               # Static assets
+│   ├── structured-data.ts # SEO structured data
+│   └── utils.ts          # General utilities
+├── hooks/                # Custom React hooks
+│   ├── use-mobile.tsx    # Mobile detection
+│   ├── use-mouse-position.ts # Mouse tracking
+│   └── use-toast.ts      # Toast notifications
+├── docs/                 # Legacy documentation
+├── docs-site/            # Docusaurus documentation site
+│   ├── docs/             # Documentation content
+│   ├── blog/             # Blog posts
+│   ├── src/              # Docusaurus customization
+│   └── static/           # Static assets
+├── __tests__/            # Jest test files
+├── logs/                 # Application logs
+├── bunfig.toml           # Bun configuration
+├── ecosystem.config.js   # PM2 process management
+├── DEPLOYMENT_PLAN.md    # Production deployment guide
+├── PROJECT_STRUCTURE.md  # Detailed project documentation
+└── public/               # Static assets (logos, icons, etc.)
 ```
 
 ## 🗺️ Development Roadmap
 
 ### Phase 1: Foundation ✅ (Completed June 2025)
-- [x] Site cleanup and branding
-- [x] Core pages development
-- [x] SEO optimization
-- [x] Testing infrastructure
+- [x] **Project Structure**: Comprehensive cleanup and organization
+- [x] **Documentation Site**: Docusaurus setup for docs.formerlyincarcerated.org
+- [x] **Deployment Planning**: Complete infuze.cloud deployment strategy
+- [x] **Local Development**: Working dev environment with dual-port setup
+- [x] **Testing Infrastructure**: Jest configuration and basic test suite
+- [x] **Professional Branding**: 6-theme system with advanced theming
+- [x] **Core Pages**: About, Programs, Survey, Contact, Proposals
+- [x] **SEO Optimization**: Structured data, meta tags, sitemap
 
-### Phase 2: Content Enhancement (Q3 2025)
-- [ ] Survey integration and analytics
-- [ ] Content expansion and blog
-- [ ] Community features
-- [ ] Performance optimization
+### Phase 2: Production Deployment (Next Steps)
+- [ ] **Server Setup**: Provision infuze.cloud Ubuntu instance
+- [ ] **Git CI/CD**: Implement automated deployment pipeline
+- [ ] **SSL & Security**: Configure Let's Encrypt certificates
+- [ ] **Domain Configuration**: Set up formerlyincarcerated.org DNS
+- [ ] **Monitoring**: PM2 process management and logging
+- [ ] **Performance**: Optimize build and caching strategies
 
-### Phase 3: Web3 Integration (Q4 2025 - Q1 2026)
-- [ ] Wallet connection
-- [ ] Governance token implementation
-- [ ] Basic DAO features
-- [ ] Skill verification NFTs
+### Phase 3: Content Enhancement (Q3 2025)
+- [ ] **Survey Analytics**: Advanced feedback collection and reporting
+- [ ] **Content Expansion**: Blog, resources, and educational content
+- [ ] **Community Features**: Forums, discussion boards, events
+- [ ] **User Experience**: Enhanced accessibility and mobile optimization
 
-### Phase 4: Advanced Features (Q2-Q3 2026)
-- [ ] Job marketplace
-- [ ] Micro-lending protocol
-- [ ] Investment DAO
-- [ ] Cross-chain integration
+### Phase 4: Web3 Integration (Q4 2025 - Q1 2026)
+- [ ] **Wallet Connection**: Web3 authentication and user profiles
+- [ ] **Governance Token**: Second Chance Governance Token (SCG) implementation
+- [ ] **Basic DAO**: Community voting and proposal system
+- [ ] **Skill Verification**: NFT-based credential system
+
+### Phase 5: Advanced Features (Q2-Q3 2026)
+- [ ] **Job Marketplace**: Decentralized employment platform
+- [ ] **Micro-Investment DAO**: Community-funded business opportunities
+- [ ] **Peer-to-Peer Lending**: Blockchain-based financial services
+- [ ] **Cross-Chain Integration**: Multi-blockchain support
 
 ## 🤝 Contributing
 

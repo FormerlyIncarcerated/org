@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { ShimmerButton } from "@/components/magicui/shimmer-button"
 import { BorderBeam } from "@/components/magicui/border-beam"
-import { ArrowRight, Sparkles, Zap, Shield } from "lucide-react"
+import { ArrowRight, Sparkles, Zap, Shield, Plus } from "lucide-react"
 
 
 
@@ -108,7 +108,7 @@ const AnimatedStats = () => {
 }
 
 const GradientText = ({ children, className = "" }: { children: React.ReactNode; className?: string }) => (
-  <span className={`bg-gradient-to-r from-primary via-secondary to-primary dark:from-secondary dark:via-primary dark:to-secondary bg-clip-text text-transparent drop-shadow-lg ${className}`}>
+  <span className={`text-gradient-readable ${className}`}>
     {children}
   </span>
 )
@@ -187,11 +187,13 @@ export default function GradientHero() {
             transition={{ duration: 0.8, delay: 0.5 }}
             className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16"
           >
-            <ShimmerButton className="bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary text-primary-foreground dark:text-secondary-foreground px-8 py-4 text-lg font-bold border-2 border-primary/20 dark:border-secondary/20 shadow-2xl hover:shadow-primary/25 dark:hover:shadow-secondary/25 transition-all duration-300">
-              <span className="flex items-center gap-2 drop-shadow-sm">
-                Join Our Community
-                <ArrowRight className="w-5 h-5" />
-              </span>
+            <ShimmerButton className="bg-gradient-to-r from-primary to-secondary dark:from-secondary dark:to-primary text-primary-foreground dark:text-secondary-foreground px-8 py-4 text-lg font-bold border-2 border-primary/20 dark:border-secondary/20 shadow-2xl hover:shadow-primary/25 dark:hover:shadow-secondary/25 transition-all duration-300" asChild>
+              <Link href="/survey">
+                <span className="flex items-center gap-2 drop-shadow-sm">
+                  Take The Survey
+                  <Plus className="w-5 h-5" />
+                </span>
+              </Link>
             </ShimmerButton>
 
             <Button

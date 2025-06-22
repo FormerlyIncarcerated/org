@@ -1,4 +1,4 @@
-# Augment Guidelines - Its Different Productions
+# Augment Guidelines - FormerlyIncarcerated.org
 
 ## 1. Cognitive Planning Phase
 - Analyze request scope and impact on existing codebase
@@ -6,33 +6,33 @@
 - Plan minimum viable complexity to meet explicit requirements
 - Identify potential implementation obstacles upfront
 - Maintain a docs subdomain for all docs.itsdifferentproductions.com
-- **FUSED GAMING**: Always use codebase-retrieval tool before making edits to understand context
-- **FUSED GAMING**: Create detailed plans with bulleted lists before implementation
-- **FUSED GAMING**: Ask for user confirmation before potentially damaging actions
+- Always use codebase-retrieval tool before making edits to understand context
+- Create detailed plans with bulleted lists before implementation
+- Ask for user confirmation before potentially damaging actions
 
 ## 2. Core Architecture Standards
-**Tech Stack**: Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase
-**FUSED GAMING Tech Stack**: React 18, TypeScript, Vite, Tailwind CSS, Lucide React
-**File Structure**: PascalCase components, camelCase hooks/utils, kebab-case routes
-**Component Pattern**: Functional components, TypeScript interfaces, single responsibility
-**FUSED GAMING Pattern**: Theme-aware components using ThemeContext, comprehensive testing
+- Next.js 15, React 19, TypeScript, Tailwind CSS, Supabase
+- React 18, TypeScript, Vite, Tailwind CSS, Lucide React
+- PascalCase components, camelCase hooks/utils, kebab-case routes
+- Functional components, TypeScript interfaces, single responsibility
+- Theme-aware components using ThemeContext, comprehensive testing
 
 ## 3. Development Workflow
-**Planning**: Detailed analysis before coding, structured output format
-**Implementation**: Minimum necessary complexity, avoid gold-plating
-**Verification**: Self-check against requirements and quality standards
-**Problem Solving**: Autonomous error resolution before user intervention
+- Detailed analysis before coding, structured output format
+- Minimum necessary complexity, avoid gold-plating
+- Self-check against requirements and quality standards
+- Autonomous error resolution before user intervention
 
 ## 4. Code Quality Requirements
 - Strict TypeScript with proper interfaces
 - shadcn/ui components with 6-theme support (Default/Purple/Blue/Green/Amber/Red)
-- **FUSED GAMING**: 5-theme support (dark/violet/emerald/amber/aurora) with ThemeContext
+- Theme support with ThemeContext
 - Supabase integration with RLS and proper error handling
 - react-hook-form + Zod validation for all forms
 - Framer Motion for animations, accessibility-first design
-- **FUSED GAMING**: Lucide React icons, no emojis in UI, professional SVG icons
-- **FUSED GAMING**: Always use package managers for dependency management
-- **FUSED GAMING**: Comprehensive test coverage with Vitest + React Testing Library
+- Lucide React icons, no emojis in UI, professional SVG icons
+- Always use package managers for dependency management
+- Comprehensive test coverage with Vitest + React Testing Library
 
 ## 5. Security & Performance
 - Input validation with Zod schemas, always maintain .env & .env.local and any other secret files
@@ -44,13 +44,13 @@
 ## 6. UI/UX Standards
 - Mobile-first responsive design
 - CSS variables for theming
-- **FUSED GAMING**: Theme-aware styling using themeConfig properties
-- **FUSED GAMING**: Professional gradients and animations with hover effects
+- Theme-aware styling using themeConfig properties
+- Professional gradients and animations with hover effects
 - Semantic HTML with ARIA attributes
 - Loading states and error boundaries
 - Consistent spacing with Tailwind scale
-- **FUSED GAMING**: Red contrasting colors and gradients for design
-- **FUSED GAMING**: Minimalist design with professional aesthetics
+- Red contrasting colors and gradients for design
+- Minimalist design with professional aesthetics
 
 ## 7. Database & Backend
 - Row Level Security (RLS) for all tables
@@ -70,12 +70,12 @@
 - [ ] Performance optimized
 - [ ] Documentation updated
 
-## 9. FUSED GAMING Specific Guidelines
+## 9. FormerlyIncarcerated.org Specific Guidelines
 
 ### Theme System Requirements
 - Always use `useTheme()` hook and `themeConfig` properties
 - Never use hardcoded colors like `bg-gray-800`, `text-white`
-- Ensure proper contrast for aurora (light) theme
+- Ensure proper contrast for light  theme
 - Active filter tabs should be filled, inactive should be transparent/opaque
 - All components must work across all 5 themes
 
@@ -87,7 +87,7 @@
 
 ### Component Standards
 - Wrap code excerpts in `<augment_code_snippet>` XML tags with path and mode attributes
-- Use Lucide React icons throughout (no emojis except branded FUSED logo)
+- Use Lucide React icons throughout (no emojis)
 - Implement comprehensive error handling and loading states
 - Follow semantic versioning for all changes
 
@@ -110,6 +110,3 @@
 - Progressive Web App (PWA) capabilities
 - Advanced SEO optimization techniques
 - Internationalization (i18n) support preparation
-- **FUSED GAMING**: Interactive financial charts and visualizations
-- **FUSED GAMING**: Enhanced markdown parser for complex content types
-- **FUSED GAMING**: Advanced theme customization capabilities

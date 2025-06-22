@@ -1,0 +1,103 @@
+# Bun Configuration for FormerlyIncarcerated.org
+# https://bun.sh/docs/runtime/bunfig
+
+[install]
+# Configure package installation
+cache = true
+exact = false
+production = false
+optional = true
+dev = true
+peer = true
+
+# Registry configuration
+registry = "https://registry.npmjs.org"
+
+# Install behavior
+auto = "yarn"
+frozenLockfile = false
+
+[install.scopes]
+# Scoped package registries can be configured here if needed
+
+[run]
+# Configure script execution
+shell = "bash"
+
+[test]
+# Test configuration
+preload = ["./jest.setup.js"]
+coverage = true
+coverageThreshold = 80
+
+[build]
+# Build configuration
+target = "node"
+format = "esm"
+splitting = true
+minify = true
+sourcemap = true
+
+# Environment-specific settings
+[env]
+NODE_ENV = "development"
+
+# Development server settings
+[dev]
+port = 3000
+host = "localhost"
+hot = true
+
+# Production settings
+[production]
+minify = true
+sourcemap = false
+splitting = true
+
+# Package manager settings
+[package-manager]
+# Use bun as the default package manager
+default = "bun"
+
+# Lockfile settings
+[lockfile]
+# Save exact versions in lockfile
+save-exact = true
+
+# Print settings
+print = "pretty"
+
+# Macros (if using bun macros)
+[macros]
+# Define any build-time macros here
+
+# Loader configuration
+[loader]
+".svg" = "file"
+".png" = "file"
+".jpg" = "file"
+".jpeg" = "file"
+".gif" = "file"
+".webp" = "file"
+".ico" = "file"
+".woff" = "file"
+".woff2" = "file"
+".eot" = "file"
+".ttf" = "file"
+".otf" = "file"
+
+# Define custom loaders for specific file types
+".md" = "text"
+".txt" = "text"
+".json" = "json"
+
+# Performance settings
+[performance]
+# Enable performance optimizations
+cache = true
+parallel = true
+
+# Security settings
+[security]
+# Enable security features
+audit = true

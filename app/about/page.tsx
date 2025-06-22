@@ -138,15 +138,15 @@ export default function AboutPage() {
         <div className="mt-8 flex flex-col gap-4 sm:flex-row sm:justify-center">
           <a
             href="/contact"
-            className="inline-flex items-center justify-center rounded-md bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm hover:bg-primary/90"
+            className="inline-flex items-center justify-center rounded-lg gradient-button text-primary-foreground border-theme-strong shadow-theme-lg hover-lift font-bold px-8 py-4 focus-visible-ring"
           >
             Get Involved
           </a>
           <a
-            href="/programs"
-            className="inline-flex items-center justify-center rounded-md border border-input bg-background px-6 py-3 text-sm font-semibold shadow-sm hover:bg-accent hover:text-accent-foreground"
+            href="/web3"
+            className="inline-flex items-center justify-center rounded-lg border-theme-strong text-primary hover:bg-primary/12 hover:border-primary backdrop-blur-md bg-card/80 shadow-theme hover-glow font-semibold px-8 py-4 focus-visible-ring"
           >
-            Learn About Our Programs
+            Learn About Web3
           </a>
         </div>
       </div>
