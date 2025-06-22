@@ -24,6 +24,8 @@ import { Button } from "@/components/ui/button"
 import Image from "next/image"
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import GovernanceShowcase from "@/components/governance-showcase"
+import Web3TechnologiesShowcase from "@/components/web3-technologies-showcase"
 
 // Logo component with fallback
 function ChainLogo({ chain }: { chain: any }) {
@@ -427,9 +429,9 @@ export default function Web3Page() {
             Exploring how breakthrough technologies create pathways to opportunity and empowerment
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
-          {web3Technologies.map((tech, index) => (
+          {web3Technologies.map((tech) => (
             <div
               key={tech.title}
               className="group relative overflow-hidden rounded-xl border-2 border-primary/20 dark:border-primary/30 bg-card/90 dark:bg-card/80 backdrop-blur-sm p-6 hover-lift transition-all duration-300 shadow-theme hover:shadow-theme-lg"
@@ -460,6 +462,16 @@ export default function Web3Page() {
             </div>
           ))}
         </div>
+      </div>
+
+      {/* Detailed Web3 Technologies Showcase */}
+      <div className="mx-auto mt-24">
+        <Web3TechnologiesShowcase />
+      </div>
+
+      {/* Governance Use Cases Showcase */}
+      <div className="mx-auto mt-24">
+        <GovernanceShowcase />
       </div>
 
       {/* Benefits Section */}
