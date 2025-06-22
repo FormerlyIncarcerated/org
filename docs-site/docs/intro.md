@@ -8,7 +8,7 @@ Welcome to the comprehensive documentation for **FormerlyIncarcerated.org** - a 
 
 ## 🚀 What is FormerlyIncarcerated.org?
 
-FormerlyIncarcerated.org is an innovative platform that leverages Web3 technology to break down systemic barriers and create unprecedented opportunities for formerly incarcerated individuals. Our mission is to empower personal transformation through:
+FormerlyIncarcerated.org is an innovative platform that leverages Web3 technology to break down systemic barriers and create unprecedented opportunities for formerly incarcerated individuals. Our mission is to empower personal transformation through, which could include:
 
 - **Second Chance Governance Tokens (SCG)** - Community-driven governance and economic participation
 - **Skill Verification NFTs** - Blockchain-based certification and credentialing

@@ -9,10 +9,10 @@ export const siteConfig = {
 
   // Social media links
   links: {
-    twitter: "https://twitter.com/FormerlyIncEmp",
-    github: "https://github.com/formerly-incarcerated-empowerment/platform",
-    linkedin: "https://linkedin.com/company/formerly-incarcerated-empowerment",
-    discord: "https://discord.gg/formerly-incarcerated-empowerment",
+    twitter: "https://twitter.com/",
+    github: "https://github.com/",
+    linkedin: "https://linkedin.com/company/",
+    discord: "https://discord.gg/fJPfsnZe9x",
     telegram: "https://t.me/formerly_incarcerated_empowerment",
     email: "contact@formerlyincarcerated.org",
     docs: "https://docs.formerlyincarcerated.org",
@@ -20,7 +20,7 @@ export const siteConfig = {
   
   // Contact information
   contact: {
-    email: "contact@formerlyincarcerated.org",
+    email: "hello@formerlyincarcerated.org",
     support: "support@formerlyincarcerated.org",
     partnerships: "partnerships@formerlyincarcerated.org",
   },
