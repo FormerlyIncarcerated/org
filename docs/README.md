@@ -1,10 +1,62 @@
-# F.Inc. Documentation
+# FormerlyIncarcerated.org Documentation
 
-Welcome to the comprehensive documentation for the F.Inc. - Formerly Incarcerated.org platform.
+This directory contains all project documentation organized by category.
 
-## 📚 Documentation Overview
+## 📁 Directory Structure
 
-This documentation provides detailed information about the platform's architecture, features, development process, and deployment procedures.
+### `/releases/`
+- Release notes and changelogs
+- GitHub release drafts
+- Patch notes and version history
+- Organization updates
+
+### `/deployment/`
+- Deployment guides and procedures
+- Infrastructure setup documentation
+- DNS and subdomain configuration
+- Production deployment plans
+
+### `/development/`
+- Development guides and workflows
+- Contributor documentation
+- Development environment setup
+- Coding standards and practices
+
+### `/project/`
+- Project status and structure documentation
+- High-level project planning
+- Architecture overviews
+- Project management documentation
+
+### `/technical/`
+- Technical architecture documentation
+- API documentation
+- Web3 integration guides
+- Database schemas and configurations
+
+## 🌐 Online Documentation
+
+For the complete, searchable documentation site, visit:
+**[docs.formerlyincarcerated.org](https://docs.formerlyincarcerated.org)**
+
+## 📋 Quick Links
+
+### For Contributors
+- [Development Guide](./development/)
+- [Project Structure](./project/)
+- [Technical Architecture](./technical/)
+
+### For Deployment
+- [Deployment Plans](./deployment/)
+- [Infrastructure Setup](./deployment/)
+
+### For Releases
+- [Release Notes](./releases/)
+- [Version History](./releases/)
+
+---
+
+*Building second chances through Web3 technology and community-driven support systems.*
 
 ## 🚀 Quick Start
 
