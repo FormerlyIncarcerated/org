@@ -10,7 +10,7 @@ export const siteConfig = {
   // Social media links
   links: {
     twitter: "https://twitter.com/",
-    github: "https://github.com/",
+    github: "https://github.com/FormerlyIncarcerated",
     linkedin: "https://linkedin.com/company/",
     discord: "https://discord.gg/fJPfsnZe9x",
     telegram: "https://t.me/formerly_incarcerated_empowerment",
