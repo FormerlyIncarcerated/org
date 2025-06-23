@@ -1,0 +1,19 @@
+<svg width="32" height="32" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <style>
+    .favicon-primary { fill: var(--logo-primary, #002447); }
+    .favicon-secondary { fill: var(--logo-secondary, #53d3d1); }
+    .favicon-stroke { stroke: var(--logo-primary, #002447); }
+    .favicon-keyhole-stroke { stroke: var(--logo-secondary, #53d3d1); }
+  </style>
+
+  <!-- Simplified Padlock for favicon -->
+  <g transform="translate(6, 6) scale(0.3)">
+    <!-- Lock Body -->
+    <rect x="10" y="30" width="40" height="50" rx="6" class="favicon-primary"/>
+    <!-- Lock Shackle (Slightly Unlocked) -->
+    <path d="M20 30V15C20 8 26 2 33 2C40 2 46 8 46 15V22" class="favicon-stroke" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- Keyhole -->
+    <circle cx="30" cy="55" r="5" class="favicon-secondary"/>
+    <path d="M30 60 V70" class="favicon-keyhole-stroke" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+</svg>
