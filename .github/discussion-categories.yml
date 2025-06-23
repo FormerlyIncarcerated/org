@@ -1,0 +1,131 @@
+# GitHub Discussions Categories Configuration
+# FormerlyIncarcerated.org Community Discussions Structure
+
+categories:
+  # Section 1: Project Management
+  - name: "📢 Community Announcements"
+    description: "Official updates, milestones, and community news from the FormerlyIncarcerated.org team"
+    format: "announcement"
+    section: "📋 Project Management"
+    
+  - name: "📈 Strategic Discussions" 
+    description: "Business strategy, partnerships, funding, and long-term vision conversations"
+    format: "open"
+    section: "📋 Project Management"
+    
+  - name: "🗳️ Community Polls"
+    description: "Feature prioritization, design choices, and community preference voting"
+    format: "poll"
+    section: "📋 Project Management"
+
+  # Section 2: Technical Development
+  - name: "🏗️ Architecture & Design"
+    description: "Technical architecture discussions, design patterns, and technology choices"
+    format: "open"
+    section: "🛠️ Technical Development"
+    
+  - name: "❓ Technical Q&A"
+    description: "Technical questions, implementation help, troubleshooting, and development support"
+    format: "question"
+    section: "🛠️ Technical Development"
+    
+  - name: "📢 Technical Announcements"
+    description: "Breaking changes, new releases, security updates, and API changes"
+    format: "announcement"
+    section: "🛠️ Technical Development"
+
+  # Section 3: Web3 & Blockchain
+  - name: "⛓️ Blockchain Development"
+    description: "Smart contract discussions, tokenomics, DeFi integrations, and Web3 development"
+    format: "open"
+    section: "🔐 Web3 & Blockchain"
+    
+  - name: "🔒 Security & Privacy"
+    description: "Security questions, privacy implementation, zero-knowledge proofs, and audit discussions"
+    format: "question"
+    section: "🔐 Web3 & Blockchain"
+    
+  - name: "🚨 Security Announcements"
+    description: "Security updates, vulnerability disclosures, and audit results"
+    format: "announcement"
+    section: "🔐 Web3 & Blockchain"
+
+  # Section 4: Issues & Support
+  - name: "❓ Help & Support"
+    description: "User support, how-to questions, platform usage help, and general troubleshooting"
+    format: "question"
+    section: "🐛 Issues & Support"
+    
+  - name: "🐛 Bug Reports & Issues"
+    description: "Bug reporting, issue discussion, collaborative debugging, and solution finding"
+    format: "question"
+    section: "🐛 Issues & Support"
+    
+  - name: "📚 Documentation Q&A"
+    description: "Documentation questions, clarifications, improvement suggestions, and how-to guides"
+    format: "question"
+    section: "🐛 Issues & Support"
+
+  # Section 5: Community & Impact
+  - name: "💬 General Discussion"
+    description: "Community chat, introductions, networking, and general conversations"
+    format: "open"
+    section: "🤝 Community & Impact"
+    
+  - name: "🌟 Success Stories"
+    description: "Impact stories, user testimonials, case studies, and community achievements"
+    format: "open"
+    section: "🤝 Community & Impact"
+    
+  - name: "📊 Impact Polls"
+    description: "Community needs assessment, satisfaction surveys, and impact measurement"
+    format: "poll"
+    section: "🤝 Community & Impact"
+
+  # Section 6: Research & Innovation
+  - name: "🧪 Research & Development"
+    description: "Research ideas, experimental features, innovation discussions, and proof of concepts"
+    format: "open"
+    section: "🔬 Research & Innovation"
+    
+  - name: "📊 Data & Analytics"
+    description: "Data analysis questions, metrics discussions, research methodology, and insights"
+    format: "question"
+    section: "🔬 Research & Innovation"
+    
+  - name: "🔮 Future Vision"
+    description: "Long-term vision, emerging trends, future planning, and strategic foresight"
+    format: "open"
+    section: "🔬 Research & Innovation"
+
+  # Section 7: Governance
+  - name: "📜 Governance Announcements"
+    description: "DAO proposals, governance decisions, policy updates, and official governance communications"
+    format: "announcement"
+    section: "🏛️ Governance"
+    
+  - name: "🗳️ Governance Proposals"
+    description: "DAO voting, governance decisions, community consensus building, and proposal discussions"
+    format: "poll"
+    section: "🏛️ Governance"
+    
+  - name: "⚖️ Policy Discussions"
+    description: "Policy development, compliance discussions, legal considerations, and regulatory topics"
+    format: "open"
+    section: "🏛️ Governance"
+
+  # Section 8: Use Cases
+  - name: "💼 Employment Solutions"
+    description: "Employment features, job matching, career development, and workforce integration"
+    format: "open"
+    section: "💼 Use Cases"
+    
+  - name: "🏦 Financial Services"
+    description: "Credit scoring, banking integration, financial literacy, and economic empowerment"
+    format: "question"
+    section: "💼 Use Cases"
+    
+  - name: "🏠 Housing Solutions"
+    description: "Housing verification, landlord partnerships, housing stability, and accommodation support"
+    format: "open"
+    section: "💼 Use Cases"
