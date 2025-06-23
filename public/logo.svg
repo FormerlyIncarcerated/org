@@ -1,0 +1,27 @@
+<svg width="320" height="120" viewBox="0 0 320 120" xmlns="http://www.w3.org/2000/svg" fill="none">
+  <style>
+    .logo-primary { fill: var(--logo-primary, #002447); }
+    .logo-secondary { fill: var(--logo-secondary, #53d3d1); }
+    .logo-accent { fill: var(--logo-accent, #feb249); }
+    .logo-highlight { fill: var(--logo-highlight, #fbeceb); }
+    .logo-stroke { stroke: var(--logo-primary, #002447); }
+    .logo-keyhole-stroke { stroke: var(--logo-secondary, #53d3d1); }
+    .logo-accent-stroke { stroke: var(--logo-accent, #feb249); }
+  </style>
+
+  <!-- Padlock -->
+  <g transform="translate(20, 20)">
+    <!-- Lock Body -->
+    <rect x="10" y="30" width="40" height="50" rx="6" class="logo-primary"/>
+    <!-- Lock Shackle (Symmetrical and Slightly Unlocked) -->
+    <path d="M20 30V15C20 8 26 2 33 2C40 2 46 8 46 15V22" class="logo-stroke" stroke-width="6" stroke-linecap="round" fill="none"/>
+    <!-- Keyhole -->
+    <circle cx="30" cy="55" r="5" class="logo-secondary"/>
+    <path d="M30 60 V70" class="logo-keyhole-stroke" stroke-width="4" stroke-linecap="round" fill="none"/>
+  </g>
+
+  <!-- Text -->
+  <text x="80" y="55" font-family="Arial, Helvetica, sans-serif" font-size="48" class="logo-primary" font-weight="bold">F.Inc.</text>
+  <text x="80" y="85" font-family="Arial, Helvetica, sans-serif" font-size="20" class="logo-accent" letter-spacing="1">FORMERLY</text>
+  <text x="80" y="102" font-family="Arial, Helvetica, sans-serif" font-size="20" class="logo-accent" letter-spacing="1">INCARCERATED.ORG</text>
+</svg>
