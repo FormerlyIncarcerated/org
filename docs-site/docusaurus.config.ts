@@ -5,8 +5,8 @@ import type * as Preset from '@docusaurus/preset-classic';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'FormerlyIncarcerated.org Documentation',
-  tagline: 'Building second chances through Web3 technology and community-driven support systems',
+  title: 'FormerlyIncarcerated.org',
+  tagline: 'Building Second Chances Through Web3 Technology',
   favicon: 'img/favicon.ico',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -45,7 +45,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/4eckd/formerlyincarcerated/tree/master/docs-site/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config: Config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/4eckd/formerlyincarcerated/tree/master/docs-site/',
+            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -73,7 +73,7 @@ const config: Config = {
     // Replace with your project's social card
     image: 'img/docusaurus-social-card.jpg',
     navbar: {
-      title: 'F.Inc. Docs',
+      title: 'FormerlyIncarcerated.org',
       logo: {
         alt: 'FormerlyIncarcerated.org Logo',
         src: 'img/logo.svg',
@@ -85,15 +85,16 @@ const config: Config = {
           position: 'left',
           label: 'Documentation',
         },
-        {to: '/blog', label: 'Updates', position: 'left'},
+        {to: '/docs/whitepaper-github', label: 'Whitepaper', position: 'left'},
+        {to: '/docs/roadmap', label: 'Roadmap', position: 'left'},
         {
-          href: 'https://formerlyincarcerated.org',
-          label: 'Main Site',
+          href: 'https://github.com/FormerlyIncarcerated',
+          label: 'GitHub',
           position: 'right',
         },
         {
-          href: 'https://github.com/4eckd/formerlyincarcerated',
-          label: 'GitHub',
+          href: 'https://formerlyincarcerated.org',
+          label: 'Main Site',
           position: 'right',
         },
       ],
@@ -105,12 +106,16 @@ const config: Config = {
           title: 'Documentation',
           items: [
             {
-              label: 'Getting Started',
+              label: 'Get Started',
               to: '/docs/intro',
             },
             {
-              label: 'Technical Guides',
-              to: '/docs/technical',
+              label: 'Whitepaper',
+              to: '/docs/whitepaper-github',
+            },
+            {
+              label: 'Technical Docs',
+              to: '/docs/technical/WEB3_ARCHITECTURE',
             },
           ],
         },
@@ -122,12 +127,12 @@ const config: Config = {
               href: 'https://formerlyincarcerated.org',
             },
             {
-              label: 'Discord',
-              href: 'https://discord.gg/formerly-incarcerated-empowerment',
+              label: 'Contact',
+              href: 'https://formerlyincarcerated.org/contact',
             },
             {
-              label: 'Twitter',
-              href: 'https://twitter.com/FormerlyIncEmp',
+              label: 'Support',
+              href: 'https://formerlyincarcerated.org/support',
             },
           ],
         },
@@ -135,16 +140,16 @@ const config: Config = {
           title: 'Development',
           items: [
             {
-              label: 'Updates',
-              to: '/blog',
-            },
-            {
               label: 'GitHub',
-              href: 'https://github.com/4eckd/formerlyincarcerated',
+              href: 'https://github.com/FormerlyIncarcerated',
             },
             {
-              label: 'Organization',
-              href: 'https://github.com/FormerlyIncarcerated',
+              label: 'Roadmap',
+              to: '/docs/roadmap',
+            },
+            {
+              label: 'Contributing',
+              href: 'https://github.com/FormerlyIncarcerated/formerlyincarcerated',
             },
           ],
         },

@@ -169,9 +169,9 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Update Algolia search index
-        uses: algolia/algoliasearch-netlify@master
-        with:
-          algolia_api_key: ${{ secrets.ALGOLIA_API_KEY }}
-          algolia_application_id: ${{ secrets.ALGOLIA_APPLICATION_ID }}
-          algolia_index_name: formerlyincarcerated_docs
-          site_url: https://docs.formerlyincarcerated.org
+        run: |
+          echo "Algolia search index update would be triggered here"
+          echo "Site URL: https://docs.formerlyincarcerated.org"
+          echo "Index: formerlyincarcerated_docs"
+          # TODO: Implement proper Algolia indexing via API or crawler
+          # This could be done via Algolia's REST API or by triggering their crawler

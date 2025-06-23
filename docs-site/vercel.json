@@ -55,13 +55,6 @@
       ]
     }
   ],
-  "redirects": [
-    {
-      "source": "/docs/(.*)",
-      "destination": "/$1",
-      "permanent": true
-    }
-  ],
   "cleanUrls": true,
   "trailingSlash": false
 }

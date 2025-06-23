@@ -4,29 +4,12 @@
     {
       "src": "package.json",
       "use": "@vercel/next"
-    },
-    {
-      "src": "docs-site/package.json",
-      "use": "@vercel/static-build",
-      "config": {
-        "distDir": "build"
-      }
     }
   ],
   "routes": [
     {
-      "src": "/docs/(.*)",
-      "dest": "/docs-site/$1"
-    },
-    {
       "src": "/(.*)",
       "dest": "/$1"
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/docs/:path*",
-      "destination": "https://docs.formerlyincarcerated.org/:path*"
     }
   ],
   "headers": [
@@ -61,6 +44,8 @@
       "runtime": "nodejs18.x"
     }
   },
-  "regions": ["iad1"],
+  "regions": [
+    "iad1"
+  ],
   "framework": "nextjs"
 }

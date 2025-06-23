@@ -13,16 +13,25 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
  Create as many sidebars as you want.
  */
 const sidebars: SidebarsConfig = {
-  // Manual sidebar with only existing files
+  // Custom sidebar with organized structure
   tutorialSidebar: [
     'intro',
     {
       type: 'category',
-      label: '🛠 Technical Documentation',
+      label: 'Whitepaper',
+      items: [
+        'whitepaper-github',
+        'whitepaper',
+      ],
+    },
+    'roadmap',
+    {
+      type: 'category',
+      label: 'Technical Documentation',
       items: [
         'technical/WEB3_ARCHITECTURE',
-        'technical/theming',
         'technical/deployment',
+        'technical/theming',
       ],
     },
   ],

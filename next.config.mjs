@@ -14,39 +14,53 @@ const nextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    formats: ['image/webp', 'image/avif'],
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    unoptimized: true,
   },
   experimental: {
     webpackBuildWorker: true,
     parallelServerBuildTraces: true,
     parallelServerCompiles: true,
   },
-  // Performance optimizations
-  compress: true,
-  poweredByHeader: false,
-  // Security headers
+  async rewrites() {
+    return [
+      // Local development docs subdomain routing
+      {
+        source: '/docs/:path*',
+        destination: 'http://localhost:3001/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'docs.localhost',
+          },
+        ],
+      },
+      // Fallback for docs routes on main domain - proxy to docs site
+      {
+        source: '/docs/:path*',
+        destination: 'http://localhost:3001/:path*',
+      },
+    ]
+  },
   async headers() {
     return [
       {
         source: '/(.*)',
         headers: [
           {
-            key: 'X-Frame-Options',
-            value: 'DENY',
-          },
-          {
             key: 'X-Content-Type-Options',
             value: 'nosniff',
           },
           {
-            key: 'Referrer-Policy',
-            value: 'origin-when-cross-origin',
+            key: 'X-Frame-Options',
+            value: 'DENY',
           },
           {
-            key: 'Permissions-Policy',
-            value: 'camera=(), microphone=(), geolocation=()',
+            key: 'X-XSS-Protection',
+            value: '1; mode=block',
+          },
+          {
+            key: 'Referrer-Policy',
+            value: 'strict-origin-when-cross-origin',
           },
         ],
       },

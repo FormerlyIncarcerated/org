@@ -10,69 +10,6 @@ body {
   .text-balance {
     text-wrap: balance;
   }
-
-  /* Theme-aware text shadows */
-  .text-shadow-theme {
-    text-shadow: 0 2px 8px hsl(var(--foreground) / 0.1), 0 1px 3px hsl(var(--foreground) / 0.05);
-  }
-
-  .text-shadow-theme-strong {
-    text-shadow: 0 2px 8px hsl(var(--foreground) / 0.2), 0 1px 3px hsl(var(--foreground) / 0.1);
-  }
-
-  .text-shadow-theme-subtle {
-    text-shadow: 0 1px 3px hsl(var(--foreground) / 0.08);
-  }
-
-  /* Enhanced gradient text with better contrast and readability */
-  .text-gradient-enhanced {
-    background: linear-gradient(135deg,
-      hsl(var(--chart-1)) 0%,
-      hsl(var(--chart-2)) 35%,
-      hsl(var(--chart-4)) 70%,
-      hsl(var(--chart-1)) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    background-size: 200% 200%;
-    animation: gradient-shift 3s ease-in-out infinite;
-    position: relative;
-  }
-
-  .text-gradient-readable {
-    background: linear-gradient(90deg,
-      hsl(var(--chart-1)) 0%,
-      hsl(var(--chart-2)) 50%,
-      hsl(var(--chart-4)) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    text-shadow: 0 2px 4px hsl(var(--foreground) / 0.1);
-  }
-
-  .text-gradient-simple {
-    background: linear-gradient(90deg,
-      hsl(var(--primary)) 0%,
-      hsl(var(--chart-1)) 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-  }
-
-  /* Theme-aware pattern overlay */
-  .pattern-overlay-theme {
-    background-image: radial-gradient(circle at 1px 1px, hsl(var(--foreground) / 0.1) 1px, transparent 0);
-    background-size: 24px 24px;
-  }
-
-  /* Gradient animation */
-  @keyframes gradient-shift {
-    0%, 100% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-  }
 }
 
 @layer base {
@@ -110,6 +47,13 @@ body {
     --sidebar-accent-foreground: 240 5.9% 10%;
     --sidebar-border: 220 13% 91%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Mobile menu button customization variables */
+    --mobile-button-size: 2.25rem;
+    --mobile-button-padding: 0.5rem;
+    --mobile-button-border-radius: var(--radius);
+    --mobile-button-border-width: 1px;
+    --mobile-icon-size: 1.25rem;
   }
   .dark {
     --background: 0 0% 3.9%;
@@ -144,6 +88,13 @@ body {
     --sidebar-accent-foreground: 240 4.8% 95.9%;
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 217.2 91.2% 59.8%;
+
+    /* Mobile menu button customization variables for dark mode */
+    --mobile-button-size: 2.25rem;
+    --mobile-button-padding: 0.5rem;
+    --mobile-button-border-radius: var(--radius);
+    --mobile-button-border-width: 1px;
+    --mobile-icon-size: 1.25rem;
   }
 }
 
@@ -153,5 +104,83 @@ body {
   }
   body {
     @apply bg-background text-foreground;
+  }
+}
+
+@layer components {
+  /* Mobile menu button - fully themeable with CSS custom properties */
+  .mobile-menu-button {
+    /* Layout and positioning */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    /* Responsive visibility */
+    display: none;
+
+    /* Size and spacing */
+    width: var(--mobile-button-size);
+    height: var(--mobile-button-size);
+    padding: var(--mobile-button-padding);
+
+    /* Border and radius */
+    border: var(--mobile-button-border-width) solid hsl(var(--border));
+    border-radius: var(--mobile-button-border-radius);
+
+    /* Colors - using CSS custom properties that inherit from theme */
+    background-color: var(--button-bg, hsl(var(--background)));
+    color: var(--button-color, hsl(var(--foreground)));
+
+    /* Typography */
+    font-size: var(--button-font-size, 0.875rem);
+    font-weight: var(--button-font-weight, 500);
+
+    /* Transitions */
+    transition: var(--button-transition, all 0.2s ease-in-out);
+
+    /* Focus and accessibility */
+    outline: none;
+    cursor: pointer;
+
+    /* Focus visible styles */
+    &:focus-visible {
+      outline: var(--button-focus-outline, 2px solid hsl(var(--ring)));
+      outline-offset: var(--button-focus-offset, 2px);
+    }
+
+    /* Hover state */
+    &:hover {
+      background-color: var(--button-hover-bg, hsl(var(--accent)));
+      color: var(--button-hover-color, hsl(var(--accent-foreground)));
+      border-color: var(--button-hover-border, hsl(var(--border)));
+    }
+
+    /* Active state */
+    &:active {
+      transform: var(--button-active-transform, translateY(1px));
+      background-color: var(--button-active-bg, hsl(var(--muted)));
+    }
+
+    /* Disabled state */
+    &:disabled {
+      opacity: var(--button-disabled-opacity, 0.5);
+      cursor: not-allowed;
+      pointer-events: none;
+    }
+
+    /* Show on mobile screens */
+    @media (max-width: 767px) {
+      display: inline-flex;
+    }
+  }
+
+  /* Menu icon styling */
+  .menu-icon {
+    width: var(--mobile-icon-size);
+    height: var(--mobile-icon-size);
+    color: inherit;
+    transition: var(--icon-transition, color 0.2s ease-in-out);
+    pointer-events: none;
+    flex-shrink: 0;
   }
 }
