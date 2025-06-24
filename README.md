@@ -221,11 +221,48 @@ We welcome contributions from the community! Please read our contributing guidel
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
+## 👥 Contributors
+
+We're grateful to all the contributors who have helped build this platform:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/4eckd">
+        <img src="https://github.com/4eckd.png" width="100px;" alt="4eckd"/>
+        <br />
+        <sub><b>4eckd</b></sub>
+      </a>
+      <br />
+      <sub>Platform Architecture & Web3 Integration</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/FormerlyIncarcerated">
+        <img src="https://github.com/FormerlyIncarcerated.png" width="100px;" alt="FormerlyIncarcerated"/>
+        <br />
+        <sub><b>FormerlyIncarcerated</b></sub>
+      </a>
+      <br />
+      <sub>Organization & Mission Leadership</sub>
+    </td>
+  </tr>
+</table>
+
+### 🤝 How to Become a Contributor
+
+We welcome contributions from:
+- **Formerly incarcerated individuals** sharing experiences and feedback
+- **Developers** contributing code, documentation, and technical expertise
+- **Community advocates** helping with outreach and support
+- **Organizations** providing partnerships and resources
+
+See our [Contributing Guidelines](.github/CONTRIBUTING.md) to get started!
+
 ## 📞 Contact
 
-- **Email**: contact@formerlyincarcerated.org
-- **Twitter**: [@FormerlyIncEmp](https://twitter.com/FormerlyIncEmp)
-- **Discord**: [Join our community](https://discord.gg/formerly-incarcerated-empowerment)
+- **GitHub**: [FormerlyIncarcerated Organization](https://github.com/FormerlyIncarcerated)
+- **Discussions**: [Community Discussions](https://github.com/orgs/FormerlyIncarcerated/discussions)
+- **Issues**: [Report Issues](https://github.com/FormerlyIncarcerated/org/issues)
 - **Website**: [formerlyincarcerated.org](https://formerlyincarcerated.org)
 
 ## 🙏 Acknowledgments
