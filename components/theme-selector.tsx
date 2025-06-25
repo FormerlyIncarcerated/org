@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Sun, Moon, Monitor, Palette, Shield, Leaf, Waves, Mountain, Sunset, Anchor, Building, Zap, CloudSnow, Compass } from "lucide-react"
+import { Sun, Moon, Monitor, Palette, Shield, Leaf, Waves, Mountain, Sunset, Anchor } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/config"
 
