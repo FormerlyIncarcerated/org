@@ -329,6 +329,67 @@ bun type-check            # TypeScript type checking
 - **Jest** and React Testing Library for comprehensive testing
 - **85%+ test coverage** requirement for all new features
 
+## 🔗 **Links & Resources**
+
+### **Platform**
+- **GitHub Organization**: https://github.com/FormerlyIncarcerated
+- **Main Repository**: https://github.com/FormerlyIncarcerated/org
+- **Community Discussions**: https://github.com/orgs/FormerlyIncarcerated/discussions
+- **Documentation**: https://docs.formerlyincarcerated.org
+
+### **Community**
+- **GitHub Discussions**: https://github.com/orgs/FormerlyIncarcerated/discussions
+- **Issues & Support**: https://github.com/FormerlyIncarcerated/org/issues
+- **Feature Requests**: Use GitHub Discussions with Feature Request template
+- **Success Stories**: Share in Community & Impact discussions
+
+### **Support**
+- **General Questions**: Create a discussion in the General category
+- **Technical Support**: Create an issue with the bug report template
+- **Security Issues**: Use GitHub Security Advisories
+- **Partnership Inquiries**: Create a discussion in Strategic Discussions
+
+## 👥 **Contributors**
+
+We're grateful to all the contributors who have helped build this platform:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/4eckd">
+        <img src="https://github.com/4eckd.png" width="100px;" alt="4eckd"/>
+        <br />
+        <sub><b>4eckd</b></sub>
+      </a>
+      <br />
+      <sub>Platform Architecture & Web3 Integration</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/FormerlyIncarcerated">
+        <img src="https://github.com/FormerlyIncarcerated.png" width="100px;" alt="FormerlyIncarcerated"/>
+        <br />
+        <sub><b>FormerlyIncarcerated</b></sub>
+      </a>
+      <br />
+      <sub>Organization & Mission Leadership</sub>
+    </td>
+  </tr>
+</table>
+
+### 🤝 How to Become a Contributor
+
+We welcome contributions from:
+- **Formerly incarcerated individuals** sharing experiences and feedback
+- **Developers** contributing code, documentation, and technical expertise
+- **Community advocates** helping with outreach and support
+- **Organizations** providing partnerships and resources
+
+See our [Contributing Guidelines](.github/CONTRIBUTING.md) to get started!
+
+## 📄 **License**
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
 ---
 
 **This comprehensive platform represents a complete solution for empowering formerly incarcerated individuals through Web3 technology, professional community infrastructure, and scalable technical architecture.**
