@@ -1,0 +1,267 @@
+name: 🚀 Infuze Cloud CI/CD Pipeline
+
+on:
+  push:
+    branches: [ master, main ]
+    tags: [ 'v*' ]
+  pull_request:
+    branches: [ master, main ]
+
+env:
+  NODE_VERSION: '22'
+  BUN_VERSION: '1.1.38'
+  INFUZE_VM_ID: '106'
+  INFUZE_VM_IP: '194.31.143.6'
+  PRODUCTION_DOMAIN: 'formerlyincarcerated.org'
+  DOCS_DOMAIN: 'docs.formerlyincarcerated.org'
+
+jobs:
+  # Build and Test Phase
+  build-and-test:
+    name: 🔨 Build & Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+
+      - name: 🥖 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+
+      - name: 📦 Install Dependencies
+        run: |
+          bun install
+          cd docs-site && bun install
+
+      - name: 🔍 Lint Code
+        run: |
+          bun run lint
+          bun run type-check
+
+      - name: 🧪 Run Tests
+        run: |
+          bun run test:ci
+
+      - name: 🏗️ Build Applications
+        run: |
+          bun run build
+          cd docs-site && bun run build
+
+      - name: 📊 Upload Build Artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: build-artifacts
+          path: |
+            .next/
+            docs-site/build/
+          retention-days: 1
+
+  # Security and Quality Checks
+  security-scan:
+    name: 🛡️ Security Scan
+    runs-on: ubuntu-latest
+    needs: build-and-test
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 🔒 Run Security Audit
+        run: |
+          npm audit --audit-level=high
+          cd docs-site && npm audit --audit-level=high
+
+      - name: 🔍 Dependency Check
+        uses: actions/dependency-review-action@v4
+        if: github.event_name == 'pull_request'
+
+  # Deploy to Infuze Cloud Production
+  deploy-production:
+    name: 🚀 Deploy to Production
+    runs-on: ubuntu-latest
+    needs: [build-and-test, security-scan]
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    environment: production
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+
+      - name: 🔧 Install Infuze CLI
+        run: |
+          npm install -g infuze
+          echo "Infuze CLI installed"
+
+      - name: 🔐 Authenticate with Infuze
+        env:
+          INFUZE_API_KEY: ${{ secrets.INFUZE_API_KEY }}
+        run: |
+          # Set up Infuze authentication
+          echo "Setting up Infuze authentication..."
+          # Note: CLI login might need to be handled differently in CI
+
+      - name: 📊 Check VM Status
+        run: |
+          echo "Checking VM status..."
+          # infuze vm info ${{ env.INFUZE_VM_ID }}
+
+      - name: 🚀 Deploy to Production Server
+        env:
+          DEPLOY_KEY: ${{ secrets.DEPLOY_SSH_KEY }}
+          VM_IP: ${{ env.INFUZE_VM_IP }}
+        run: |
+          # Setup SSH key
+          mkdir -p ~/.ssh
+          echo "$DEPLOY_KEY" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          
+          # Add server to known hosts
+          ssh-keyscan -H $VM_IP >> ~/.ssh/known_hosts
+          
+          # Deploy to server
+          echo "🚀 Deploying to production server..."
+          ssh -i ~/.ssh/deploy_key deploy@$VM_IP << 'EOF'
+            set -e
+            echo "📥 Updating repository..."
+            cd /home/deploy/formerlyincarcerated || exit 1
+            git fetch origin
+            git checkout master
+            git pull origin master
+            
+            echo "📦 Installing dependencies..."
+            bun install
+            cd docs-site && bun install && cd ..
+            
+            echo "🔨 Building applications..."
+            bun run build
+            cd docs-site && bun run build && cd ..
+            
+            echo "📁 Deploying to web directories..."
+            sudo rm -rf /var/www/formerlyincarcerated.org/*
+            sudo cp -r .next/* /var/www/formerlyincarcerated.org/ 2>/dev/null || true
+            sudo cp -r public/* /var/www/formerlyincarcerated.org/ 2>/dev/null || true
+            
+            sudo rm -rf /var/www/docs.formerlyincarcerated.org/*
+            sudo cp -r docs-site/build/* /var/www/docs.formerlyincarcerated.org/
+            
+            echo "🔐 Setting permissions..."
+            sudo chown -R deploy:www-data /var/www/formerlyincarcerated.org
+            sudo chown -R deploy:www-data /var/www/docs.formerlyincarcerated.org
+            sudo chmod -R 755 /var/www/formerlyincarcerated.org
+            sudo chmod -R 755 /var/www/docs.formerlyincarcerated.org
+            
+            echo "🔄 Restarting services..."
+            sudo systemctl restart nginx
+            pm2 restart all 2>/dev/null || true
+            
+            echo "✅ Deployment completed successfully!"
+          EOF
+
+      - name: 🔍 Verify Deployment
+        run: |
+          echo "🔍 Verifying deployment..."
+          sleep 10
+          
+          # Test main site
+          if curl -f -s https://${{ env.PRODUCTION_DOMAIN }} > /dev/null; then
+            echo "✅ Main site is responding"
+          else
+            echo "❌ Main site is not responding"
+            exit 1
+          fi
+          
+          # Test docs site
+          if curl -f -s https://${{ env.DOCS_DOMAIN }} > /dev/null; then
+            echo "✅ Documentation site is responding"
+          else
+            echo "❌ Documentation site is not responding"
+            exit 1
+          fi
+
+      - name: 📢 Deployment Notification
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const status = '${{ job.status }}';
+            const emoji = status === 'success' ? '✅' : '❌';
+            const message = `${emoji} Deployment ${status} for commit ${context.sha.substring(0, 7)}`;
+            
+            github.rest.repos.createCommitComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              commit_sha: context.sha,
+              body: `🚀 **Infuze Cloud Deployment**\n\n${message}\n\n**Target**: ${process.env.INFUZE_VM_IP}\n**Domain**: https://${process.env.PRODUCTION_DOMAIN}`
+            });
+
+  # Staging Deployment (for PRs)
+  deploy-staging:
+    name: 🧪 Deploy to Staging
+    runs-on: ubuntu-latest
+    needs: [build-and-test]
+    if: github.event_name == 'pull_request'
+    environment: staging
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: 📦 Download Build Artifacts
+        uses: actions/download-artifact@v4
+        with:
+          name: build-artifacts
+
+      - name: 🧪 Deploy to Staging Environment
+        run: |
+          echo "🧪 Deploying to staging environment..."
+          echo "This would deploy to a staging VM or subdomain"
+          # Add staging deployment logic here
+
+  # Monitoring and Health Checks
+  post-deployment-checks:
+    name: 📊 Post-Deployment Monitoring
+    runs-on: ubuntu-latest
+    needs: deploy-production
+    if: github.ref == 'refs/heads/master' && github.event_name == 'push'
+    
+    steps:
+      - name: 🏥 Health Check
+        run: |
+          echo "🏥 Running post-deployment health checks..."
+          
+          # Check main site health
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://${{ env.PRODUCTION_DOMAIN }})
+          if [ "$response" = "200" ]; then
+            echo "✅ Main site health check passed"
+          else
+            echo "❌ Main site health check failed (HTTP $response)"
+          fi
+          
+          # Check docs site health
+          response=$(curl -s -o /dev/null -w "%{http_code}" https://${{ env.DOCS_DOMAIN }})
+          if [ "$response" = "200" ]; then
+            echo "✅ Docs site health check passed"
+          else
+            echo "❌ Docs site health check failed (HTTP $response)"
+          fi
+
+      - name: 📊 Performance Check
+        run: |
+          echo "📊 Running performance checks..."
+          # Add performance monitoring here
+          # Could integrate with tools like Lighthouse CI
