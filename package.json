@@ -1,8 +1,8 @@
 {
-  "name": "formerly-incarcerated-empowerment",
-  "version": "1.0.0",
+  "name": "formerly-incarcerated",
+  "version": "2.1.1",
   "private": false,
-  "description": "Web3 empowerment platform for formerly incarcerated individuals - building second chances through blockchain technology",
+  "description": "Web3 empowerment platform for formerly incarcerated individuals - building second chances through blockchain technology and community support",
   "keywords": [
     "web3",
     "empowerment",
@@ -10,10 +10,23 @@
     "blockchain",
     "second-chance",
     "reentry",
-    "social-impact"
+    "social-impact",
+    "decentralized-identity",
+    "community-support",
+    "prison-blues-theme",
+    "accessibility",
+    "documentation"
   ],
   "author": "Formerly Incarcerated - No More Middleman",
+  "license": "MIT",
   "homepage": "https://formerlyincarcerated.org",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/FormerlyIncarcerated/org.git"
+  },
+  "bugs": {
+    "url": "https://github.com/FormerlyIncarcerated/org/issues"
+  },
   "scripts": {
     "dev": "next dev",
     "dev:docs": "node scripts/dev-with-docs.js",

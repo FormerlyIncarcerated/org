@@ -2,9 +2,9 @@
 
 > Breaking barriers, building futures through Web3 technology and community-driven empowerment.
 
-[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/formerlyincarcerated/platform/releases)
+[![Version](https://img.shields.io/badge/version-2.1.1-blue.svg)](https://github.com/FormerlyIncarcerated/org/releases)
 [![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
-[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/formerlyincarcerated/platform/actions)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/FormerlyIncarcerated/org/actions)
 
 ## 🌟 Mission
 

@@ -1,15 +1,15 @@
 {
-  "name": "Formerly Incarcerated Empowerment Platform",
-  "short_name": "FI Empowerment",
-  "description": "Empowering formerly incarcerated individuals through Web3 technology, blockchain-based opportunities, and community-driven support systems.",
+  "name": "FormerlyIncarcerated.org",
+  "short_name": "FormerlyIncarcerated",
+  "description": "Building second chances through Web3 technology, decentralized identity, and community-driven support systems. Featuring the Prison Blues theme system.",
   "start_url": "/",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#06b6d4",
+  "background_color": "#1e293b",
+  "theme_color": "#2A6F97",
   "orientation": "portrait-primary",
   "scope": "/",
   "lang": "en",
-  "categories": ["social", "empowerment", "web3", "blockchain", "community"],
+  "categories": ["social", "empowerment", "web3", "blockchain", "community", "reentry", "second-chance"],
   "icons": [
     {
       "src": "/favicon.svg",
@@ -29,7 +29,7 @@
       "src": "/og-image.svg",
       "sizes": "1200x630",
       "type": "image/svg+xml",
-      "label": "Formerly Incarcerated Empowerment Platform Homepage"
+      "label": "FormerlyIncarcerated.org Platform Homepage"
     }
   ],
   "related_applications": [],
