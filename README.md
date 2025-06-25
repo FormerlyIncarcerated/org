@@ -1,149 +1,277 @@
-# 🔓 FormerlyIncarcerated.org
+# FormerlyIncarcerated.org
 
-[![Profile Views](https://komarev.com/ghpvc/?username=FormerlyIncarcerated&label=Profile%20Views&color=0891b2&style=flat)](https://github.com/FormerlyIncarcerated)
+> Breaking barriers, building futures through Web3 technology and community-driven empowerment.
 
-**Building second chances through Web3 technology and community-driven support systems.**
+[![Version](https://img.shields.io/badge/version-1.0.0-blue.svg)](https://github.com/formerlyincarcerated/platform/releases)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Build Status](https://img.shields.io/badge/build-passing-brightgreen.svg)](https://github.com/formerlyincarcerated/platform/actions)
 
----
+## 🌟 Mission
 
-## 🌟 About Our Mission
+To empower formerly incarcerated individuals through innovative Web3 technology, creating sustainable pathways to economic independence, community integration, and personal growth.
 
-**FormerlyIncarcerated.org** is an innovative platform that leverages Web3 technology to break down systemic barriers and create unprecedented opportunities for formerly incarcerated individuals. We're building a future where:
+## 🚀 Features
 
-- 🚀 **Economic Independence** through blockchain-based opportunities
-- 🤝 **Community Integration** via decentralized support networks  
-- 💡 **Personal Growth** through innovative technology education
-- 🔗 **Sustainable Pathways** to long-term success and empowerment
+### � **v1.0.0 - Complete Platform Launch** (December 22, 2024)
 
----
+#### **Core Platform Features**
+- **Revolutionary Web3 Technologies Showcase** - Comprehensive exploration of blockchain, DeFi, smart contracts, and decentralized governance
+- **Interactive Technology Demonstrations** - Real-world use cases for formerly incarcerated individuals
+- **Community-Driven Governance** - Transparent decision-making through blockchain technology
+- **Comprehensive Survey System** - Multi-step feedback collection with real-time data storage
+- **6-Theme Support** - Default, Purple, Blue, Green, Amber, and Red themes with full accessibility
+- **Mobile-First Design** - Responsive across all devices with touch-optimized interactions
 
-## 🌐 Connect With Us
+#### **Technical Excellence**
+- **Next.js 15 & React 19** - Latest framework with App Router and cutting-edge features
+- **TypeScript** - Full type safety and enhanced developer experience
+- **Supabase Integration** - Real-time database with secure data handling
+- **Comprehensive SEO** - Meta tags, Open Graph, Twitter Cards, and structured data
+- **Performance Optimized** - Static site generation with 18 optimized pages
+- **Security First** - OWASP compliant headers and privacy-focused design
 
-[![Website](https://img.shields.io/badge/Website-0891b2?style=for-the-badge&logo=globe&logoColor=white)](https://formerlyincarcerated.org)
-[![Documentation](https://img.shields.io/badge/Documentation-1e293b?style=for-the-badge&logo=gitbook&logoColor=white)](https://docs.formerlyincarcerated.org)
-[![Discord](https://img.shields.io/badge/Discord-5865F2?style=for-the-badge&logo=discord&logoColor=white)](https://discord.gg/formerly-incarcerated-empowerment)
-[![Twitter](https://img.shields.io/badge/Twitter-1DA1F2?style=for-the-badge&logo=twitter&logoColor=white)](https://twitter.com/FormerlyIncEmp)
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://linkedin.com/company/formerly-incarcerated-empowerment)
+## 🎨 Design System
 
----
+### **Custom Color Palette**
+```css
+--color-1: #002447; /* Deep Navy Gradient - Primary Background */
+--color-2: #53d3d1; /* Bright Teal - Interactive elements */
+--color-3: #fbeceb; /* Soft Cream - Accent details */
+--color-4: #feb249; /* Vibrant Orange - Call-to-action highlights */
+```
 
-## 💻 Technology Stack
+### **Theme Features**
+- **Dark Mode First**: Beautiful dark theme as default with bright accent colors
+- **Light Mode Support**: Clean light theme with proper contrast ratios
+- **System Integration**: Automatic theme detection based on user preferences
+- **Smooth Transitions**: Animated theme switching with Framer Motion
 
-### Frontend & UI
-![Next.js](https://img.shields.io/badge/Next.js_15-000000?style=for-the-badge&logo=next.js&logoColor=white)
-![React](https://img.shields.io/badge/React_19-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
-![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?style=for-the-badge&logo=tailwind-css&logoColor=white)
+## 🛠️ Tech Stack
 
-### Web3 & Blockchain
-![Solidity](https://img.shields.io/badge/Solidity-363636?style=for-the-badge&logo=solidity&logoColor=white)
-![Wagmi](https://img.shields.io/badge/Wagmi-1C1B1F?style=for-the-badge&logo=ethereum&logoColor=white)
-![Viem](https://img.shields.io/badge/Viem-646CFF?style=for-the-badge&logo=ethereum&logoColor=white)
-![RainbowKit](https://img.shields.io/badge/RainbowKit-FF6B6B?style=for-the-badge&logo=rainbow&logoColor=white)
+- **Framework**: Next.js 15 with React 19 and TypeScript 5
+- **Package Manager**: npm (transitioning to bun for production)
+- **Styling**: Tailwind CSS 3.4 with custom design system
+- **UI Components**: shadcn/ui with Radix UI primitives
+- **Icons**: Lucide React + Web3 Icons, no emojis in UI
+- **Animation**: Framer Motion 11, Magic UI components
+- **Theme Management**: next-themes with 6-theme support
+- **Testing**: Jest 29 with React Testing Library
+- **Web3**: Wagmi 2.x, Viem 2.x, RainbowKit 2.x (ready for integration)
+- **Documentation**: Docusaurus for docs.formerlyincarcerated.org
+- **Process Management**: PM2 with clustering for production
+- **Hosting**: infuze.cloud Ubuntu server with git CI/CD deployment
 
-### Backend & Database
-![Supabase](https://img.shields.io/badge/Supabase-3ECF8E?style=for-the-badge&logo=supabase&logoColor=white)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-316192?style=for-the-badge&logo=postgresql&logoColor=white)
-![Node.js](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white)
 
-### Development Tools
-![Bun](https://img.shields.io/badge/Bun-000000?style=for-the-badge&logo=bun&logoColor=white)
-![Jest](https://img.shields.io/badge/Jest-C21325?style=for-the-badge&logo=jest&logoColor=white)
-![Framer Motion](https://img.shields.io/badge/Framer_Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white)
-![Docusaurus](https://img.shields.io/badge/Docusaurus-3ECC5F?style=for-the-badge&logo=docusaurus&logoColor=white)
+## 📦 Installation
 
-### Design & Animation
-![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)
-![Lucide](https://img.shields.io/badge/Lucide_Icons-000000?style=for-the-badge&logo=lucide&logoColor=white)
-![Magic UI](https://img.shields.io/badge/Magic_UI-FF6B6B?style=for-the-badge&logo=magic&logoColor=white)
+1. Clone the repository:
+```bash
+git clone https://github.com/formerly-incarcerated-empowerment/platform.git
+cd platform
+```
 
----
+2. Install dependencies:
+```bash
+npm install --legacy-peer-deps
+```
 
-## 🚀 Platform Features
+3. Set up environment variables:
+```bash
+cp .env.example .env.local
+# Edit .env.local with your configuration
+```
 
-### 🎨 **v1.0.0 - Professional Foundation**
-- ✅ **Custom Branding**: Professional logo with freedom symbolism
-- ✅ **Advanced Theming**: 6-theme system with dark mode first
-- ✅ **Responsive Design**: Mobile-first, accessible interface
-- ✅ **Documentation**: Comprehensive docs with Docusaurus
+4. Run the development servers:
+```bash
+# Main site (port 3000)
+npm run dev
 
-### 🔗 **Web3 Integration Ready**
-- 🔄 **Wallet Connect**: Multi-wallet support infrastructure
-- 🔄 **Smart Contracts**: Solidity-based empowerment tools
-- 🔄 **DAO Governance**: Community-driven decision making
-- 🔄 **DeFi Integration**: Financial empowerment tools
+# Documentation site (port 3002)
+npm run docs:dev
+```
 
-### 🤝 **Community Features**
-- 📋 **Resource Hub**: Comprehensive reentry resources
-- 💬 **Support Networks**: Peer-to-peer connection systems
-- 📚 **Educational Content**: Web3 and blockchain learning
-- 🎯 **Opportunity Matching**: Skills-based job connections
+5. Open the applications:
+   - **Main site**: [http://localhost:3000](http://localhost:3000)
+   - **Documentation**: [http://localhost:3002](http://localhost:3002)
 
----
+## 🧪 Testing
 
-## 📊 Project Status
+Run the test suite:
+```bash
+# Run all tests
+npm test
 
-![Development Status](https://img.shields.io/badge/Status-Production_Ready-success?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0.0-blue?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+# Run tests in watch mode
+npm run test:watch
 
-**Current Phase**: Foundation Complete ✅  
-**Next Phase**: Web3 Integration & Community Features 🔄  
-**Future**: DAO Governance & Advanced DeFi Tools 📋
+# Run tests with coverage
+npm run test:coverage
+```
 
----
+## 📁 Project Structure
 
-## 🎯 Impact Goals
+```
+├── app/                    # Next.js 15 App Router
+│   ├── about/             # About page
+│   ├── contact/           # Contact page
+│   ├── programs/          # Programs showcase
+│   ├── proposals/         # Proposals page
+│   ├── survey/            # Community survey
+│   ├── layout.tsx         # Root layout with theme provider
+│   ├── page.tsx           # Homepage with animated hero
+│   └── globals.css        # Global styles and CSS variables
+├── components/            # React components
+│   ├── ui/               # shadcn/ui base components
+│   ├── magicui/          # Magic UI animated components
+│   ├── animated-*.tsx    # Feature animations
+│   ├── header.tsx        # Navigation header with theme selector
+│   ├── footer.tsx        # Site footer
+│   ├── theme-provider.tsx # Theme context provider
+│   └── wallet-connect.tsx # Web3 wallet integration (ready)
+├── lib/                  # Utility libraries
+│   ├── config.ts         # Site configuration
+│   ├── analytics.ts      # Analytics utilities
+│   ├── web3-config.ts    # Web3 configuration
+│   ├── structured-data.ts # SEO structured data
+│   └── utils.ts          # General utilities
+├── hooks/                # Custom React hooks
+│   ├── use-mobile.tsx    # Mobile detection
+│   ├── use-mouse-position.ts # Mouse tracking
+│   └── use-toast.ts      # Toast notifications
+├── docs/                 # Legacy documentation
+├── docs-site/            # Docusaurus documentation site
+│   ├── docs/             # Documentation content
+│   ├── blog/             # Blog posts
+│   ├── src/              # Docusaurus customization
+│   └── static/           # Static assets
+├── __tests__/            # Jest test files
+├── logs/                 # Application logs
+├── bunfig.toml           # Bun configuration
+├── ecosystem.config.js   # PM2 process management
+├── DEPLOYMENT_PLAN.md    # Production deployment guide
+├── PROJECT_STRUCTURE.md  # Detailed project documentation
+└── public/               # Static assets (logos, icons, etc.)
+```
 
-- 🏆 **10,000+** formerly incarcerated individuals empowered
-- 💼 **5,000+** sustainable job placements facilitated  
-- 🎓 **1,000+** Web3 technology certifications awarded
-- 🤝 **500+** community partnerships established
-- 💰 **$1M+** in economic opportunities created
+## 🗺️ Development Roadmap
 
----
+### Phase 1: Foundation ✅ (Completed June 2025)
+- [x] **Project Structure**: Comprehensive cleanup and organization
+- [x] **Documentation Site**: Docusaurus setup for docs.formerlyincarcerated.org
+- [x] **Deployment Planning**: Complete infuze.cloud deployment strategy
+- [x] **Local Development**: Working dev environment with dual-port setup
+- [x] **Testing Infrastructure**: Jest configuration and basic test suite
+- [x] **Professional Branding**: 6-theme system with advanced theming
+- [x] **Core Pages**: About, Programs, Survey, Contact, Proposals
+- [x] **SEO Optimization**: Structured data, meta tags, sitemap
 
-## 🤝 Get Involved
+### Phase 2: Production Deployment (Next Steps)
+- [ ] **Server Setup**: Provision infuze.cloud Ubuntu instance
+- [ ] **Git CI/CD**: Implement automated deployment pipeline
+- [ ] **SSL & Security**: Configure Let's Encrypt certificates
+- [ ] **Domain Configuration**: Set up formerlyincarcerated.org DNS
+- [ ] **Monitoring**: PM2 process management and logging
+- [ ] **Performance**: Optimize build and caching strategies
 
-### For Formerly Incarcerated Individuals
-- 📝 **Join Our Platform**: Access resources and opportunities
-- 🎓 **Learn Web3**: Free blockchain technology courses
-- 💼 **Find Opportunities**: Connect with empowerment-focused employers
-- 🤝 **Build Community**: Connect with peers and mentors
+### Phase 3: Content Enhancement (Q3 2025)
+- [ ] **Survey Analytics**: Advanced feedback collection and reporting
+- [ ] **Content Expansion**: Blog, resources, and educational content
+- [ ] **Community Features**: Forums, discussion boards, events
+- [ ] **User Experience**: Enhanced accessibility and mobile optimization
 
-### For Organizations & Employers
-- 🤝 **Partner With Us**: Create inclusive hiring programs
-- 💡 **Sponsor Programs**: Support Web3 education initiatives
-- 🎯 **Post Opportunities**: Share second-chance employment
-- 📈 **Measure Impact**: Track diversity and inclusion metrics
+### Phase 4: Web3 Integration (Q4 2025 - Q1 2026)
+- [ ] **Wallet Connection**: Web3 authentication and user profiles
+- [ ] **Governance Token**: Second Chance Governance Token (SCG) implementation
+- [ ] **Basic DAO**: Community voting and proposal system
+- [ ] **Skill Verification**: NFT-based credential system
 
-### For Developers & Contributors
-- 💻 **Contribute Code**: Help build empowerment tools
-- 📚 **Improve Docs**: Enhance our documentation
-- 🐛 **Report Issues**: Help us improve the platform
-- 💡 **Suggest Features**: Share ideas for new functionality
+### Phase 5: Advanced Features (Q2-Q3 2026)
+- [ ] **Job Marketplace**: Decentralized employment platform
+- [ ] **Micro-Investment DAO**: Community-funded business opportunities
+- [ ] **Peer-to-Peer Lending**: Blockchain-based financial services
+- [ ] **Cross-Chain Integration**: Multi-blockchain support
 
----
+## 🤝 Contributing
 
-## 📞 Contact & Support
+We welcome contributions from the community! Please read our contributing guidelines and code of conduct.
 
+1. Fork the repository
+2. Create a feature branch: `git checkout -b feature/amazing-feature`
+3. Commit your changes: `git commit -m 'Add amazing feature'`
+4. Push to the branch: `git push origin feature/amazing-feature`
+5. Open a Pull Request
+
+## 📊 Key Statistics
+
+- **70 Million**: Americans with criminal records
+- **27%**: Unemployment rate among formerly incarcerated individuals
+- **68%**: Recidivism rate within three years
+- **$87 Billion**: Annual economic impact of employment barriers
+
+## 🌐 Web3 Utility Tokens (Planned)
+
+1. **Second Chance Governance Token (SCG)** - Community governance and funding decisions
+2. **Skill Verification NFTs** - Blockchain-verified credentials and certifications
+3. **Micro-Investment DAO** - Collective investment in formerly incarcerated-owned businesses
+4. **Resource Access Tokens** - Exchange for housing, legal aid, and support services
+5. **Job Marketplace Protocol** - Decentralized employment opportunities
+6. **Peer-to-Peer Lending** - Community-backed financial services
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👥 Contributors
+
+We're grateful to all the contributors who have helped build this platform:
+
+<table>
+  <tr>
+    <td align="center">
+      <a href="https://github.com/4eckd">
+        <img src="https://github.com/4eckd.png" width="100px;" alt="4eckd"/>
+        <br />
+        <sub><b>4eckd</b></sub>
+      </a>
+      <br />
+      <sub>Platform Architecture & Web3 Integration</sub>
+    </td>
+    <td align="center">
+      <a href="https://github.com/FormerlyIncarcerated">
+        <img src="https://github.com/FormerlyIncarcerated.png" width="100px;" alt="FormerlyIncarcerated"/>
+        <br />
+        <sub><b>FormerlyIncarcerated</b></sub>
+      </a>
+      <br />
+      <sub>Organization & Mission Leadership</sub>
+    </td>
+  </tr>
+</table>
+
+### 🤝 How to Become a Contributor
+
+We welcome contributions from:
+- **Formerly incarcerated individuals** sharing experiences and feedback
+- **Developers** contributing code, documentation, and technical expertise
+- **Community advocates** helping with outreach and support
+- **Organizations** providing partnerships and resources
+
+See our [Contributing Guidelines](.github/CONTRIBUTING.md) to get started!
+
+## 📞 Contact
+
+- **GitHub**: [FormerlyIncarcerated Organization](https://github.com/FormerlyIncarcerated)
+- **Discussions**: [Community Discussions](https://github.com/orgs/FormerlyIncarcerated/discussions)
+- **Issues**: [Report Issues](https://github.com/FormerlyIncarcerated/org/issues)
 - **Website**: [formerlyincarcerated.org](https://formerlyincarcerated.org)
-- **Documentation**: [docs.formerlyincarcerated.org](https://docs.formerlyincarcerated.org)
-- **Email**: contact@formerlyincarcerated.org
-- **Support**: support@formerlyincarcerated.org
-- **Partnerships**: partnerships@formerlyincarcerated.org
+
+## 🙏 Acknowledgments
+
+- The formerly incarcerated community for their resilience and feedback
+- Web3 developers and advocates supporting social impact
+- Organizations working on criminal justice reform
+- Contributors and supporters of this platform
 
 ---
 
-## 💝 Support Our Mission
-
-[![Sponsor](https://img.shields.io/badge/Sponsor-FF69B4?style=for-the-badge&logo=github-sponsors&logoColor=white)](https://github.com/sponsors/FormerlyIncarcerated)
-[![Donate](https://img.shields.io/badge/Donate-00457C?style=for-the-badge&logo=paypal&logoColor=white)](mailto:partnerships@formerlyincarcerated.org)
-
----
-
-### 🌟 Show some ❤️ by starring our repositories and joining our mission!
-
-*Building second chances through Web3 technology and community-driven support systems.*
-
-**Last Updated**: June 22, 2025 | **Version**: 1.0.0
+**Building bridges, not barriers. Creating opportunities, not obstacles.**
