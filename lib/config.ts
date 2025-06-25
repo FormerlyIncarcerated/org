@@ -16,6 +16,7 @@ export const siteConfig = {
     telegram: "https://t.me/formerlyincarcerated",
     email: "hello@formerlyincarcerated.org",
     docs: "https://docs.formerlyincarcerated.org",
+    blog: "https://docs.formerlyincarcerated.org/blog",
   },
   
   // Contact information

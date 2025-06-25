@@ -1,25 +1,36 @@
-yangshun:
-  name: Yangshun Tay
-  title: Ex-Meta Staff Engineer, Co-founder GreatFrontEnd
-  url: https://linkedin.com/in/yangshun
-  image_url: https://github.com/yangshun.png
+team:
+  name: FormerlyIncarcerated.org Team
+  title: Platform Development Team
+  url: https://github.com/FormerlyIncarcerated
+  image_url: https://github.com/FormerlyIncarcerated.png
   page: true
   socials:
-    x: yangshunz
-    linkedin: yangshun
-    github: yangshun
-    newsletter: https://www.greatfrontend.com
+    github: FormerlyIncarcerated
 
-slorber:
-  name: Sébastien Lorber
-  title: Docusaurus maintainer
-  url: https://sebastienlorber.com
-  image_url: https://github.com/slorber.png
-  page:
-    # customize the url of the author page at /blog/authors/<permalink>
-    permalink: '/all-sebastien-lorber-articles'
-  socials:
-    x: sebastienlorber
-    linkedin: sebastienlorber
-    github: slorber
-    newsletter: https://thisweekinreact.com
+design-team:
+  name: Design Team
+  title: UI/UX Design Team
+  url: https://github.com/FormerlyIncarcerated
+  image_url: https://github.com/FormerlyIncarcerated.png
+  page: false
+
+community-team:
+  name: Community Team
+  title: Community Engagement Team
+  url: https://github.com/FormerlyIncarcerated
+  image_url: https://github.com/FormerlyIncarcerated.png
+  page: false
+
+tech-team:
+  name: Technical Team
+  title: Engineering Team
+  url: https://github.com/FormerlyIncarcerated
+  image_url: https://github.com/FormerlyIncarcerated.png
+  page: false
+
+founder:
+  name: FormerlyIncarcerated.org Founder
+  title: Founder & CEO
+  url: https://github.com/FormerlyIncarcerated
+  image_url: https://github.com/FormerlyIncarcerated.png
+  page: false

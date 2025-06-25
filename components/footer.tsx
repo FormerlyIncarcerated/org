@@ -7,7 +7,7 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="border-t border-theme bg-gradient-to-br from-background via-background/95 to-muted/30">
+    <footer className="mt-24 border-t border-theme bg-gradient-to-br from-background via-background/95 to-muted/30">
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 gap-8 md:grid-cols-4">
           {/* Brand with matching header theme styling */}

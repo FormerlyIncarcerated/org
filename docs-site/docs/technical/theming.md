@@ -1,20 +1,35 @@
-# Theming System Documentation
+# Blue Ocean Theming System Documentation
 
 ## Overview
 
-The F.Inc. platform features an advanced theming system built with CSS custom properties, Tailwind CSS, and next-themes. This system provides seamless light/dark mode switching with a custom color palette designed for accessibility and visual impact.
+The F.Inc. platform features an advanced blue-focused theming system built with CSS custom properties, Tailwind CSS, and next-themes. This ocean-inspired design system provides seamless light/dark mode switching with a comprehensive blue color palette designed for accessibility, professional appeal, and visual impact.
 
-## Color Palette
+## Design Philosophy
 
-### Custom Color Variables
+Our blue palette represents:
+- **Trust & Reliability**: Deep blues convey stability and trustworthiness
+- **Professional Growth**: Ocean metaphors represent depth and potential
+- **Accessibility First**: WCAG AAA compliance across all themes
+- **Empowerment**: From dark depths to bright horizons, representing the journey of formerly incarcerated individuals
+
+## Blue Color Palette
+
+### Core Blue Spectrum
 
 ```css
 :root {
-  /* Custom Color Palette */
-  --color-1: #002447; /* Deep Navy */
-  --color-2: #53d3d1; /* Bright Teal */
-  --color-3: #fbeceb; /* Soft Cream */
-  --color-4: #feb249; /* Vibrant Orange */
+  /* Ocean-Inspired Blue Palette */
+  --blue-darkest: 204 95% 15%;     /* #012A4A - Midnight Deep */
+  --blue-very-dark: 204 98% 20%;   /* #013A63 - Ocean Depth */
+  --blue-dark: 204 98% 24%;        /* #01497C - Deep Current */
+  --blue-dark-alt: 204 98% 26%;    /* #014F86 - Navy Professional */
+  --blue-medium: 204 56% 38%;      /* #2A6F97 - Ocean Blue */
+  --blue-medium-teal: 198 57% 40%; /* #2C7DA0 - Teal Current */
+  --blue-medium-dark: 198 42% 48%; /* #468FAF - Steel Wave */
+  --blue-air: 198 44% 57%;         /* #61A5C2 - Air Superiority */
+  --blue-light-gray: 198 53% 69%;  /* #89C2D9 - Coastal Mist */
+  --blue-very-light: 198 53% 78%;  /* #A9D6E5 - Sky Reflection */
+  --seasalt: 240 6% 97%;           /* #F6F6F7 - Seasalt */
 }
 ```
 

@@ -107,15 +107,15 @@ const config: Config = {
           items: [
             {
               label: 'Get Started',
-              to: '/docs/intro',
+              to: '/intro',
             },
             {
               label: 'Whitepaper',
-              to: '/docs/whitepaper-github',
+              to: '/whitepaper',
             },
             {
               label: 'Technical Docs',
-              to: '/docs/technical/WEB3_ARCHITECTURE',
+              to: '/technical/WEB3_ARCHITECTURE',
             },
           ],
         },

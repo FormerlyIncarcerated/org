@@ -153,10 +153,10 @@ export default function AboutPage() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2 lg:items-stretch">
             {/* Challenge Card */}
-            <div className="group">
-              <div className="relative overflow-hidden rounded-2xl border-2 border-destructive/20 bg-gradient-to-br from-destructive/5 via-card/90 to-destructive/10 backdrop-blur-sm p-8 shadow-theme hover:shadow-theme-lg transition-all duration-300">
+            <div className="group h-full">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-destructive/20 bg-gradient-to-br from-destructive/5 via-card/90 to-destructive/10 backdrop-blur-sm p-8 shadow-theme hover:shadow-theme-lg transition-all duration-300 h-full flex flex-col">
                 {/* Warning accent */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-destructive/50 to-orange-500/50" />
 
@@ -167,31 +167,33 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold tracking-tight">The Challenge</h3>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  Over 70 million Americans have criminal records, facing systemic barriers to employment,
-                  housing, education, and financial services. Traditional reentry programs often fall short,
-                  leading to high recidivism rates and perpetuating cycles of poverty and incarceration.
-                </p>
+                <div className="flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    Over 70 million Americans have criminal records, facing systemic barriers to employment,
+                    housing, education, and financial services. Traditional reentry programs often fall short,
+                    leading to high recidivism rates and perpetuating cycles of poverty and incarceration.
+                  </p>
 
-                <div className="space-y-3">
-                  {[
-                    "27% unemployment rate among formerly incarcerated individuals",
-                    "68% recidivism rate within three years of release",
-                    "$87 billion annual economic impact of employment barriers",
-                    "Limited access to traditional financial services"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
+                  <div className="space-y-3 mt-auto">
+                    {[
+                      "27% unemployment rate among formerly incarcerated individuals",
+                      "68% recidivism rate within three years of release",
+                      "$87 billion annual economic impact of employment barriers",
+                      "Limited access to traditional financial services"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-destructive rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>
 
             {/* Solution Card */}
-            <div className="group">
-              <div className="relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/10 backdrop-blur-sm p-8 shadow-theme hover:shadow-theme-lg transition-all duration-300">
+            <div className="group h-full">
+              <div className="relative overflow-hidden rounded-2xl border-2 border-primary/20 bg-gradient-to-br from-primary/5 via-card/90 to-secondary/10 backdrop-blur-sm p-8 shadow-theme hover:shadow-theme-lg transition-all duration-300 h-full flex flex-col">
                 {/* Success accent */}
                 <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary/50 to-secondary/50" />
 
@@ -202,24 +204,26 @@ export default function AboutPage() {
                   <h3 className="text-2xl font-bold tracking-tight">Our Solution</h3>
                 </div>
 
-                <p className="text-muted-foreground mb-6 leading-relaxed">
-                  We're building a comprehensive Web3 ecosystem that addresses these challenges through
-                  innovative blockchain-based solutions, creating new opportunities for economic empowerment
-                  and community support.
-                </p>
+                <div className="flex-1 flex flex-col">
+                  <p className="text-muted-foreground mb-6 leading-relaxed">
+                    We're building a comprehensive Web3 ecosystem that addresses these challenges through
+                    innovative blockchain-based solutions, creating new opportunities for economic empowerment
+                    and community support.
+                  </p>
 
-                <div className="space-y-3">
-                  {[
-                    "Decentralized job marketplace with anonymous screening",
-                    "Skill verification through blockchain credentials",
-                    "Community-funded micro-investment opportunities",
-                    "Peer-to-peer lending and financial services"
-                  ].map((item, index) => (
-                    <div key={index} className="flex items-start gap-3">
-                      <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
-                      <span className="text-muted-foreground">{item}</span>
-                    </div>
-                  ))}
+                  <div className="space-y-3 mt-auto">
+                    {[
+                      "Decentralized job marketplace with anonymous screening",
+                      "Skill verification through blockchain credentials",
+                      "Community-funded micro-investment opportunities",
+                      "Peer-to-peer lending and financial services"
+                    ].map((item, index) => (
+                      <div key={index} className="flex items-start gap-3">
+                        <div className="w-2 h-2 bg-primary rounded-full mt-2 flex-shrink-0" />
+                        <span className="text-muted-foreground">{item}</span>
+                      </div>
+                    ))}
+                  </div>
                 </div>
               </div>
             </div>

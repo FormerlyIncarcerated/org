@@ -70,91 +70,91 @@ export default function Web3Page() {
     return () => clearInterval(interval)
   }, [empoweringWords.length])
 
-  // Web3 Technologies and Blockchain Chains with logos
+  // Web3 Technologies and Blockchain Chains with logos - Updated with blue theme colors
   const web3Chains = [
     {
       name: "Ethereum",
       symbol: "ETH",
       description: "Smart contracts & DeFi ecosystem",
       logo: "https://cryptologos.cc/logos/ethereum-eth-logo.svg",
-      color: "from-blue-400 to-purple-600"
+      color: "from-blue-medium to-blue-air"
     },
     {
       name: "Polygon",
       symbol: "MATIC",
       description: "Layer 2 scaling solution",
       logo: "https://cryptologos.cc/logos/polygon-matic-logo.svg",
-      color: "from-purple-500 to-pink-500"
+      color: "from-blue-air to-blue-very-light"
     },
     {
       name: "Solana",
       symbol: "SOL",
       description: "High-speed blockchain",
       logo: "https://cryptologos.cc/logos/solana-sol-logo.svg",
-      color: "from-green-400 to-blue-500"
+      color: "from-blue-medium-teal to-blue-medium"
     },
     {
       name: "Chainlink",
       symbol: "LINK",
       description: "Decentralized oracle network",
       logo: "https://cryptologos.cc/logos/chainlink-link-logo.svg",
-      color: "from-blue-500 to-cyan-400"
+      color: "from-blue-medium to-blue-light-gray"
     },
     {
       name: "Filecoin",
       symbol: "FIL",
       description: "Decentralized storage network",
       logo: "https://cryptologos.cc/logos/filecoin-fil-logo.svg",
-      color: "from-cyan-400 to-blue-600"
+      color: "from-blue-light-gray to-blue-medium-dark"
     },
     {
       name: "Uniswap",
       symbol: "UNI",
       description: "Decentralized exchange protocol",
       logo: "https://cryptologos.cc/logos/uniswap-uni-logo.svg",
-      color: "from-pink-500 to-rose-500"
+      color: "from-blue-very-light to-blue-air"
     },
     {
       name: "Aave",
       symbol: "AAVE",
       description: "Decentralized lending protocol",
       logo: "https://cryptologos.cc/logos/aave-aave-logo.svg",
-      color: "from-purple-600 to-blue-500"
+      color: "from-blue-dark-alt to-blue-medium"
     },
     {
       name: "The Graph",
       symbol: "GRT",
       description: "Indexing protocol for Web3",
       logo: "https://cryptologos.cc/logos/the-graph-grt-logo.svg",
-      color: "from-indigo-500 to-purple-600"
+      color: "from-blue-very-dark to-blue-dark-alt"
     },
     {
       name: "Arweave",
       symbol: "AR",
       description: "Permanent data storage",
       logo: "https://cryptologos.cc/logos/arweave-ar-logo.svg",
-      color: "from-gray-600 to-gray-800"
+      color: "from-blue-darkest to-blue-very-dark"
     },
     {
       name: "Compound",
       symbol: "COMP",
       description: "Algorithmic money markets",
       logo: "https://cryptologos.cc/logos/compound-comp-logo.svg",
-      color: "from-green-500 to-emerald-600"
+      color: "from-blue-medium-teal to-blue-air"
     },
     {
       name: "Maker",
       symbol: "MKR",
       description: "Decentralized credit platform",
       logo: "https://cryptologos.cc/logos/maker-mkr-logo.svg",
-      color: "from-teal-500 to-cyan-600"
+      color: "from-blue-medium-dark to-blue-light-gray"
     },
     {
       name: "Optimism",
       symbol: "OP",
       description: "Ethereum Layer 2 solution",
       logo: "https://cryptologos.cc/logos/optimism-ethereum-op-logo.svg",
-      color: "from-red-500 to-pink-500"
+      color: "from-blue-air to-blue-very-light"
     }
   ]
 
@@ -169,7 +169,7 @@ export default function Web3Page() {
         "Transparent funding for community programs",
         "Global connections for family support"
       ],
-      color: "from-yellow-500 to-orange-500"
+      color: "from-blue-medium to-blue-air"
     },
     {
       icon: FileText,
@@ -181,7 +181,7 @@ export default function Web3Page() {
         "Milestone-based success rewards",
         "Community-driven decision making"
       ],
-      color: "from-blue-500 to-cyan-500"
+      color: "from-blue-medium-teal to-blue-light-gray"
     },
     {
       icon: Shield,
@@ -193,7 +193,7 @@ export default function Web3Page() {
         "Privacy-respecting background processes",
         "Secure personal document management"
       ],
-      color: "from-green-500 to-emerald-500"
+      color: "from-blue-air to-blue-very-light"
     },
     {
       icon: Vote,
@@ -205,7 +205,7 @@ export default function Web3Page() {
         "Peer-supported application reviews",
         "Collaborative policy creation"
       ],
-      color: "from-purple-500 to-violet-500"
+      color: "from-blue-dark-alt to-blue-medium"
     },
     {
       icon: Database,
@@ -217,7 +217,7 @@ export default function Web3Page() {
         "Permanent achievement records",
         "Open access to educational content"
       ],
-      color: "from-indigo-500 to-blue-500"
+      color: "from-blue-very-dark to-blue-dark"
     },
     {
       icon: Network,
@@ -229,7 +229,7 @@ export default function Web3Page() {
         "Protective insurance solutions",
         "Automated wealth-building tools"
       ],
-      color: "from-pink-500 to-rose-500"
+      color: "from-blue-light-gray to-blue-very-light"
     }
   ]
 

@@ -53,6 +53,20 @@ const config = {
           DEFAULT: "hsl(var(--card))",
           foreground: "hsl(var(--card-foreground))",
         },
+        // Blue Ocean Palette - Custom theme colors
+        blue: {
+          darkest: "hsl(var(--blue-darkest))",
+          "very-dark": "hsl(var(--blue-very-dark))",
+          dark: "hsl(var(--blue-dark))",
+          "dark-alt": "hsl(var(--blue-dark-alt))",
+          medium: "hsl(var(--blue-medium))",
+          "medium-teal": "hsl(var(--blue-medium-teal))",
+          "medium-dark": "hsl(var(--blue-medium-dark))",
+          air: "hsl(var(--blue-air))",
+          "light-gray": "hsl(var(--blue-light-gray))",
+          "very-light": "hsl(var(--blue-very-light))",
+        },
+        seasalt: "hsl(var(--seasalt))",
         // Added cyan color to replace spektr-cyan-50
         cyan: {
           50: "#e0f7fa",

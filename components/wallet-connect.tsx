@@ -3,7 +3,7 @@
 import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Wallet, ExternalLink, AlertCircle, ChevronDown, Copy, LogOut, Shield, Zap, CheckCircle2 } from "lucide-react"
+import { Wallet, ExternalLink, AlertCircle, ChevronDown, Copy, LogOut, Shield, Zap, CheckCircle2, Vote, Coins } from "lucide-react"
 import {
   DropdownMenu,
   DropdownMenuContent,

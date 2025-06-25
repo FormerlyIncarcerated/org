@@ -22,10 +22,27 @@ const nextConfig = {
     parallelServerCompiles: true,
   },
   async rewrites() {
+    // Temporarily disable rewrites to prevent 500 errors when docs site isn't running
+    // To enable docs proxying, start the docs site with: cd docs-site && npm start -- --port 3001
+    return []
+
+    // Uncomment the following when docs site is running on port 3001:
+    /*
     return [
-      // Local development docs subdomain routing
+      // Development: docs.localhost subdomain routing
       {
-        source: '/docs/:path*',
+        source: '/:path*',
+        destination: 'http://localhost:3001/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'docs.localhost:3000',
+          },
+        ],
+      },
+      // Development: docs.localhost without port
+      {
+        source: '/:path*',
         destination: 'http://localhost:3001/:path*',
         has: [
           {
@@ -34,12 +51,24 @@ const nextConfig = {
           },
         ],
       },
-      // Fallback for docs routes on main domain - proxy to docs site
+      // Production: docs.formerlyincarcerated.org subdomain routing
+      {
+        source: '/:path*',
+        destination: 'https://docs.formerlyincarcerated.org/:path*', // In production, this would be your Docusaurus deployment URL
+        has: [
+          {
+            type: 'host',
+            value: 'docs.formerlyincarcerated.org',
+          },
+        ],
+      },
+      // Fallback for /docs routes on main domain - proxy to docs site
       {
         source: '/docs/:path*',
         destination: 'http://localhost:3001/:path*',
       },
     ]
+    */
   },
   async headers() {
     return [

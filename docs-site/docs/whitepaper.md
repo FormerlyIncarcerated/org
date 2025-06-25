@@ -356,9 +356,9 @@ We invite stakeholders across the ecosystem to join us in building a more just a
 
 📄 **[Download Complete Whitepaper (PDF)](/whitepaper.pdf)**
 
-📋 **[View Technical Specifications](/docs/technical/)**
+📋 **[View Technical Specifications](/technical/)**
 
-🤝 **[Join Our Community](/contact)**
+🤝 **[Join Our Community](https://formerlyincarcerated.org/contact)**
 
 ---
 

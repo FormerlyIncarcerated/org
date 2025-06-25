@@ -1,30 +1,205 @@
 /**
- * Any CSS included here will be global. The classic template
- * bundles Infima by default. Infima is a CSS framework designed to
- * work well for content-centric websites.
+ * FormerlyIncarcerated.org Documentation - Blue Ocean Theme
+ * Custom CSS with blue ocean color palette for accessibility and professional design
  */
 
-/* You can override the default Infima variables here. */
+/* Import Inter font for consistency with main site */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Blue Ocean Theme - Light Mode */
 :root {
-  --ifm-color-primary: #2e8555;
-  --ifm-color-primary-dark: #29784c;
-  --ifm-color-primary-darker: #277148;
-  --ifm-color-primary-darkest: #205d3b;
-  --ifm-color-primary-light: #33925d;
-  --ifm-color-primary-lighter: #359962;
-  --ifm-color-primary-lightest: #3cad6e;
+  /* Primary blue ocean colors */
+  --ifm-color-primary: #2A6F97;        /* Ocean Blue */
+  --ifm-color-primary-dark: #246189;    /* Darker ocean */
+  --ifm-color-primary-darker: #215B82;  /* Deep ocean */
+  --ifm-color-primary-darkest: #1B4B6B; /* Deepest ocean */
+  --ifm-color-primary-light: #61A5C2;   /* Air superiority blue */
+  --ifm-color-primary-lighter: #89C2D9; /* Light blue-gray */
+  --ifm-color-primary-lightest: #A9D6E5; /* Very light blue */
+
+  /* Secondary colors */
+  --ifm-color-secondary: #61A5C2;       /* Air superiority blue */
+  --ifm-color-info: #89C2D9;           /* Light blue-gray */
+  --ifm-color-success: #2A6F97;        /* Ocean blue for success */
+  --ifm-color-warning: #468FAF;        /* Medium-dark blue */
+  --ifm-color-danger: #013A63;         /* Very dark blue for errors */
+
+  /* Background colors */
+  --ifm-background-color: #F6F6F7;     /* Seasalt */
+  --ifm-background-surface-color: #FFFFFF;
+  --ifm-hero-background-color: linear-gradient(135deg, #2A6F97 0%, #61A5C2 100%);
+
+  /* Text colors */
+  --ifm-font-color-base: #012A4A;      /* Darkest blue for text */
+  --ifm-font-color-secondary: #013A63; /* Very dark blue */
+  --ifm-heading-color: #012A4A;        /* Darkest blue for headings */
+
+  /* Font family */
+  --ifm-font-family-base: 'Inter', system-ui, -apple-system, sans-serif;
+  --ifm-font-family-monospace: 'JetBrains Mono', 'Fira Code', monospace;
+
+  /* Code highlighting */
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(42, 111, 151, 0.1);
+
+  /* Navbar */
+  --ifm-navbar-background-color: #FFFFFF;
+  --ifm-navbar-shadow: 0 2px 4px rgba(42, 111, 151, 0.1);
+
+  /* Footer */
+  --ifm-footer-background-color: #012A4A;
+  --ifm-footer-color: #F6F6F7;
+  --ifm-footer-link-color: #A9D6E5;
+  --ifm-footer-title-color: #FFFFFF;
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
+/* Blue Ocean Theme - Dark Mode */
 [data-theme='dark'] {
-  --ifm-color-primary: #25c2a0;
-  --ifm-color-primary-dark: #21af90;
-  --ifm-color-primary-darker: #1fa588;
-  --ifm-color-primary-darkest: #1a8870;
-  --ifm-color-primary-light: #29d5b0;
-  --ifm-color-primary-lighter: #32d8b4;
-  --ifm-color-primary-lightest: #4fddbf;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  /* Primary colors for dark mode */
+  --ifm-color-primary: #61A5C2;        /* Air superiority blue */
+  --ifm-color-primary-dark: #468FAF;    /* Medium-dark blue */
+  --ifm-color-primary-darker: #2C7DA0;  /* Medium blue-teal */
+  --ifm-color-primary-darkest: #2A6F97; /* Ocean blue */
+  --ifm-color-primary-light: #89C2D9;   /* Light blue-gray */
+  --ifm-color-primary-lighter: #A9D6E5; /* Very light blue */
+  --ifm-color-primary-lightest: #F6F6F7; /* Seasalt */
+
+  /* Background colors for dark mode */
+  --ifm-background-color: #012A4A;     /* Darkest blue */
+  --ifm-background-surface-color: #013A63; /* Very dark blue */
+
+  /* Text colors for dark mode */
+  --ifm-font-color-base: #F6F6F7;      /* Seasalt for text */
+  --ifm-font-color-secondary: #A9D6E5; /* Very light blue */
+  --ifm-heading-color: #FFFFFF;        /* White for headings */
+
+  /* Code highlighting for dark mode */
+  --docusaurus-highlighted-code-line-bg: rgba(97, 165, 194, 0.2);
+
+  /* Navbar for dark mode */
+  --ifm-navbar-background-color: #013A63;
+
+  /* Footer for dark mode */
+  --ifm-footer-background-color: #012A4A;
+}
+
+/* Custom component styling */
+.hero {
+  background: var(--ifm-hero-background-color);
+  color: white;
+}
+
+.hero__title {
+  font-weight: 800;
+  font-size: 3rem;
+}
+
+.hero__subtitle {
+  font-weight: 400;
+  opacity: 0.9;
+}
+
+/* Enhanced button styling */
+.button--primary {
+  background: linear-gradient(135deg, var(--ifm-color-primary) 0%, var(--ifm-color-primary-light) 100%);
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.button--primary:hover {
+  background: linear-gradient(135deg, var(--ifm-color-primary-dark) 0%, var(--ifm-color-primary) 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(42, 111, 151, 0.3);
+}
+
+/* Card styling for better visual hierarchy */
+.card {
+  border: 1px solid rgba(42, 111, 151, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 8px 25px rgba(42, 111, 151, 0.15);
+  transform: translateY(-4px);
+}
+
+/* Enhanced code blocks */
+.prism-code {
+  border-radius: 8px;
+  border: 1px solid rgba(42, 111, 151, 0.1);
+}
+
+/* Table styling */
+.table-of-contents {
+  border-left: 3px solid var(--ifm-color-primary);
+  padding-left: 1rem;
+}
+
+/* Sidebar enhancements */
+.theme-doc-sidebar-item-link {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.theme-doc-sidebar-item-link:hover {
+  background: rgba(42, 111, 151, 0.1);
+}
+
+/* Badge styling */
+.badge {
+  border-radius: 20px;
+  font-weight: 600;
+  font-size: 0.75rem;
+  padding: 0.25rem 0.75rem;
+}
+
+.badge--primary {
+  background: var(--ifm-color-primary);
+  color: white;
+}
+
+.badge--secondary {
+  background: var(--ifm-color-secondary);
+  color: white;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .hero__title {
+    font-size: 2rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1rem;
+  }
+}
+
+/* Accessibility improvements */
+.button:focus,
+.menu__link:focus {
+  outline: 2px solid var(--ifm-color-primary);
+  outline-offset: 2px;
+}
+
+/* Custom admonition styling */
+.admonition {
+  border-radius: 8px;
+  border-left-width: 4px;
+}
+
+.admonition-icon {
+  margin-right: 0.5rem;
+}
+
+/* Enhanced search styling */
+.DocSearch-Button {
+  border-radius: 20px;
+  border: 1px solid rgba(42, 111, 151, 0.2);
+}
+
+.DocSearch-Button:hover {
+  border-color: var(--ifm-color-primary);
+  box-shadow: 0 2px 8px rgba(42, 111, 151, 0.15);
 }

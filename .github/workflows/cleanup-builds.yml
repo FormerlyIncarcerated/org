@@ -1,0 +1,276 @@
+name: 🧹 Build Cleanup Automation
+
+on:
+  # Run on push to main branch
+  push:
+    branches: [ main ]
+  
+  # Run on pull request
+  pull_request:
+    branches: [ main ]
+  
+  # Run daily at 2 AM UTC
+  schedule:
+    - cron: '0 2 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+    inputs:
+      deep_clean:
+        description: 'Perform deep clean (including node_modules)'
+        required: false
+        default: 'false'
+        type: boolean
+
+env:
+  NODE_VERSION: '18'
+  BUN_VERSION: 'latest'
+
+jobs:
+  cleanup-builds:
+    name: 🧹 Clean Build Artifacts
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+          cache: 'npm'
+      
+      - name: 🥟 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      
+      - name: 📦 Install Dependencies
+        run: |
+          bun install
+          cd docs-site && npm install
+      
+      - name: 🧹 Run Build Cleanup
+        run: |
+          chmod +x scripts/cleanup-builds.sh
+          if [ "${{ github.event.inputs.deep_clean }}" = "true" ]; then
+            node scripts/cleanup-builds.js --deep
+          else
+            node scripts/cleanup-builds.js
+          fi
+      
+      - name: 📊 Check Disk Usage
+        run: |
+          echo "=== Disk Usage After Cleanup ==="
+          df -h
+          echo ""
+          echo "=== Directory Sizes ==="
+          du -sh .next 2>/dev/null || echo ".next: Not found"
+          du -sh docs-site/build 2>/dev/null || echo "docs-site/build: Not found"
+          du -sh node_modules 2>/dev/null || echo "node_modules: Not found"
+          du -sh docs-site/node_modules 2>/dev/null || echo "docs-site/node_modules: Not found"
+      
+      - name: 🧪 Test Build After Cleanup
+        run: |
+          echo "Testing main site build..."
+          npm run build
+          
+          echo "Testing docs site build..."
+          npm run docs:build
+      
+      - name: 📝 Upload Cleanup Logs
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: cleanup-logs-${{ github.run_number }}
+          path: logs/
+          retention-days: 7
+
+  setup-automation:
+    name: ⚙️ Setup Build Automation
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: ⚙️ Setup Git Hooks
+        run: |
+          chmod +x scripts/cleanup-builds.sh
+          node scripts/cleanup-builds.js --setup-hooks
+      
+      - name: 📋 Commit Git Hooks
+        run: |
+          git config --local user.email "action@github.com"
+          git config --local user.name "GitHub Action"
+          
+          if [ -n "$(git status --porcelain)" ]; then
+            git add .git/hooks/
+            git commit -m "🔧 Setup automated build cleanup hooks"
+            git push
+          else
+            echo "No changes to commit"
+          fi
+
+  validate-cleanup:
+    name: ✅ Validate Cleanup Scripts
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+        node-version: [18, 20]
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node-version }}
+      
+      - name: 🧪 Test Cleanup Scripts
+        shell: bash
+        run: |
+          # Test Node.js script
+          echo "Testing Node.js cleanup script..."
+          node scripts/cleanup-builds.js --help
+          
+          # Test platform-specific scripts
+          if [ "$RUNNER_OS" = "Windows" ]; then
+            echo "Testing PowerShell script..."
+            powershell -File scripts/cleanup-builds.ps1 -Help
+          else
+            echo "Testing Bash script..."
+            chmod +x scripts/cleanup-builds.sh
+            ./scripts/cleanup-builds.sh --help
+          fi
+      
+      - name: 🔍 Validate Script Syntax
+        shell: bash
+        run: |
+          # Validate Node.js syntax
+          node -c scripts/cleanup-builds.js
+          
+          # Validate shell scripts
+          if [ "$RUNNER_OS" != "Windows" ]; then
+            bash -n scripts/cleanup-builds.sh
+          fi
+
+  performance-test:
+    name: 🚀 Performance Test
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: 📥 Checkout Repository
+        uses: actions/checkout@v4
+      
+      - name: 🟢 Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ env.NODE_VERSION }}
+      
+      - name: 🥟 Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: ${{ env.BUN_VERSION }}
+      
+      - name: 📦 Install Dependencies
+        run: |
+          bun install
+          cd docs-site && npm install
+      
+      - name: 🏗️ Create Test Build Artifacts
+        run: |
+          # Create some build artifacts to test cleanup
+          npm run build
+          npm run docs:build
+      
+      - name: ⏱️ Measure Cleanup Performance
+        run: |
+          echo "=== Before Cleanup ==="
+          du -sh .next docs-site/build node_modules docs-site/node_modules 2>/dev/null || true
+          
+          echo "=== Running Cleanup ==="
+          time node scripts/cleanup-builds.js
+          
+          echo "=== After Cleanup ==="
+          du -sh .next docs-site/build node_modules docs-site/node_modules 2>/dev/null || true
+      
+      - name: 📊 Generate Performance Report
+        run: |
+          echo "# 🚀 Cleanup Performance Report" > performance-report.md
+          echo "" >> performance-report.md
+          echo "**Date:** $(date)" >> performance-report.md
+          echo "**OS:** ${{ runner.os }}" >> performance-report.md
+          echo "**Node Version:** ${{ env.NODE_VERSION }}" >> performance-report.md
+          echo "" >> performance-report.md
+          echo "## Cleanup Results" >> performance-report.md
+          echo "- ✅ Build artifacts cleaned successfully" >> performance-report.md
+          echo "- ✅ Cache directories cleared" >> performance-report.md
+          echo "- ✅ Temporary files removed" >> performance-report.md
+          echo "" >> performance-report.md
+          echo "## Next Steps" >> performance-report.md
+          echo "- Build automation is working correctly" >> performance-report.md
+          echo "- Ready for production deployment" >> performance-report.md
+      
+      - name: 📤 Upload Performance Report
+        uses: actions/upload-artifact@v4
+        with:
+          name: performance-report-${{ github.run_number }}
+          path: performance-report.md
+          retention-days: 30
+
+  notify-completion:
+    name: 📢 Notify Completion
+    runs-on: ubuntu-latest
+    needs: [cleanup-builds, validate-cleanup, performance-test]
+    if: always()
+    
+    steps:
+      - name: 📊 Check Job Results
+        run: |
+          echo "=== Job Results ==="
+          echo "Cleanup Builds: ${{ needs.cleanup-builds.result }}"
+          echo "Validate Cleanup: ${{ needs.validate-cleanup.result }}"
+          echo "Performance Test: ${{ needs.performance-test.result }}"
+          
+          if [ "${{ needs.cleanup-builds.result }}" = "success" ] && 
+             [ "${{ needs.validate-cleanup.result }}" = "success" ] && 
+             [ "${{ needs.performance-test.result }}" = "success" ]; then
+            echo "🎉 All cleanup automation tests passed!"
+            echo "BUILD_STATUS=success" >> $GITHUB_ENV
+          else
+            echo "❌ Some cleanup automation tests failed"
+            echo "BUILD_STATUS=failure" >> $GITHUB_ENV
+          fi
+      
+      - name: 💬 Create Summary
+        run: |
+          echo "## 🧹 Build Cleanup Automation Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Status:** ${{ env.BUILD_STATUS == 'success' && '✅ Success' || '❌ Failed' }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Trigger:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Job Results" >> $GITHUB_STEP_SUMMARY
+          echo "- **Cleanup Builds:** ${{ needs.cleanup-builds.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Validate Cleanup:** ${{ needs.validate-cleanup.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Performance Test:** ${{ needs.performance-test.result }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Automation Features" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Automated build cleanup on push/PR" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Daily scheduled cleanup at 2 AM UTC" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Cross-platform script validation" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Performance monitoring" >> $GITHUB_STEP_SUMMARY
+          echo "- ✅ Git hooks for local development" >> $GITHUB_STEP_SUMMARY

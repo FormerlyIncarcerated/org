@@ -17,37 +17,37 @@ const colorThemes = [
   {
     name: "theme-navy",
     icon: Anchor,
-    label: "Professional Navy",
-    description: "Deep blue professional theme",
-    colors: ["#003366", "#4d79a4", "#d4a574", "#f0f2f5"]
+    label: "Deep Navy",
+    description: "Professional navy with enhanced depth",
+    colors: ["#014F86", "#2C7DA0", "#468FAF", "#F6F6F7"]
   },
   {
-    name: "theme-earth",
-    icon: Mountain,
-    label: "Warm Earth",
-    description: "Natural earth tones",
-    colors: ["#3d2914", "#8b4513", "#87ceeb", "#f5f5dc"]
+    name: "theme-azure",
+    icon: Waves,
+    label: "Azure Sky",
+    description: "Light and airy blue theme",
+    colors: ["#61A5C2", "#A9D6E5", "#2A6F97", "#89C2D9"]
   },
   {
-    name: "theme-purple",
+    name: "theme-steel",
     icon: Shield,
-    label: "Modern Purple",
-    description: "Professional purple theme",
-    colors: ["#4a148c", "#7b1fa2", "#ffd54f", "#f3e5f5"]
+    label: "Steel Blue",
+    description: "Industrial steel blue professional",
+    colors: ["#468FAF", "#2A6F97", "#A9D6E5", "#013A63"]
   },
   {
-    name: "theme-forest",
-    icon: Leaf,
-    label: "Forest Green",
-    description: "Deep forest theme",
-    colors: ["#1b5e20", "#4caf50", "#ff8a65", "#e8f5e8"]
+    name: "theme-arctic",
+    icon: Mountain,
+    label: "Arctic Blue",
+    description: "Cool arctic theme with crisp tones",
+    colors: ["#89C2D9", "#A9D6E5", "#014F86", "#F6F6F7"]
   },
   {
-    name: "theme-sunset",
+    name: "theme-midnight",
     icon: Sunset,
-    label: "Sunset",
-    description: "Warm sunset theme",
-    colors: ["#bf360c", "#ff7043", "#42a5f5", "#fff3e0"]
+    label: "Midnight Ocean",
+    description: "Deep midnight blue with oceanic depth",
+    colors: ["#2C7DA0", "#2A6F97", "#A9D6E5", "#012A4A"]
   },
 ]
 
@@ -152,35 +152,48 @@ export default function ThemeSelector() {
                 })}
               </div>
               
-              {/* Enhanced color palette preview */}
+              {/* Enhanced blue palette preview */}
               <div className="border-t border-theme p-3">
                 <div className="text-xs font-semibold text-muted-foreground px-2 py-1 mb-3">
-                  Current Palette
+                  Blue Palette Preview
                 </div>
-                <div className="flex gap-2 px-2">
+                <div className="grid grid-cols-4 gap-2 px-2 mb-3">
                   <motion.div
-                    className="h-7 w-7 rounded-full border-2 border-primary/30 shadow-sm"
+                    className="h-6 w-6 rounded-full border-2 border-primary/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--primary))" }}
                     whileHover={{ scale: 1.15, rotate: 5 }}
-                    title="Primary Color"
+                    title="Primary Blue"
                   />
                   <motion.div
-                    className="h-7 w-7 rounded-full border-2 border-secondary/30 shadow-sm"
+                    className="h-6 w-6 rounded-full border-2 border-secondary/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--secondary))" }}
                     whileHover={{ scale: 1.15, rotate: -5 }}
-                    title="Secondary Color"
+                    title="Secondary Blue"
                   />
                   <motion.div
-                    className="h-7 w-7 rounded-full border-2 border-accent/30 shadow-sm"
+                    className="h-6 w-6 rounded-full border-2 border-accent/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--accent))" }}
                     whileHover={{ scale: 1.15, rotate: 5 }}
-                    title="Accent Color"
+                    title="Accent Blue"
                   />
                   <motion.div
-                    className="h-7 w-7 rounded-full border-2 border-muted-foreground/30 shadow-sm"
+                    className="h-6 w-6 rounded-full border-2 border-muted-foreground/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--muted))" }}
                     whileHover={{ scale: 1.15, rotate: -5 }}
-                    title="Muted Color"
+                    title="Muted Blue"
+                  />
+                </div>
+
+                {/* Blue gradient showcase */}
+                <div className="px-2">
+                  <div className="text-xs text-muted-foreground mb-2">Ocean Gradient</div>
+                  <motion.div
+                    className="h-4 rounded-full shadow-sm border border-border/50"
+                    style={{
+                      background: "linear-gradient(90deg, hsl(var(--blue-darkest)), hsl(var(--blue-medium)), hsl(var(--blue-air)), hsl(var(--blue-very-light)))"
+                    }}
+                    whileHover={{ scale: 1.02 }}
+                    title="Blue Palette Gradient"
                   />
                 </div>
               </div>

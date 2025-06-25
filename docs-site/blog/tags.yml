@@ -1,19 +1,84 @@
-facebook:
-  label: Facebook
-  permalink: /facebook
-  description: Facebook tag description
+announcement:
+  label: Announcements
+  permalink: /announcement
+  description: Platform announcements and major updates
 
-hello:
-  label: Hello
-  permalink: /hello
-  description: Hello tag description
+launch:
+  label: Launch
+  permalink: /launch
+  description: Platform launch and milestone announcements
 
-docusaurus:
-  label: Docusaurus
-  permalink: /docusaurus
-  description: Docusaurus tag description
+web3:
+  label: Web3
+  permalink: /web3
+  description: Web3 technology and blockchain-related content
 
-hola:
-  label: Hola
-  permalink: /hola
-  description: Hola tag description
+community:
+  label: Community
+  permalink: /community
+  description: Community updates, stories, and engagement
+
+design:
+  label: Design
+  permalink: /design
+  description: Design system, UI/UX, and visual updates
+
+accessibility:
+  label: Accessibility
+  permalink: /accessibility
+  description: Accessibility features and inclusive design
+
+theme:
+  label: Theme
+  permalink: /theme
+  description: Theme system and customization
+
+ui-ux:
+  label: UI/UX
+  permalink: /ui-ux
+  description: User interface and user experience design
+
+development:
+  label: Development
+  permalink: /development
+  description: Technical development updates and features
+
+platform:
+  label: Platform
+  permalink: /platform
+  description: Platform features and functionality
+
+empowerment:
+  label: Empowerment
+  permalink: /empowerment
+  description: Community empowerment and success stories
+
+technology:
+  label: Technology
+  permalink: /technology
+  description: Technology updates and innovations
+
+impact:
+  label: Impact
+  permalink: /impact
+  description: Community impact and outcomes
+
+partnership:
+  label: Partnerships
+  permalink: /partnership
+  description: Partnership announcements and collaborations
+
+education:
+  label: Education
+  permalink: /education
+  description: Educational content and resources
+
+advocacy:
+  label: Advocacy
+  permalink: /advocacy
+  description: Policy advocacy and social change
+
+success-stories:
+  label: Success Stories
+  permalink: /success-stories
+  description: Community member success stories and achievements
