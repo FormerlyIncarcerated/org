@@ -14,6 +14,31 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ---
 
+## [2.1.1] - 2025-06-25
+
+### 🔧 Fixed
+- **Documentation Build Issues**: Resolved broken links and missing file references
+- **Environment Configuration**: Restored missing .env.local file for development
+- **File Structure**: Consolidated redundant docs/ and docs-site/docs/ folders
+
+### 📚 Added
+- **Contributing Documentation**: Comprehensive guidelines and code of conduct
+- **Version Tracking**: Created VERSION.md for release history
+- **Link Validation**: Automated script for checking and fixing broken links
+- **Missing Documentation Files**: Created intro.md and contributing guides
+
+### 🎨 Changed
+- **Package Metadata**: Updated version to 2.1.1 with enhanced keywords
+- **Web Manifest**: Refreshed with Prison Blues theme colors and current branding
+- **Repository Links**: Updated all GitHub URLs to reflect organization structure
+
+### 🏗️ Improved
+- **Build Process**: Documentation now builds successfully without critical errors
+- **Development Environment**: Better local development setup with proper .env.local
+- **Error Handling**: Improved warning management in build scripts
+
+---
+
 ## [1.0.0] - 2025-06-25
 
 ### 🎉 Initial Release
