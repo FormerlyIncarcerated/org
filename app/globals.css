@@ -122,47 +122,65 @@ body {
   }
 }
 
-/* Theme-specific CSS classes for blue palette themes */
-.theme-navy {
-  --primary: 204 98% 26%; /* #014F86 - Dark blue */
-  --secondary: 198 57% 40%; /* #2C7DA0 - Medium blue-teal */
-  --accent: 198 42% 48%; /* #468FAF - Medium-dark blue */
-  --background: 204 98% 24%; /* #01497C - Dark blue background */
-  --muted: 204 95% 15%; /* #012A4A - Darkest blue */
-}
-
-.theme-azure {
-  --primary: 198 44% 57%; /* #61A5C2 - Air superiority blue */
-  --secondary: 198 53% 78%; /* #A9D6E5 - Very light blue */
-  --accent: 204 56% 38%; /* #2A6F97 - Medium blue */
-  --background: 198 53% 69%; /* #89C2D9 - Light blue-gray */
-  --foreground: 204 98% 20%; /* #013A63 - Very dark blue */
-  --muted: 240 6% 97%; /* #F6F6F7 - Seasalt */
-}
-
-.theme-steel {
-  --primary: 198 42% 48%; /* #468FAF - Medium-dark blue */
-  --secondary: 204 56% 38%; /* #2A6F97 - Medium blue */
-  --accent: 198 53% 78%; /* #A9D6E5 - Very light blue */
-  --background: 204 98% 20%; /* #013A63 - Very dark blue */
-  --muted: 204 98% 24%; /* #01497C - Dark blue */
-}
-
-.theme-arctic {
-  --primary: 198 53% 69%; /* #89C2D9 - Light blue-gray */
-  --secondary: 198 53% 78%; /* #A9D6E5 - Very light blue */
-  --accent: 204 98% 26%; /* #014F86 - Dark blue */
+/* Prison Blues Theme System - Honoring the Journey of Transformation */
+.theme-san-quentin {
+  --primary: 204 56% 38%; /* #2A6F97 - Ocean Blue */
+  --secondary: 198 44% 57%; /* #61A5C2 - Air Superiority */
+  --accent: 198 53% 78%; /* #A9D6E5 - Sky Reflection */
   --background: 240 6% 97%; /* #F6F6F7 - Seasalt */
-  --foreground: 204 95% 15%; /* #012A4A - Darkest blue */
-  --muted: 198 44% 57%; /* #61A5C2 - Air superiority blue */
+  --foreground: 204 95% 15%; /* #012A4A - Old Folsom */
+  --muted: 198 53% 69%; /* #89C2D9 - Coastal Mist */
+  --border: 204 56% 38%; /* #2A6F97 - Ocean Blue */
 }
 
-.theme-midnight {
-  --primary: 198 57% 40%; /* #2C7DA0 - Medium blue-teal */
-  --secondary: 204 56% 38%; /* #2A6F97 - Medium blue */
-  --accent: 198 53% 78%; /* #A9D6E5 - Very light blue */
-  --background: 204 95% 15%; /* #012A4A - Darkest blue */
-  --muted: 204 98% 20%; /* #013A63 - Very dark blue */
+.theme-pelican {
+  --primary: 204 98% 26%; /* #014F86 - Pelican Bay */
+  --secondary: 198 57% 40%; /* #2C7DA0 - Teal Current */
+  --accent: 198 42% 48%; /* #468FAF - Steel Wave */
+  --background: 204 98% 24%; /* #01497C - San Quentin */
+  --foreground: 240 6% 97%; /* #F6F6F7 - Seasalt */
+  --muted: 204 95% 15%; /* #012A4A - Old Folsom */
+  --border: 198 53% 69%; /* #89C2D9 - Coastal Mist */
+}
+
+.theme-chino {
+  --primary: 198 44% 57%; /* #61A5C2 - Air Superiority */
+  --secondary: 198 53% 78%; /* #A9D6E5 - Sky Reflection */
+  --accent: 204 56% 38%; /* #2A6F97 - Ocean Blue */
+  --background: 198 53% 69%; /* #89C2D9 - Coastal Mist */
+  --foreground: 204 98% 20%; /* #013A63 - New Folsom */
+  --muted: 240 6% 97%; /* #F6F6F7 - Seasalt */
+  --border: 198 42% 48%; /* #468FAF - Steel Wave */
+}
+
+.theme-folsom {
+  --primary: 198 42% 48%; /* #468FAF - Steel Wave */
+  --secondary: 204 56% 38%; /* #2A6F97 - Ocean Blue */
+  --accent: 198 53% 78%; /* #A9D6E5 - Sky Reflection */
+  --background: 204 98% 20%; /* #013A63 - New Folsom */
+  --foreground: 240 6% 97%; /* #F6F6F7 - Seasalt */
+  --muted: 204 98% 24%; /* #01497C - San Quentin */
+  --border: 198 44% 57%; /* #61A5C2 - Air Superiority */
+}
+
+.theme-lancaster {
+  --primary: 198 53% 69%; /* #89C2D9 - Coastal Mist */
+  --secondary: 198 53% 78%; /* #A9D6E5 - Sky Reflection */
+  --accent: 204 98% 26%; /* #014F86 - Pelican Bay */
+  --background: 240 6% 97%; /* #F6F6F7 - Seasalt */
+  --foreground: 204 95% 15%; /* #012A4A - Old Folsom */
+  --muted: 198 44% 57%; /* #61A5C2 - Air Superiority */
+  --border: 204 56% 38%; /* #2A6F97 - Ocean Blue */
+}
+
+.theme-crescent {
+  --primary: 198 57% 40%; /* #2C7DA0 - Teal Current */
+  --secondary: 204 56% 38%; /* #2A6F97 - Ocean Blue */
+  --accent: 198 53% 78%; /* #A9D6E5 - Sky Reflection */
+  --background: 204 95% 15%; /* #012A4A - Old Folsom */
+  --foreground: 240 6% 97%; /* #F6F6F7 - Seasalt */
+  --muted: 204 98% 20%; /* #013A63 - New Folsom */
+  --border: 198 42% 48%; /* #468FAF - Steel Wave */
 }
 
 @layer base {

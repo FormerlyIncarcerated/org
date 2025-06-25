@@ -1,16 +1,17 @@
-# Blue Ocean Theming System Documentation
+# 🏛️ Prison Blues Theming System Documentation
 
 ## Overview
 
-The F.Inc. platform features an advanced blue-focused theming system built with CSS custom properties, Tailwind CSS, and next-themes. This ocean-inspired design system provides seamless light/dark mode switching with a comprehensive blue color palette designed for accessibility, professional appeal, and visual impact.
+The FormerlyIncarcerated.org platform features an advanced Prison Blues theming system built with CSS custom properties, Tailwind CSS, and next-themes. This meaningful design system honors the lived experiences of formerly incarcerated individuals while providing seamless theme switching with a comprehensive blue color palette designed for accessibility, professional appeal, and dignity.
 
 ## Design Philosophy
 
-Our blue palette represents:
-- **Trust & Reliability**: Deep blues convey stability and trustworthiness
-- **Professional Growth**: Ocean metaphors represent depth and potential
-- **Accessibility First**: WCAG AAA compliance across all themes
-- **Empowerment**: From dark depths to bright horizons, representing the journey of formerly incarcerated individuals
+Our Prison Blues palette represents:
+- **Authentic Connection**: Themes named after real correctional facilities that resonate with lived experiences
+- **Transformation Journey**: From confinement to empowerment, representing growth and second chances
+- **Dignity & Respect**: Professional design that honors every individual's worth and potential
+- **Accessibility First**: WCAG AAA compliance across all themes ensuring inclusive access
+- **Strength Through Adversity**: Celebrating resilience and the power of positive change
 
 ## Blue Color Palette
 
@@ -18,11 +19,11 @@ Our blue palette represents:
 
 ```css
 :root {
-  /* Ocean-Inspired Blue Palette */
-  --blue-darkest: 204 95% 15%;     /* #012A4A - Midnight Deep */
-  --blue-very-dark: 204 98% 20%;   /* #013A63 - Ocean Depth */
-  --blue-dark: 204 98% 24%;        /* #01497C - Deep Current */
-  --blue-dark-alt: 204 98% 26%;    /* #014F86 - Navy Professional */
+  /* Prison-Blues-Inspired Blue Palette */
+  --blue-darkest: 204 95% 15%;     /* #012A4A - Old Folsom */
+  --blue-very-dark: 204 98% 20%;   /* #013A63 - New Folsom */
+  --blue-dark: 204 98% 24%;        /* #01497C - San Quentin */
+  --blue-dark-alt: 204 98% 26%;    /* #014F86 - Pelican Bay */
   --blue-medium: 204 56% 38%;      /* #2A6F97 - Ocean Blue */
   --blue-medium-teal: 198 57% 40%; /* #2C7DA0 - Teal Current */
   --blue-medium-dark: 198 42% 48%; /* #468FAF - Steel Wave */
@@ -33,49 +34,61 @@ Our blue palette represents:
 }
 ```
 
-## Six Blue Theme Variants
+## Six Prison Blues Theme Variants
 
-### 1. Ocean Professional (Default)
-Primary blue theme with professional depth and accessibility
+### 1. 🏛️ San Quentin Standard (Default)
+Classic, trusted, and foundational – honoring transformation programs
 - **Primary**: Ocean Blue (#2A6F97)
 - **Secondary**: Air Superiority (#61A5C2)
 - **Accent**: Sky Reflection (#A9D6E5)
-- **Background**: Midnight Deep (#012A4A)
+- **Background**: Seasalt (#F6F6F7)
+- **Foreground**: Old Folsom (#012A4A)
+- **Inspiration**: California's oldest prison known for transformation programs
 
-### 2. Deep Navy
-Professional navy with enhanced depth and contrast
-- **Primary**: Navy Professional (#014F86)
+### 2. ⚓ Pelican Depths
+Heavy, isolated, and intense – echoing Pelican Bay's SHU atmosphere
+- **Primary**: Pelican Bay (#014F86)
 - **Secondary**: Teal Current (#2C7DA0)
 - **Accent**: Steel Wave (#468FAF)
-- **Background**: Deep Current (#01497C)
+- **Background**: San Quentin (#01497C)
+- **Foreground**: Seasalt (#F6F6F7)
+- **Inspiration**: Pelican Bay's Secure Housing Unit (SHU)
 
-### 3. Azure Sky
-Light and airy blue theme with sky-like qualities
+### 3. ☁️ Chino Skies
+Lighter tone symbolic of open yards and reentry potential
 - **Primary**: Air Superiority (#61A5C2)
 - **Secondary**: Sky Reflection (#A9D6E5)
 - **Accent**: Ocean Blue (#2A6F97)
 - **Background**: Coastal Mist (#89C2D9)
+- **Foreground**: New Folsom (#013A63)
+- **Inspiration**: California Institution for Men (Chino)
 
-### 4. Steel Blue
-Industrial steel blue with modern professional appeal
+### 4. ⚡ Folsom Iron
+Rugged, industrial look – honoring strength through adversity
 - **Primary**: Steel Wave (#468FAF)
 - **Secondary**: Ocean Blue (#2A6F97)
 - **Accent**: Sky Reflection (#A9D6E5)
-- **Background**: Ocean Depth (#013A63)
+- **Background**: New Folsom (#013A63)
+- **Foreground**: Seasalt (#F6F6F7)
+- **Inspiration**: Folsom State Prison's legacy
 
-### 5. Arctic Blue
-Cool arctic theme with crisp blue tones
+### 5. ☀️ Lancaster Light
+Modern, rehabilitative, and calm – inspired by progressive programming
 - **Primary**: Coastal Mist (#89C2D9)
 - **Secondary**: Sky Reflection (#A9D6E5)
-- **Accent**: Navy Professional (#014F86)
+- **Accent**: Pelican Bay (#014F86)
 - **Background**: Seasalt (#F6F6F7)
+- **Foreground**: Old Folsom (#012A4A)
+- **Inspiration**: California State Prison, Los Angeles County
 
-### 6. Midnight Ocean
-Deep midnight blue with oceanic depth
+### 6. 🌙 Crescent Night
+Solemn, deep night tones symbolizing reflection and change
 - **Primary**: Teal Current (#2C7DA0)
 - **Secondary**: Ocean Blue (#2A6F97)
 - **Accent**: Sky Reflection (#A9D6E5)
-- **Background**: Midnight Deep (#012A4A)
+- **Background**: Old Folsom (#012A4A)
+- **Foreground**: Seasalt (#F6F6F7)
+- **Inspiration**: Crescent City (Pelican Bay location)
 
 ## CSS Implementation
 

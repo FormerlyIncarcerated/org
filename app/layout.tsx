@@ -98,13 +98,13 @@ export default function RootLayout({
       <body className="min-h-screen flex flex-col">
         <ThemeProvider
           attribute="class"
-          defaultTheme="system"
+          defaultTheme="theme-san-quentin"
           enableSystem
           disableTransitionOnChange={false}
         >
           <div className="relative z-10 min-h-screen flex flex-col">
             <Header />
-            <main className="flex-1 mb-8">
+            <main className="flex-1">
               {children}
             </main>
             <Footer />

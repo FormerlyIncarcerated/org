@@ -72,71 +72,71 @@ export const blueColorPalette = {
 } as const;
 
 export const themeVariants = {
-  oceanProfessional: {
-    name: "Ocean Professional",
-    description: "Primary blue theme with professional depth and accessibility",
-    primary: blueColorPalette.medium.hsl,
-    secondary: blueColorPalette.air.hsl,
-    accent: blueColorPalette.veryLight.hsl,
-    background: blueColorPalette.darkest.hsl,
-    foreground: blueColorPalette.seasalt.hsl,
-    muted: blueColorPalette.veryDark.hsl,
-    border: blueColorPalette.lightGray.hsl,
+  sanQuentin: {
+    name: "San Quentin Standard",
+    description: "Classic, trusted, and foundational – honoring transformation programs",
+    primary: blueColorPalette.medium.hsl,        // Ocean Blue #2A6F97
+    secondary: blueColorPalette.air.hsl,         // Air Superiority #61A5C2
+    accent: blueColorPalette.veryLight.hsl,      // Sky Reflection #A9D6E5
+    background: blueColorPalette.seasalt.hsl,    // Seasalt #F6F6F7
+    foreground: blueColorPalette.darkest.hsl,    // Old Folsom #012A4A
+    muted: blueColorPalette.lightGray.hsl,       // Coastal Mist #89C2D9
+    border: blueColorPalette.medium.hsl,         // Ocean Blue
   },
-  deepNavy: {
-    name: "Deep Navy", 
-    description: "Professional navy with enhanced depth and contrast",
-    primary: blueColorPalette.darkAlt.hsl,
-    secondary: blueColorPalette.mediumTeal.hsl,
-    accent: blueColorPalette.mediumDark.hsl,
-    background: blueColorPalette.dark.hsl,
-    foreground: blueColorPalette.seasalt.hsl,
-    muted: blueColorPalette.darkest.hsl,
-    border: blueColorPalette.lightGray.hsl,
+  pelicanDepths: {
+    name: "Pelican Depths",
+    description: "Heavy, isolated, and intense – echoing the atmosphere of Pelican Bay's SHU",
+    primary: blueColorPalette.darkAlt.hsl,       // Pelican Bay #014F86
+    secondary: blueColorPalette.mediumTeal.hsl,  // Teal Current #2C7DA0
+    accent: blueColorPalette.mediumDark.hsl,     // Steel Wave #468FAF
+    background: blueColorPalette.dark.hsl,       // San Quentin #01497C
+    foreground: blueColorPalette.seasalt.hsl,    // Seasalt #F6F6F7
+    muted: blueColorPalette.darkest.hsl,         // Old Folsom #012A4A
+    border: blueColorPalette.lightGray.hsl,      // Coastal Mist #89C2D9
   },
-  azureSky: {
-    name: "Azure Sky",
-    description: "Light and airy blue theme with sky-like qualities", 
-    primary: blueColorPalette.air.hsl,
-    secondary: blueColorPalette.veryLight.hsl,
-    accent: blueColorPalette.medium.hsl,
-    background: blueColorPalette.lightGray.hsl,
-    foreground: blueColorPalette.veryDark.hsl,
-    muted: blueColorPalette.seasalt.hsl,
-    border: blueColorPalette.mediumDark.hsl,
+  chinoSkies: {
+    name: "Chino Skies",
+    description: "Lighter tone symbolic of open yards and reentry potential",
+    primary: blueColorPalette.air.hsl,           // Air Superiority #61A5C2
+    secondary: blueColorPalette.veryLight.hsl,   // Sky Reflection #A9D6E5
+    accent: blueColorPalette.medium.hsl,         // Ocean Blue #2A6F97
+    background: blueColorPalette.lightGray.hsl,  // Coastal Mist #89C2D9
+    foreground: blueColorPalette.veryDark.hsl,   // New Folsom #013A63
+    muted: blueColorPalette.seasalt.hsl,         // Seasalt #F6F6F7
+    border: blueColorPalette.mediumDark.hsl,     // Steel Wave #468FAF
   },
-  steelBlue: {
-    name: "Steel Blue",
-    description: "Industrial steel blue with modern professional appeal",
-    primary: blueColorPalette.mediumDark.hsl,
-    secondary: blueColorPalette.medium.hsl, 
-    accent: blueColorPalette.veryLight.hsl,
-    background: blueColorPalette.veryDark.hsl,
-    foreground: blueColorPalette.seasalt.hsl,
-    muted: blueColorPalette.dark.hsl,
-    border: blueColorPalette.air.hsl,
+  folsomIron: {
+    name: "Folsom Iron",
+    description: "Rugged, industrial look – honoring Folsom's legacy and strength through adversity",
+    primary: blueColorPalette.mediumDark.hsl,    // Steel Wave #468FAF
+    secondary: blueColorPalette.medium.hsl,      // Ocean Blue #2A6F97
+    accent: blueColorPalette.veryLight.hsl,      // Sky Reflection #A9D6E5
+    background: blueColorPalette.veryDark.hsl,   // New Folsom #013A63
+    foreground: blueColorPalette.seasalt.hsl,    // Seasalt #F6F6F7
+    muted: blueColorPalette.dark.hsl,            // San Quentin #01497C
+    border: blueColorPalette.air.hsl,            // Air Superiority #61A5C2
   },
-  arcticBlue: {
-    name: "Arctic Blue",
-    description: "Cool arctic theme with crisp blue tones",
-    primary: blueColorPalette.lightGray.hsl,
-    secondary: blueColorPalette.veryLight.hsl,
-    accent: blueColorPalette.darkAlt.hsl,
-    background: blueColorPalette.seasalt.hsl,
-    foreground: blueColorPalette.darkest.hsl,
-    muted: blueColorPalette.air.hsl,
-    border: blueColorPalette.medium.hsl,
+  lancasterLight: {
+    name: "Lancaster Light",
+    description: "Modern, rehabilitative, and calm – inspired by progressive programming efforts",
+    primary: blueColorPalette.lightGray.hsl,     // Coastal Mist #89C2D9
+    secondary: blueColorPalette.veryLight.hsl,   // Sky Reflection #A9D6E5
+    accent: blueColorPalette.darkAlt.hsl,        // Pelican Bay #014F86
+    background: blueColorPalette.seasalt.hsl,    // Seasalt #F6F6F7
+    foreground: blueColorPalette.darkest.hsl,    // Old Folsom #012A4A
+    muted: blueColorPalette.air.hsl,             // Air Superiority #61A5C2
+    border: blueColorPalette.medium.hsl,         // Ocean Blue #2A6F97
   },
-  midnightOcean: {
-    name: "Midnight Ocean",
-    description: "Deep midnight blue with oceanic depth",
-    primary: blueColorPalette.mediumTeal.hsl,
-    secondary: blueColorPalette.medium.hsl,
-    accent: blueColorPalette.veryLight.hsl,
-    background: blueColorPalette.darkest.hsl,
-    foreground: blueColorPalette.seasalt.hsl,
-    muted: blueColorPalette.veryDark.hsl,
-    border: blueColorPalette.mediumDark.hsl,
+  crescentNight: {
+    name: "Crescent Night",
+    description: "Solemn, deep night tones symbolizing reflection and change",
+    primary: blueColorPalette.mediumTeal.hsl,    // Teal Current #2C7DA0
+    secondary: blueColorPalette.medium.hsl,      // Ocean Blue #2A6F97
+    accent: blueColorPalette.veryLight.hsl,      // Sky Reflection #A9D6E5
+    background: blueColorPalette.darkest.hsl,    // Old Folsom #012A4A
+    foreground: blueColorPalette.seasalt.hsl,    // Seasalt #F6F6F7
+    muted: blueColorPalette.veryDark.hsl,        // New Folsom #013A63
+    border: blueColorPalette.mediumDark.hsl,     // Steel Wave #468FAF
   }
 } as const;
 

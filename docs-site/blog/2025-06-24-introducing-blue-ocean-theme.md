@@ -1,28 +1,28 @@
 ---
-slug: introducing-blue-ocean-theme
-title: 🌊 Introducing the Blue Ocean Theme System
+slug: introducing-prison-blues-theme
+title: 🏛️ Introducing the Prison Blues Theme System
 authors: [design-team]
-tags: [design, accessibility, theme, ui-ux]
+tags: [design, accessibility, theme, ui-ux, prison-blues]
 ---
 
-# 🌊 Introducing the Blue Ocean Theme System
+# 🏛️ Introducing the Prison Blues Theme System
 
-**Professional Design Meets Accessibility Excellence**
+**Honoring the Journey of Transformation Through Meaningful Design**
 
-We're excited to unveil the Blue Ocean Theme System - a comprehensive design language that reflects our mission of creating new opportunities and navigating uncharted waters in the reentry space. This isn't just a visual refresh; it's a complete reimagining of how technology can serve our community with dignity, accessibility, and professional excellence.
+We're excited to unveil the Prison Blues Theme System - a comprehensive design language that honors the lived experiences of our community while reflecting our mission of transformation and second chances. This isn't just a visual refresh; it's a meaningful tribute to the journey from incarceration to empowerment, designed with dignity, accessibility, and professional excellence at its core.
 
 <!--truncate-->
 
-## 🎨 The Philosophy Behind Blue Ocean
+## 🎨 The Philosophy Behind Prison Blues
 
-### 🌊 Why "Blue Ocean"?
+### 🏛️ Why "Prison Blues"?
 
-The Blue Ocean strategy concept represents creating new market spaces rather than competing in existing ones. For our community, this means:
+The Prison Blues theme system honors the lived experiences of formerly incarcerated individuals while symbolizing transformation and hope. Each theme is named after real correctional facilities, acknowledging the journey while focusing on growth and second chances:
 
-- **Uncharted Opportunities**: Creating new pathways that didn't exist before
-- **Professional Growth**: Moving beyond traditional limitations
-- **Calm Navigation**: Providing stability and trust in uncertain times
-- **Depth and Possibility**: Representing the vast potential within each individual
+- **Authentic Connection**: Themes that resonate with real experiences and places
+- **Transformation Journey**: From confinement to empowerment and opportunity
+- **Dignity and Respect**: Professional design that honors every individual's worth
+- **Strength Through Adversity**: Celebrating resilience and the power of change
 
 ### 🎯 Design Principles
 
@@ -57,39 +57,45 @@ Our color system achieves **WCAG AAA compliance** with:
 - **High contrast mode** support for users with visual impairments
 - **Semantic color usage** that doesn't rely solely on color for meaning
 
-## 🎭 Six Professional Themes
+## 🏛️ Six Prison Blues Themes
 
-We've created six distinct theme variants to serve different preferences and use cases:
+We've created six distinct theme variants, each honoring real correctional facilities while serving different preferences and use cases:
 
-### 1. 🌊 Ocean Professional (Default)
+### 1. 🏛️ San Quentin Standard (Default)
 - **Primary**: Ocean Blue (#2A6F97)
+- **Inspiration**: California's oldest prison known for transformation programs
 - **Use Case**: Professional networking, job applications, business development
-- **Mood**: Trustworthy, competent, growth-oriented
+- **Mood**: Classic, trusted, foundational
 
-### 2. 🌙 Deep Navy
-- **Primary**: Midnight Deep (#012A4A)
+### 2. ⚓ Pelican Depths
+- **Primary**: Pelican Bay (#014F86)
+- **Inspiration**: Pelican Bay's Secure Housing Unit (SHU) - heavy and intense
 - **Use Case**: Serious documentation, legal content, formal communications
-- **Mood**: Authoritative, stable, reliable
+- **Mood**: Heavy, isolated, intense
 
-### 3. ☁️ Azure Sky
+### 3. ☁️ Chino Skies
 - **Primary**: Air Superiority (#61A5C2)
+- **Inspiration**: California Institution for Men (Chino) - open yards and potential
 - **Use Case**: Creative projects, community building, social features
-- **Mood**: Inspiring, collaborative, uplifting
+- **Mood**: Light, hopeful, symbolic of reentry potential
 
-### 4. 🔧 Steel Blue
-- **Primary**: Medium Blue-Teal (#2C7DA0)
+### 4. ⚡ Folsom Iron
+- **Primary**: Steel Wave (#468FAF)
+- **Inspiration**: Folsom State Prison's legacy - strength through adversity
 - **Use Case**: Technical documentation, developer tools, system interfaces
-- **Mood**: Precise, technical, efficient
+- **Mood**: Rugged, industrial, resilient
 
-### 5. ❄️ Arctic Blue
-- **Primary**: Light Blue-Gray (#89C2D9)
+### 5. ☀️ Lancaster Light
+- **Primary**: Coastal Mist (#89C2D9)
+- **Inspiration**: California State Prison, Los Angeles County - progressive programming
 - **Use Case**: Accessibility mode, high contrast needs, calm environments
-- **Mood**: Gentle, supportive, accessible
+- **Mood**: Modern, rehabilitative, calm
 
-### 6. 🌌 Midnight Ocean
-- **Primary**: Very Dark Blue (#013A63)
+### 6. 🌙 Crescent Night
+- **Primary**: Teal Current (#2C7DA0)
+- **Inspiration**: Crescent City (Pelican Bay location) - reflection and change
 - **Use Case**: Dark mode, evening use, reduced eye strain
-- **Mood**: Sophisticated, comfortable, modern
+- **Mood**: Solemn, reflective, transformative
 
 ## 🛠️ Technical Implementation
 

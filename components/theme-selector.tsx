@@ -3,7 +3,7 @@
 import { useTheme } from "next-themes"
 import { useEffect, useState } from "react"
 import { motion, AnimatePresence } from "framer-motion"
-import { Sun, Moon, Monitor, Palette, Shield, Leaf, Waves, Mountain, Sunset, Anchor } from "lucide-react"
+import { Sun, Moon, Monitor, Palette, Shield, Leaf, Waves, Mountain, Sunset, Anchor, Building, Zap, CloudSnow, Compass } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { siteConfig } from "@/lib/config"
 
@@ -15,38 +15,45 @@ const baseThemes = [
 
 const colorThemes = [
   {
-    name: "theme-navy",
-    icon: Anchor,
-    label: "Deep Navy",
-    description: "Professional navy with enhanced depth",
-    colors: ["#014F86", "#2C7DA0", "#468FAF", "#F6F6F7"]
+    name: "theme-san-quentin",
+    icon: Building,
+    label: "San Quentin Standard",
+    description: "Classic, trusted, and foundational – honoring transformation programs",
+    colors: ["#2A6F97", "#61A5C2", "#A9D6E5", "#F6F6F7"]
   },
   {
-    name: "theme-azure",
-    icon: Waves,
-    label: "Azure Sky",
-    description: "Light and airy blue theme",
+    name: "theme-pelican",
+    icon: Anchor,
+    label: "Pelican Depths",
+    description: "Heavy, isolated, and intense – echoing Pelican Bay's atmosphere",
+    colors: ["#014F86", "#2C7DA0", "#468FAF", "#01497C"]
+  },
+  {
+    name: "theme-chino",
+    icon: CloudSnow,
+    label: "Chino Skies",
+    description: "Lighter tone symbolic of open yards and reentry potential",
     colors: ["#61A5C2", "#A9D6E5", "#2A6F97", "#89C2D9"]
   },
   {
-    name: "theme-steel",
-    icon: Shield,
-    label: "Steel Blue",
-    description: "Industrial steel blue professional",
+    name: "theme-folsom",
+    icon: Zap,
+    label: "Folsom Iron",
+    description: "Rugged, industrial look – honoring strength through adversity",
     colors: ["#468FAF", "#2A6F97", "#A9D6E5", "#013A63"]
   },
   {
-    name: "theme-arctic",
-    icon: Mountain,
-    label: "Arctic Blue",
-    description: "Cool arctic theme with crisp tones",
+    name: "theme-lancaster",
+    icon: Sun,
+    label: "Lancaster Light",
+    description: "Modern, rehabilitative, and calm – inspired by progressive programming",
     colors: ["#89C2D9", "#A9D6E5", "#014F86", "#F6F6F7"]
   },
   {
-    name: "theme-midnight",
-    icon: Sunset,
-    label: "Midnight Ocean",
-    description: "Deep midnight blue with oceanic depth",
+    name: "theme-crescent",
+    icon: Moon,
+    label: "Crescent Night",
+    description: "Solemn, deep night tones symbolizing reflection and change",
     colors: ["#2C7DA0", "#2A6F97", "#A9D6E5", "#012A4A"]
   },
 ]
@@ -152,48 +159,35 @@ export default function ThemeSelector() {
                 })}
               </div>
               
-              {/* Enhanced blue palette preview */}
+              {/* Enhanced color palette preview */}
               <div className="border-t border-theme p-3">
                 <div className="text-xs font-semibold text-muted-foreground px-2 py-1 mb-3">
-                  Blue Palette Preview
+                  Current Palette
                 </div>
-                <div className="grid grid-cols-4 gap-2 px-2 mb-3">
+                <div className="flex gap-2 px-2">
                   <motion.div
-                    className="h-6 w-6 rounded-full border-2 border-primary/30 shadow-sm"
+                    className="h-7 w-7 rounded-full border-2 border-primary/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--primary))" }}
                     whileHover={{ scale: 1.15, rotate: 5 }}
-                    title="Primary Blue"
+                    title="Primary Color"
                   />
                   <motion.div
-                    className="h-6 w-6 rounded-full border-2 border-secondary/30 shadow-sm"
+                    className="h-7 w-7 rounded-full border-2 border-secondary/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--secondary))" }}
                     whileHover={{ scale: 1.15, rotate: -5 }}
-                    title="Secondary Blue"
+                    title="Secondary Color"
                   />
                   <motion.div
-                    className="h-6 w-6 rounded-full border-2 border-accent/30 shadow-sm"
+                    className="h-7 w-7 rounded-full border-2 border-accent/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--accent))" }}
                     whileHover={{ scale: 1.15, rotate: 5 }}
-                    title="Accent Blue"
+                    title="Accent Color"
                   />
                   <motion.div
-                    className="h-6 w-6 rounded-full border-2 border-muted-foreground/30 shadow-sm"
+                    className="h-7 w-7 rounded-full border-2 border-muted-foreground/30 shadow-sm"
                     style={{ backgroundColor: "hsl(var(--muted))" }}
                     whileHover={{ scale: 1.15, rotate: -5 }}
-                    title="Muted Blue"
-                  />
-                </div>
-
-                {/* Blue gradient showcase */}
-                <div className="px-2">
-                  <div className="text-xs text-muted-foreground mb-2">Ocean Gradient</div>
-                  <motion.div
-                    className="h-4 rounded-full shadow-sm border border-border/50"
-                    style={{
-                      background: "linear-gradient(90deg, hsl(var(--blue-darkest)), hsl(var(--blue-medium)), hsl(var(--blue-air)), hsl(var(--blue-very-light)))"
-                    }}
-                    whileHover={{ scale: 1.02 }}
-                    title="Blue Palette Gradient"
+                    title="Muted Color"
                   />
                 </div>
               </div>
