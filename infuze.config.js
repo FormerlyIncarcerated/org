@@ -44,13 +44,14 @@ module.exports = {
 
   // Deployment Configuration
   deployment: {
-    user: process.env.DEPLOY_USER || 'deploy',
+    user: process.env.INFUZE_VM_USERNAME || 'root',
+    password: process.env.INFUZE_VM_PASSWORD || '9ijn*UHB',
     
     // Paths on the server
     paths: {
       app: '/var/www/formerlyincarcerated.org',
       docs: '/var/www/docs.formerlyincarcerated.org',
-      repository: '/home/deploy/formerlyincarcerated',
+      repository: '/root/formerlyincarcerated',
       backups: '/var/www/backups',
       logs: '/var/log/formerlyincarcerated'
     },
