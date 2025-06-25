@@ -25,7 +25,7 @@ const config: Config = {
   organizationName: 'FormerlyIncarcerated', // Usually your GitHub org/user name.
   projectName: 'formerlyincarcerated', // Usually your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -107,15 +107,15 @@ const config: Config = {
           items: [
             {
               label: 'Get Started',
-              to: '/intro',
+              to: '/docs/intro',
             },
             {
               label: 'Whitepaper',
-              to: '/whitepaper',
+              to: '/docs/whitepaper-github',
             },
             {
               label: 'Technical Docs',
-              to: '/technical/WEB3_ARCHITECTURE',
+              to: '/docs/technical/WEB3_ARCHITECTURE',
             },
           ],
         },

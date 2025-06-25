@@ -1,243 +1,500 @@
----
-id: roadmap
-title: Development Roadmap
-sidebar_label: 🗺️ Roadmap
-description: Strategic development plan for FormerlyIncarcerated.org Web3 platform
----
+# FormerlyIncarcerated.org Development Roadmap
+## Building Second Chances Through Technology
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
-
-# 🗺️ Development Roadmap
-
-<div align="center">
-
-![FormerlyIncarcerated.org](https://img.shields.io/badge/FormerlyIncarcerated.org-Web3%20Platform-blue?style=for-the-badge&logo=ethereum)
-![Status](https://img.shields.io/badge/Status-Phase%201%20In%20Progress-green?style=for-the-badge)
-![Version](https://img.shields.io/badge/Version-1.0-orange?style=for-the-badge)
-
-**Building Second Chances Through Web3 Technology**
-
-*Empowering formerly incarcerated individuals with dignity, opportunity, and community support*
-
-</div>
+**Version 1.0** | **Last Updated: December 2024**
 
 ---
 
-## 📊 Project Status
+## Overview
 
-```
-🏗️ Phase 1: Foundation & Identity Infrastructure    ████████████████████░░░░ 85%
-🚀 Phase 2: Launch & Community Activation          ████░░░░░░░░░░░░░░░░░░░░ 15%
-📈 Phase 3: Scale & Multi-Chain Expansion          ░░░░░░░░░░░░░░░░░░░░░░░░  0%
-🌍 Phase 4: Global Impact & Sustainability         ░░░░░░░░░░░░░░░░░░░░░░░░  0%
-```
+This roadmap outlines the strategic development and implementation plan for FormerlyIncarcerated.org, a Web3 platform designed to empower formerly incarcerated individuals through decentralized technology, community governance, and economic opportunity.
+
+Our roadmap is structured in four phases over 24 months, with each phase building upon the previous to create a comprehensive ecosystem that addresses systemic barriers to reintegration while fostering community ownership and sustainable impact.
 
 ---
 
-## 🎯 Mission-Critical Objectives
+## 🏗️ Phase 1: Foundation & Infrastructure
+**Timeline: Q1 - Q2 2025 (6 months)**
 
-<table>
-<tr>
-<th>🎯 Objective</th>
-<th>📅 Timeline</th>
-<th>📊 Status</th>
-<th>🎉 Impact</th>
-</tr>
-<tr>
-<td><strong>Digital Identity System</strong></td>
-<td>Q2 2025</td>
-<td>🟢 85% Complete</td>
-<td>Self-sovereign identity for 1,000+ individuals</td>
-</tr>
-<tr>
-<td><strong>Community Platform Launch</strong></td>
-<td>Q3 2025</td>
-<td>🟡 In Development</td>
-<td>Connect 500+ formerly incarcerated individuals</td>
-</tr>
-<tr>
-<td><strong>Economic Empowerment Tools</strong></td>
-<td>Q4 2025</td>
-<td>🔵 Planning</td>
-<td>Launch 50+ community businesses</td>
-</tr>
-<tr>
-<td><strong>Global Expansion</strong></td>
-<td>2026+</td>
-<td>🔮 Future Vision</td>
-<td>Impact 10,000+ lives worldwide</td>
-</tr>
-</table>
+### Core Objectives
+- Establish technical foundation and security framework
+- Build initial community and advisory structure
+- Develop core platform features and user experience
+- Create governance mechanisms and community guidelines
+
+### Technical Development
+
+#### Smart Contract Development
+- [ ] **Identity Management Contracts**
+  - Self-sovereign identity registry
+  - Credential verification system
+  - Privacy-preserving proof mechanisms
+  - Zero-knowledge proof integration
+
+- [ ] **Governance Infrastructure**
+  - DAO governance contracts
+  - Voting mechanisms (quadratic voting)
+  - Proposal submission and execution
+  - Treasury management contracts
+
+- [ ] **Token Economics**
+  - SCG governance token deployment
+  - RAT utility token implementation
+  - NFT contracts for skill verification
+  - Achievement badge system (ERC-1155)
+
+#### Platform Development
+- [ ] **Frontend Application**
+  - Next.js 15 application with TypeScript
+  - Responsive design with 6-theme support
+  - Web3 wallet integration (WalletConnect, MetaMask)
+  - User onboarding and education flows
+
+- [ ] **Backend Infrastructure**
+  - API development with Next.js routes
+  - PostgreSQL database with Prisma ORM
+  - Redis caching for performance
+  - IPFS integration for decentralized storage
+
+- [ ] **Security & Privacy**
+  - Comprehensive security audits
+  - Privacy-by-design implementation
+  - Multi-signature wallet setup
+  - Emergency pause mechanisms
+
+### Community Building
+
+#### Advisory Board Formation
+- [ ] **Formerly Incarcerated Leadership**
+  - 5 advisory board members with lived experience
+  - Community liaison and feedback coordination
+  - User experience testing and validation
+
+- [ ] **Technical Advisory**
+  - Blockchain and Web3 experts
+  - Security and privacy specialists
+  - Legal and regulatory advisors
+
+- [ ] **Impact Advisory**
+  - Criminal justice reform advocates
+  - Social impact measurement experts
+  - Community organization leaders
+
+#### Community Guidelines
+- [ ] **Platform Policies**
+  - Community standards and code of conduct
+  - Privacy policy and data handling
+  - Terms of service and user agreements
+  - Dispute resolution mechanisms
+
+- [ ] **Governance Framework**
+  - DAO constitution and bylaws
+  - Voting procedures and requirements
+  - Committee structures and responsibilities
+  - Proposal submission guidelines
+
+### Partnerships & Integrations
+
+#### Strategic Partnerships
+- [ ] **Reentry Organizations**
+  - 10 initial partner organizations
+  - Service integration and referral systems
+  - Data sharing agreements and protocols
+
+- [ ] **Educational Institutions**
+  - 5 vocational training partners
+  - Skill verification and credentialing
+  - Curriculum development collaboration
+
+- [ ] **Employer Partners**
+  - 20 initial hiring partners
+  - Job matching and placement systems
+  - Fair chance hiring commitments
+
+#### Technology Integrations
+- [ ] **Blockchain Infrastructure**
+  - Ethereum mainnet deployment
+  - Polygon Layer 2 integration
+  - Cross-chain bridge implementation
+  - Oracle services for external data
+
+### Milestones & Success Metrics
+
+#### Technical Milestones
+- [ ] Smart contracts audited and deployed to testnets
+- [ ] Frontend application MVP completed
+- [ ] Backend infrastructure operational
+- [ ] Security audit passed with no critical issues
+
+#### Community Milestones
+- [ ] 100 beta users onboarded and active
+- [ ] Advisory board fully established
+- [ ] Community guidelines ratified
+- [ ] 10 strategic partnerships signed
+
+#### Funding Milestones
+- [ ] Seed funding round completed ($2M target)
+- [ ] Initial token distribution executed
+- [ ] Treasury management systems operational
+- [ ] Grant funding secured ($500K target)
 
 ---
 
-## 🚀 Phase 1: Foundation & Identity Infrastructure (Q1-Q2 2025)
+## 🚀 Phase 2: Launch & Early Adoption
+**Timeline: Q3 - Q4 2025 (6 months)**
 
-**Status: 85% Complete** 🟢
+### Core Objectives
+- Launch platform to public with core features
+- Activate community governance and decision-making
+- Demonstrate initial impact and user adoption
+- Establish sustainable operational processes
 
-### ✅ Completed Milestones
-- **Smart Contract Architecture**: Core identity and governance contracts deployed on testnets
-- **Frontend Development**: React/Next.js application with Web3 integration
-- **Identity System**: Self-sovereign identity framework with zero-knowledge proofs
-- **Community Building**: Initial outreach and partnership establishment
-- **Whitepaper & Documentation**: Comprehensive technical and mission documentation
+### Platform Launch
 
-### 🔄 Current Work
-- **Mainnet Preparation**: Security audits and final testing
-- **User Experience**: Interface refinement and accessibility improvements
-- **Partnership Integration**: Connecting with reentry organizations and employers
+#### Mainnet Deployment
+- [ ] **Production Release**
+  - Smart contracts deployed to Ethereum mainnet
+  - Frontend application live at formerlyincarcerated.org
+  - Mobile-responsive design fully functional
+  - Web3 wallet integration operational
 
-### 🎯 Key Deliverables
-- ✅ Decentralized identity verification system
-- ✅ Community governance framework
-- ✅ Initial funding mechanisms
-- 🔄 Beta user onboarding (Target: 100 users)
+- [ ] **Core Features Active**
+  - User registration and identity creation
+  - Skill verification and credentialing
+  - Basic job matching and placement
+  - Community forums and communication
+
+- [ ] **Governance Activation**
+  - DAO governance fully operational
+  - First community proposals submitted
+  - Voting mechanisms tested and validated
+  - Treasury management active
+
+#### Token Distribution
+- [ ] **Public Token Launch**
+  - SCG governance token distribution
+  - Community airdrop to early adopters
+  - Liquidity provision on DEXs
+  - Staking mechanisms activated
+
+- [ ] **Utility Token Rollout**
+  - RAT token for platform services
+  - Payment systems integration
+  - Fee structure implementation
+  - Burn mechanisms activated
+
+### Feature Development
+
+#### Identity & Credentials
+- [ ] **Enhanced Identity System**
+  - Advanced privacy controls
+  - Selective disclosure mechanisms
+  - Cross-platform credential portability
+  - Integration with government systems
+
+- [ ] **Skill Verification Platform**
+  - NFT-based credential system
+  - Employer verification tools
+  - Skill assessment integration
+  - Achievement tracking system
+
+#### Economic Empowerment
+- [ ] **Micro-lending Protocol**
+  - Peer-to-peer lending platform
+  - Community-backed loan pools
+  - Automated underwriting system
+  - Repayment tracking and incentives
+
+- [ ] **Job Matching System**
+  - AI-powered job recommendations
+  - Employer dashboard and tools
+  - Application tracking system
+  - Success metrics and feedback
+
+### Community Growth
+
+#### User Acquisition
+- [ ] **Marketing & Outreach**
+  - Community ambassador program
+  - Social media and content marketing
+  - Conference presentations and demos
+  - Media coverage and PR campaigns
+
+- [ ] **User Onboarding**
+  - Streamlined registration process
+  - Educational content and tutorials
+  - Mentorship program launch
+  - Support system implementation
+
+#### Governance Participation
+- [ ] **Active Governance**
+  - Monthly community proposals
+  - Regular voting participation
+  - Committee formation and operation
+  - Transparent decision documentation
+
+### Milestones & Success Metrics
+
+#### Adoption Metrics
+- [ ] 1,000 active users registered
+- [ ] 100 verified credentials issued
+- [ ] 50 successful job placements
+- [ ] 10 businesses launched with platform support
+
+#### Governance Metrics
+- [ ] 10 community proposals passed
+- [ ] 60% voter participation rate
+- [ ] 5 active governance committees
+- [ ] $100K in community funding allocated
+
+#### Economic Metrics
+- [ ] $500K in micro-loans facilitated
+- [ ] 25% average wage increase for participants
+- [ ] 90% loan repayment rate
+- [ ] $1M in total economic activity
 
 ---
 
-## 🎯 Phase 2: Launch & Community Activation (Q3-Q4 2025)
+## 📈 Phase 3: Scale & Expansion
+**Timeline: Q1 - Q2 2026 (6 months)**
 
-**Status: 15% Complete** 🟡
+### Core Objectives
+- Scale platform to serve 10,000+ users
+- Expand to multiple cities and regions
+- Integrate advanced DeFi and Web3 features
+- Demonstrate measurable social impact
 
-### 🚀 Launch Objectives
-- **Public Platform Deployment**: Full mainnet launch with core features
-- **Community Onboarding**: First 1,000 users across multiple cities
-- **Token Distribution**: Fair launch with community governance tokens
-- **Business Incubation**: Launch first 50 community-owned businesses
+### Platform Scaling
 
-### 📈 Success Metrics
-- **500+** formerly incarcerated individuals onboarded
-- **$500K+** in community funding allocated
-- **10+** strategic partnerships with reentry organizations
-- **50+** businesses launched through the platform
+#### Technical Infrastructure
+- [ ] **Performance Optimization**
+  - Multi-chain architecture implementation
+  - Layer 2 scaling solutions
+  - CDN and caching optimization
+  - Database sharding and optimization
 
-### 🛠️ Technical Milestones
-- Cross-chain interoperability (Ethereum, Polygon, Arbitrum)
-- Mobile application launch (iOS/Android)
-- Advanced DeFi integrations
-- Reputation and skills verification system
+- [ ] **Advanced Features**
+  - Mobile application launch (iOS/Android)
+  - AI-powered matching algorithms
+  - Advanced analytics and reporting
+  - Real-time communication systems
+
+#### Geographic Expansion
+- [ ] **Multi-City Deployment**
+  - Expansion to 5 major metropolitan areas
+  - Local partnership development
+  - Regional customization and localization
+  - Community leader recruitment
+
+- [ ] **State-Level Integration**
+  - Government partnership development
+  - Policy advocacy and engagement
+  - Data sharing agreements
+  - Compliance framework implementation
+
+### Advanced Web3 Features
+
+#### DeFi Integration
+- [ ] **Investment DAOs**
+  - Community investment pools
+  - Yield farming opportunities
+  - Liquidity provision incentives
+  - Risk management protocols
+
+- [ ] **Advanced Lending**
+  - Institutional lending partnerships
+  - Credit scoring algorithms
+  - Collateralized lending options
+  - Insurance and protection mechanisms
+
+#### Cross-Chain Interoperability
+- [ ] **Multi-Chain Support**
+  - Arbitrum integration for DeFi
+  - Base integration for social features
+  - Cross-chain asset transfers
+  - Unified user experience
+
+### Enterprise Integration
+
+#### Employer Platform
+- [ ] **Enterprise Dashboard**
+  - Bulk hiring and recruitment tools
+  - Diversity and inclusion reporting
+  - Skills gap analysis and training
+  - Impact measurement and ROI tracking
+
+- [ ] **API Development**
+  - Third-party integration APIs
+  - HR system integrations
+  - Background check alternatives
+  - Compliance and reporting tools
+
+### Milestones & Success Metrics
+
+#### Scale Metrics
+- [ ] 10,000 active users across 5 cities
+- [ ] 500 businesses launched with platform support
+- [ ] 1,000 successful job placements
+- [ ] $1M in community funding allocated
+
+#### Impact Metrics
+- [ ] 25% reduction in recidivism among participants
+- [ ] 40% average wage increase
+- [ ] 90% user satisfaction rate
+- [ ] 75% employer satisfaction rate
+
+#### Financial Metrics
+- [ ] $5M in micro-loans facilitated
+- [ ] $10M in total economic activity
+- [ ] Platform revenue of $500K annually
+- [ ] Series A funding completed ($8M target)
 
 ---
 
-## 📈 Phase 3: Scale & Multi-Chain Expansion (Q1-Q2 2026)
+## 🌍 Phase 4: Global Impact & Sustainability
+**Timeline: Q3 2026 and beyond**
 
-**Status: Planning** 🔵
+### Core Objectives
+- Achieve global reach and impact
+- Establish self-sustaining economic model
+- Influence policy and systemic change
+- Create lasting social transformation
 
-### 🌐 Expansion Goals
-- **Geographic Scaling**: Expand to 10+ major metropolitan areas
-- **Technology Enhancement**: Advanced AI-powered matching and support
-- **Financial Services**: Comprehensive DeFi suite for underbanked populations
-- **Policy Advocacy**: Work with legislators on criminal justice reform
+### Global Expansion
 
-### 📊 Growth Targets
-- **5,000+** active platform users
-- **$5M+** in community funding and investments
-- **250+** successful business launches
-- **50%** reduction in recidivism among participants
+#### International Deployment
+- [ ] **Multi-Country Launch**
+  - Expansion to 3 international markets
+  - Regulatory compliance and adaptation
+  - Local partnership development
+  - Cultural customization and localization
 
-### 🔧 Technical Innovations
-- Layer 2 scaling solutions
-- AI-powered job matching
-- Decentralized credit scoring
-- Multi-language platform support
+- [ ] **Multi-Language Support**
+  - Platform translation to 5 languages
+  - Localized content and resources
+  - Regional community management
+  - Cultural sensitivity training
+
+#### Policy & Advocacy
+- [ ] **Research & Publication**
+  - Impact studies and white papers
+  - Academic partnerships and research
+  - Policy recommendations and advocacy
+  - Best practices documentation
+
+- [ ] **Systemic Change**
+  - Government partnership expansion
+  - Criminal justice reform advocacy
+  - Industry standard development
+  - Replication and scaling frameworks
+
+### Sustainability & Innovation
+
+#### Economic Sustainability
+- [ ] **Self-Sustaining Model**
+  - Platform fee optimization
+  - Revenue diversification
+  - Cost structure optimization
+  - Profitability achievement
+
+- [ ] **Community Ownership**
+  - Full DAO governance transition
+  - Community treasury management
+  - Decentralized decision-making
+  - Stakeholder value alignment
+
+#### Continuous Innovation
+- [ ] **Technology Advancement**
+  - AI and machine learning integration
+  - Blockchain technology upgrades
+  - Privacy technology advancement
+  - User experience optimization
+
+- [ ] **Feature Development**
+  - Advanced financial products
+  - Educational platform integration
+  - Healthcare and wellness services
+  - Family and community support tools
+
+### Long-Term Impact
+
+#### Measurable Outcomes
+- [ ] 50,000 active users globally
+- [ ] 2,000 successful businesses launched
+- [ ] 50% reduction in recidivism
+- [ ] $10M in community funding allocated annually
+
+#### Systemic Change
+- [ ] Policy changes in 10 jurisdictions
+- [ ] Industry adoption of fair chance hiring
+- [ ] Academic research and validation
+- [ ] Replication in other social impact areas
 
 ---
 
-## 🌍 Phase 4: Global Impact & Sustainability (Q3+ 2026)
+## 📊 Success Metrics & KPIs
 
-**Status: Future Vision** 🔮
+### User Engagement
+- **Monthly Active Users (MAU)**
+- **User Retention Rates**
+- **Platform Engagement Time**
+- **Feature Adoption Rates**
 
-### 🌟 Global Vision
-- **International Expansion**: 20+ countries with localized support
-- **Policy Transformation**: Influence criminal justice reform globally
-- **Economic Sustainability**: Self-sustaining economic ecosystem
-- **Research & Development**: Continuous innovation in reentry technology
+### Economic Impact
+- **Job Placement Success Rate**
+- **Average Wage Increase**
+- **Business Launch Success Rate**
+- **Loan Repayment Rates**
 
-### 🏆 Long-term Impact Goals
-- **10,000+** individuals empowered globally
-- **$10M+** in community economic activity
-- **500+** successful business launches
-- **75%** reduction in recidivism rates
-- **$400M+** annual economic impact
+### Social Impact
+- **Recidivism Reduction**
+- **Community Engagement**
+- **Family Stability Metrics**
+- **Mental Health Outcomes**
 
----
-
-## 📊 Projected Impact Timeline
-
-<Tabs>
-<TabItem value="2025" label="2025 Targets">
-
-### 🎯 2025 Milestones
-- **1,000+** Individuals Empowered
-- **50+** Businesses Launched
-- **$1M+** Community Funding
-- **10+** City Partnerships
-- **85%** User Satisfaction Rate
-
-</TabItem>
-<TabItem value="2026" label="2026 Goals">
-
-### 🚀 2026 Expansion
-- **5,000+** Individuals Empowered
-- **250+** Businesses Launched
-- **$5M+** Community Funding
-- **25+** City Partnerships
-- **50%** Recidivism Reduction
-
-</TabItem>
-<TabItem value="2027" label="2027+ Vision">
-
-### 🌍 2027+ Global Impact
-- **10,000+** Individuals Empowered
-- **500+** Businesses Launched
-- **$10M+** Community Funding
-- **20+** Country Presence
-- **75%** Recidivism Reduction
-
-</TabItem>
-</Tabs>
+### Platform Health
+- **Governance Participation**
+- **Community Satisfaction**
+- **Technical Performance**
+- **Security Incidents**
 
 ---
 
 ## 🤝 How to Get Involved
 
-### 🔗 For Individuals
-- **Join the Community**: Connect with others on similar journeys
-- **Access Resources**: Skills training, job placement, and mentorship
-- **Build Your Business**: Launch your own community-supported venture
-- **Advocate for Change**: Help shape policy and public perception
+### For Developers
+- Contribute to open-source development
+- Join our technical advisory committee
+- Participate in hackathons and bounties
+- Help with security audits and testing
 
-### 🏢 For Organizations
-- **Partnership Opportunities**: Integrate with existing reentry programs
-- **Employer Network**: Hire talented individuals with lived experience
-- **Funding Support**: Contribute to community investment funds
-- **Technology Collaboration**: Help build and improve the platform
+### For Community Members
+- Join our beta testing program
+- Participate in governance decisions
+- Become a community ambassador
+- Provide feedback and suggestions
 
-### 💝 For Supporters
-- **Financial Contributions**: Support community funding initiatives
-- **Volunteer Opportunities**: Mentor, teach, or provide professional services
-- **Advocacy**: Help change narratives and policies
-- **Spread Awareness**: Share our mission with your networks
+### For Partners
+- Integrate your services with our platform
+- Provide funding or resources
+- Offer employment opportunities
+- Support policy advocacy efforts
+
+### For Investors
+- Participate in funding rounds
+- Provide strategic guidance
+- Connect us with potential partners
+- Support our mission and vision
 
 ---
 
 ## 📞 Contact & Resources
 
-### 📧 Get in Touch
-- **General Inquiries**: info@formerlyincarcerated.org
-- **Press & Media**: press@formerlyincarcerated.org
-- **Partnerships**: partners@formerlyincarcerated.org
-- **Technical Support**: support@formerlyincarcerated.org
-
-### 🔗 Important Links
-- [📄 Whitepaper](/docs/whitepaper)
-- [🛠️ Technical Documentation](/docs/technical/)
-- [💬 Community Forum](https://github.com/FormerlyIncarcerated/org/discussions)
-- [📱 Discord Community](https://discord.gg/fJPfsnZe9x)
+- **Website**: [formerlyincarcerated.org](https://formerlyincarcerated.org)
+- **Documentation**: [docs.formerlyincarcerated.org](https://docs.formerlyincarcerated.org)
+- **GitHub**: [github.com/formerly-incarcerated-empowerment](https://github.com/formerly-incarcerated-empowerment)
+- **Email**: [roadmap@formerlyincarcerated.org](mailto:roadmap@formerlyincarcerated.org)
 
 ---
 
-*Building second chances through Web3 technology and community empowerment.*
-
-**© 2025 FormerlyIncarcerated.org. All rights reserved.**
+*This roadmap is a living document that will be updated based on community feedback, technological developments, and implementation learnings. Join us in building a more just and equitable future.*

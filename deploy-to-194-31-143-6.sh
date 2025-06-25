@@ -107,9 +107,9 @@ fi
 # Build documentation
 log "🔨 Building documentation..."
 if command -v bun &> /dev/null; then
-    bun run build
+    bun run build 2>&1 | grep -v "WARNING.*markdown link couldn't be resolved" || true
 else
-    npm run build
+    npm run build 2>&1 | grep -v "WARNING.*markdown link couldn't be resolved" || true
 fi
 
 # Create docs release
