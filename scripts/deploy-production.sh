@@ -1,7 +1,8 @@
 #!/bin/bash
 
-# FormerlyIncarcerated.org Production Deployment Script
+# FormerlyIncarcerated.org Production Deployment Script v2.1.1
 # Comprehensive deployment with build verification and rollback capabilities
+# Updated for version 2.1.1 with documentation fixes and environment restoration
 
 set -e
 
